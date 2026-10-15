@@ -74,34 +74,37 @@
     <div class="container hero-container">
       <div class="hero-video-banner glass-panel">
 
-        <!-- Responsive Video Container -->
-        <div class="video-iframe-wrapper" [class.tiktok-video-wrapper]="isVideoTikTok()">
-          <!-- TikTok Video (Lăng Bác) -->
-          <iframe *ngIf="isVideoTikTok()" [src]="activeVideoId() | youtubeSafeUrl"
-            title="Lăng Chủ tịch Hồ Chí Minh TikTok Video" frameborder="0" scrolling="no"
-            allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen>
-          </iframe>
+        <!-- Dedicated Video Mask to cleanly clip video with rounded corners while allowing Pill Tabs to overlap -->
+        <div class="video-mask">
+          <!-- Responsive Video Container -->
+          <div class="video-iframe-wrapper" [class.tiktok-video-wrapper]="isVideoTikTok()">
+            <!-- TikTok Video (Lăng Bác) -->
+            <iframe *ngIf="isVideoTikTok()" [src]="activeVideoId() | youtubeSafeUrl"
+              title="Lăng Chủ tịch Hồ Chí Minh TikTok Video" frameborder="0" scrolling="no"
+              allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen>
+            </iframe>
 
-          <!-- YouTube Player API Element for 16:9 Landscape Flycam Videos -->
-          <div *ngIf="!isVideoTikTok()" id="yt-hero-player" class="youtube-api-player"></div>
+            <!-- YouTube Player API Element for 16:9 Landscape Flycam Videos -->
+            <div *ngIf="!isVideoTikTok()" id="yt-hero-player" class="youtube-api-player"></div>
 
-          <div class="video-gradient-overlay" *ngIf="!isVideoTikTok()"></div>
+            <div class="video-gradient-overlay" *ngIf="!isVideoTikTok()"></div>
+          </div>
         </div>
 
-      </div>
-
-      <!-- FLOATING SEGMENTED CONTROL: MODERN PILL OVERLAPPING HERO BANNER BOUNDARY -->
-      <div class="hero-location-switcher-wrapper">
-        <div class="location-pill-container" role="tablist"
-          aria-label="Bộ chuyển đổi địa điểm Flycam trọng điểm Hà Nội">
-          <button *ngFor="let loc of locationOptions" type="button" role="tab" [id]="'hero-loc-pill-' + loc.id"
-            class="location-pill-btn" [class.active]="selectedLocation() === loc.id"
-            [attr.aria-selected]="selectedLocation() === loc.id" (click)="selectLocation(loc.id)">
-            <i class="fa-solid" [ngClass]="loc.icon"></i>
-            <span class="loc-name-full">{{ loc.name }}</span>
-            <span class="loc-name-short">{{ loc.shortName }}</span>
-          </button>
+        <!-- FLOATING SEGMENTED CONTROL: MODERN PILL OVERLAPPING HERO BANNER BOTTOM BOUNDARY -->
+        <div class="hero-location-switcher-wrapper">
+          <div class="location-pill-container" role="tablist"
+            aria-label="Bộ chuyển đổi địa điểm Flycam trọng điểm Hà Nội">
+            <button *ngFor="let loc of locationOptions" type="button" role="tab" [id]="'hero-loc-pill-' + loc.id"
+              class="location-pill-btn" [class.active]="selectedLocation() === loc.id"
+              [attr.aria-selected]="selectedLocation() === loc.id" (click)="selectLocation(loc.id)">
+              <i class="fa-solid" [ngClass]="loc.icon"></i>
+              <span class="loc-name-full">{{ loc.name }}</span>
+              <span class="loc-name-short">{{ loc.shortName }}</span>
+            </button>
+          </div>
         </div>
+
       </div>
 
     </div>

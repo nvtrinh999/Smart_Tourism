@@ -730,6 +730,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       this.setupScrollDrivenTabs();
       this.setupTouchSwipe();
       this.initOrUpdatePlayer();
+      this.centerActivePillTab(this.selectedLocation());
     }, 250);
   }
 
@@ -794,6 +795,23 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const cWidth = container.clientWidth;
     const cHeight = container.clientHeight;
     if (!cWidth || !cHeight) return;
+
+    const isMobile = window.innerWidth <= 768 || cWidth < 600;
+    if (isMobile) {
+      iframe.style.position = 'absolute';
+      iframe.style.top = '50%';
+      iframe.style.left = '50%';
+      iframe.style.transform = 'translate(-50%, -50%)';
+      iframe.style.width = '300%';
+      iframe.style.height = '300%';
+      iframe.style.minWidth = '100%';
+      iframe.style.minHeight = '100%';
+      iframe.style.border = '0';
+      iframe.style.margin = '0';
+      iframe.style.padding = '0';
+      iframe.style.display = 'block';
+      return;
+    }
 
     const containerRatio = cWidth / cHeight;
     const targetRatio = 16 / 9;
@@ -1065,6 +1083,9 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const videoUrl = loc?.videoUrl || '';
     this.activeVideoId.set(videoUrl);
 
+    // Auto-center active location pill tab in horizontal scrollable container
+    this.centerActivePillTab(locId);
+
     if (this.isVideoTikTok()) {
       if (this.ytPlayer) {
         try {
@@ -1085,6 +1106,24 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         }
       }, 120);
     }
+  }
+
+  /**
+   * Auto-center active location pill tab in horizontal scrollable container (Mobile & Desktop)
+   * Uses scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
+   */
+  centerActivePillTab(locId: string): void {
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+    setTimeout(() => {
+      const pillBtn = document.getElementById('hero-loc-pill-' + locId);
+      if (pillBtn) {
+        pillBtn.scrollIntoView({
+          behavior: 'smooth',
+          inline: 'center',
+          block: 'nearest'
+        });
+      }
+    }, 60);
   }
 
   selectLocationAndScroll(locId: string): void {

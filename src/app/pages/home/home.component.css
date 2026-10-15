@@ -266,11 +266,23 @@
   min-height: 450px;
   max-height: 520px;
   border-radius: var(--radius-lg, 20px);
-  overflow: hidden;
+  overflow: visible;
   isolation: isolate;
   border: 1px solid var(--border-hairline);
   background: #000000;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+  margin-bottom: 36px;
+}
+
+/* Dedicated Video Mask to cleanly clip video with rounded corners */
+.video-mask {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+  z-index: 1;
 }
 
 .video-iframe-wrapper {
@@ -346,12 +358,12 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  z-index: 25;
+  z-index: 30;
   display: flex;
   justify-content: center;
   align-items: center;
   width: max-content;
-  max-width: calc(100vw - 32px);
+  max-width: calc(100% - 24px);
   margin: 0;
   pointer-events: auto;
 }
@@ -360,14 +372,15 @@
 .location-pill-container {
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: flex-start !important;
   gap: 4px !important;
   background: #FFFFFF !important;
   border: 1px solid rgba(0, 0, 0, 0.08) !important;
   border-radius: 9999px !important;
   padding: 4px 6px !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18), 0 2px 8px rgba(0, 0, 0, 0.08) !important;
-  max-width: calc(100vw - 32px) !important;
+  width: max-content !important;
+  max-width: 100% !important;
   overflow-x: auto !important;
   white-space: nowrap !important;
   scrollbar-width: none !important;
@@ -433,30 +446,112 @@
 }
 
 @media (max-width: 768px) {
+  .hero-video-banner {
+    height: 320px;
+    min-height: 280px;
+    max-height: 360px;
+    border-radius: var(--radius-md, 14px);
+    position: relative;
+    overflow: visible !important;
+    margin-bottom: 36px !important;
+  }
+
+  .video-mask {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+    z-index: 1;
+  }
+
+  .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
+  .video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player,
+  ::ng-deep .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
+  ::ng-deep .video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 300% !important;
+    height: 300% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    transform: translate(-50%, -50%) !important;
+    pointer-events: none !important;
+  }
+
   .hero-location-switcher-wrapper {
-    max-width: calc(100vw - 32px);
-    width: auto;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translate(-50%, 50%) !important;
+    z-index: 30 !important;
+    width: max-content !important;
+    max-width: calc(100% - 24px) !important;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    pointer-events: auto;
   }
 
   .location-pill-container {
-    max-width: calc(100vw - 32px) !important;
-    padding: 3px 4px !important;
-    gap: 3px !important;
+    width: 100%;
+    max-width: 100% !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    border-radius: 9999px !important;
+    padding: 4px !important;
+    gap: 4px !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    box-sizing: border-box !important;
+  }
+
+  .location-pill-container::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 
   .location-pill-btn {
-    padding: 6px 12px;
-    min-height: 34px;
-    font-size: 0.75rem;
-    gap: 5px;
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 6px 12px !important;
+    min-height: 34px !important;
+    font-size: 12.5px !important;
+    gap: 5px !important;
+    border-radius: 9999px !important;
+  }
+
+  .location-pill-btn i {
+    font-size: 13.5px !important;
+    flex-shrink: 0 !important;
   }
 
   .location-pill-btn .loc-name-full {
-    display: none;
+    display: none !important;
   }
 
   .location-pill-btn .loc-name-short {
-    display: inline;
+    display: inline !important;
+    white-space: nowrap !important;
+    font-weight: 600 !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
   }
 }
 
@@ -3637,37 +3732,60 @@
 
   .location-pill-container {
     width: 100%;
-    display: flex;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-    border-radius: 9999px;
-    padding: 3px;
-    gap: 2px;
+    max-width: calc(100vw - 24px) !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    border-radius: 9999px !important;
+    padding: 4px !important;
+    gap: 4px !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    box-sizing: border-box !important;
   }
 
   .location-pill-container::-webkit-scrollbar {
-    display: none;
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 
   .location-pill-btn {
-    flex: 1 1 0;
-    min-width: 0;
-    padding: 11px 10px;
-    font-size: 0.8125rem;
-    min-height: 46px;
-    gap: 6px;
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    min-width: auto !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 6px 12px !important;
+    min-height: 34px !important;
+    font-size: 12.5px !important;
+    gap: 5px !important;
+    border-radius: 9999px !important;
+  }
+
+  .location-pill-btn i {
+    font-size: 13.5px !important;
+    flex-shrink: 0 !important;
   }
 
   .loc-name-full {
-    display: none;
+    display: none !important;
   }
 
   .loc-name-short {
-    display: inline;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: inline !important;
+    white-space: nowrap !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    font-weight: 600 !important;
   }
 
   /* Tab 1 Single Column Stack (Mobile-Centric Layout) */
@@ -3851,6 +3969,34 @@
     min-height: 280px;
     max-height: 360px;
     border-radius: var(--radius-md, 14px);
+    position: relative;
+    overflow: visible !important;
+    margin-bottom: 36px !important;
+  }
+
+  .video-mask {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+    z-index: 1;
+  }
+
+  .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
+  .video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player,
+  ::ng-deep .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
+  ::ng-deep .video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 300% !important;
+    height: 300% !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    transform: translate(-50%, -50%) !important;
+    pointer-events: none !important;
   }
 
   .video-iframe-wrapper.tiktok-video-wrapper iframe {
@@ -3860,41 +4006,76 @@
   }
 
   .hero-location-switcher-wrapper {
-    position: absolute;
-    bottom: 12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 20px);
-    max-width: 440px;
-    margin: 0 auto;
-    justify-content: center;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 50% !important;
+    transform: translate(-50%, 50%) !important;
+    z-index: 30 !important;
+    width: max-content !important;
+    max-width: calc(100% - 24px) !important;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    pointer-events: auto;
   }
 
-  .hero-glass-pill {
+  .location-pill-container {
     width: 100%;
+    max-width: 100% !important;
     display: flex !important;
+    flex-wrap: nowrap !important;
     align-items: center !important;
-    justify-content: center !important;
-    overflow-x: auto;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start !important;
+    overflow-x: auto !important;
+    scroll-behavior: smooth !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    border-radius: 9999px !important;
     padding: 4px !important;
     gap: 4px !important;
+    background: #FFFFFF !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    box-sizing: border-box !important;
   }
 
-  .hero-glass-pill::-webkit-scrollbar {
-    display: none;
+  .location-pill-container::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
   }
 
-  .hero-glass-pill .location-pill-btn {
-    flex: 1 1 0;
-    min-width: 0;
-    padding: 9px 6px;
-    font-size: 0.78rem;
-    min-height: 42px;
-    gap: 5px;
-    justify-content: center;
-    text-align: center;
+  .location-pill-btn {
+    flex: 0 0 auto !important;
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    padding: 6px 12px !important;
+    min-height: 34px !important;
+    font-size: 12.5px !important;
+    gap: 5px !important;
+    border-radius: 9999px !important;
+  }
+
+  .location-pill-btn i {
+    font-size: 13.5px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .location-pill-btn .loc-name-full {
+    display: none !important;
+  }
+
+  .location-pill-btn .loc-name-short {
+    display: inline !important;
+    white-space: nowrap !important;
+    font-weight: 600 !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
   }
 
   /* Real-time Toolbar Mobile */
