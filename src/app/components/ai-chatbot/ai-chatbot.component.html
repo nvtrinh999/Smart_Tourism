@@ -1,0 +1,133 @@
+<!-- FLOATING AI CHATBOT TRIGGER BUTTON -->
+<div class="chatbot-floating-wrapper">
+  
+  <!-- Pulsing floating launcher button -->
+  <button type="button" class="chatbot-trigger-btn" (click)="toggleChat()" [class.active]="isOpen()"
+    title="Hỏi Trợ lý Ảo AI (Gemini 2.5 Flash)">
+    <span class="trigger-glow-ring"></span>
+    <i *ngIf="!isOpen()" class="fa-solid fa-wand-magic-sparkles trigger-icon"></i>
+    <i *ngIf="isOpen()" class="fa-solid fa-xmark trigger-icon"></i>
+    <span class="trigger-badge-dot"></span>
+  </button>
+  <span *ngIf="!isOpen()" class="floating-tooltip">Hỏi Trợ lý AI</span>
+</div>
+
+<!-- CHATBOT WINDOW CONTAINER -->
+<div *ngIf="isOpen()" class="chatbot-window glass-panel" role="dialog" aria-label="Cửa sổ Trợ lý AI Du Lịch">
+
+  <!-- Chat Header Bar -->
+  <div class="chat-header">
+    <div class="chat-header-brand">
+      <div class="ai-avatar-box">
+        <i class="fa-solid fa-robot"></i>
+        <span class="avatar-live-dot" title="Hệ thống hoạt động"></span>
+      </div>
+      <div class="header-titles">
+        <div class="header-main-title">
+          <span>HÀ NỘI SMART AI</span>
+          <span class="model-tag">Gemini 2.5 Flash</span>
+        </div>
+        <span class="header-sub-title">Trợ lý ảo điều tiết & di sản số</span>
+      </div>
+    </div>
+
+    <!-- Header Actions -->
+    <div class="chat-header-actions">
+      <!-- Toggle API Key Config -->
+      <button type="button" class="btn-chat-icon" (click)="toggleKeyModal()"
+        [class.has-key]="!!effectiveApiKey"
+        [title]="effectiveApiKey ? 'API Key đã cấu hình (Bấm để đổi)' : 'Nhập Gemini API Key cá nhân'">
+        <i class="fa-solid fa-key"></i>
+      </button>
+
+      <!-- Clear Chat History -->
+      <button type="button" class="btn-chat-icon" (click)="clearChat()" title="Làm mới cuộc trò chuyện">
+        <i class="fa-solid fa-rotate-right"></i>
+      </button>
+
+      <!-- Close Window -->
+      <button type="button" class="btn-chat-icon close-btn" (click)="closeChat()" title="Đóng cửa sổ">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Inline API Key Settings Drawer (Collapsible) -->
+  <div *ngIf="showKeyModal()" class="api-key-drawer">
+    <div class="key-drawer-header">
+      <span class="key-title"><i class="fa-solid fa-gear text-gold"></i> Cài đặt Gemini API Key:</span>
+      <button type="button" class="btn-mini-close" (click)="toggleKeyModal()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <p class="key-desc">
+      Nhập key cá nhân để gọi trực tiếp model <strong>gemini-2.5-flash</strong> từ Google AI Studio (Key được lưu an toàn tại trình duyệt của bạn).
+    </p>
+    <div class="key-input-row">
+      <input #keyInput type="password" class="key-input-field" placeholder="AIzaSy..." [value]="apiKey()">
+      <button type="button" class="btn-save-key" (click)="saveApiKey(keyInput.value)">Lưu Key</button>
+    </div>
+    <div class="key-security-note">
+      <i class="fa-solid fa-shield-halved text-gold"></i>
+      <span><strong>Lưu ý bảo mật:</strong> Trong kiến trúc Frontend SPA, request được gọi trực tiếp từ trình duyệt đến Google Gemini API. Đối với môi trường production, khuyến nghị sử dụng backend proxy server hoặc giới hạn HTTP referrer / hạn mức quota tại Google Cloud Console.</span>
+    </div>
+  </div>
+
+  <!-- Quick Suggestion Chips (Gợi ý câu hỏi nhanh) -->
+  <div class="quick-chips-wrapper">
+    <div class="quick-chips-scroller">
+      <button *ngFor="let suggestion of quickSuggestions" type="button" class="quick-chip-btn"
+        (click)="useSuggestion(suggestion)">
+        <i class="fa-solid fa-sparkles text-gold"></i> {{ suggestion }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Messages History Body Scroll -->
+  <div class="chat-messages-body" #messagesScroll (scroll)="onMessagesScroll($event)">
+    <div *ngFor="let msg of messages(); trackBy: trackByMsgId" class="message-row" [class.user-row]="msg.sender === 'user'"
+      [class.ai-row]="msg.sender === 'ai'">
+      
+      <!-- AI Avatar in chat row -->
+      <div *ngIf="msg.sender === 'ai'" class="msg-avatar">
+        <i class="fa-solid fa-landmark text-gold"></i>
+      </div>
+
+      <!-- Bubble Content -->
+      <div class="msg-bubble" [class.user-bubble]="msg.sender === 'user'" [class.ai-bubble]="msg.sender === 'ai'">
+        <div class="msg-text-content" [innerHTML]="msg.text | slice:0 | slice:0">
+          <!-- Plain formatted paragraphs rendered with line breaks -->
+        </div>
+        <p class="formatted-bubble-text" style="white-space: pre-wrap; margin: 0; line-height: 1.55;">{{ msg.text }}</p>
+        <span class="msg-time">{{ msg.timestamp }}</span>
+      </div>
+    </div>
+
+    <!-- Typing Loader Bubble -->
+    <div *ngIf="isLoading()" class="message-row ai-row">
+      <div class="msg-avatar">
+        <i class="fa-solid fa-spinner fa-spin text-gold"></i>
+      </div>
+      <div class="msg-bubble ai-bubble typing-bubble">
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+        <span class="typing-label">Gemini 2.5 Flash đang suy nghĩ...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chat Input Footer Form -->
+  <div class="chat-input-footer">
+    <form (ngSubmit)="sendMessage()" class="chat-form">
+      <input type="text" [(ngModel)]="userInput" name="userInput" class="chat-input-box"
+        placeholder="Hỏi về Lăng Bác, Hồ Gươm, xe buýt 47A..." [disabled]="isLoading()" autocomplete="off">
+      <button type="submit" class="btn-send-msg" [disabled]="!userInput.trim() || isLoading()"
+        title="Gửi câu hỏi">
+        <i class="fa-solid fa-paper-plane"></i>
+      </button>
+    </form>
+    <div class="input-subnote">
+      <span>Dữ liệu đề án Di sản Số Thủ đô • Powered by Google Gemini</span>
+    </div>
+  </div>
+
+</div>

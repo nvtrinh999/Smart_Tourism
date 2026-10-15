@@ -75,29 +75,35 @@
       <div class="hero-video-banner glass-panel">
 
         <!-- Responsive Video Container -->
-        <div class="video-iframe-wrapper">
-          <iframe [src]="activeVideoId() | youtubeSafeUrl" title="Hà Nội Smart Tourism 4K Video" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
+        <div class="video-iframe-wrapper" [class.tiktok-video-wrapper]="isVideoTikTok()">
+          <!-- TikTok Video (Lăng Bác) -->
+          <iframe *ngIf="isVideoTikTok()" [src]="activeVideoId() | youtubeSafeUrl"
+            title="Lăng Chủ tịch Hồ Chí Minh TikTok Video" frameborder="0" scrolling="no"
+            allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen>
           </iframe>
-          <div class="video-gradient-overlay"></div>
-        </div>
 
-        <!-- MERCEDES-BENZ BRAND SWITCHER STYLE: 3-LOCATION PILL CONTROL (PINNED TO BOTTOM OF BANNER) -->
-        <div class="hero-location-switcher-wrapper">
-          <div class="location-pill-container hero-glass-pill" role="tablist"
-            aria-label="Bộ chuyển đổi 3 địa điểm trọng điểm Hà Nội">
-            <button *ngFor="let loc of locationOptions" type="button" role="tab" [id]="'hero-loc-pill-' + loc.id"
-              class="location-pill-btn" [class.active]="selectedLocation() === loc.id"
-              [attr.aria-selected]="selectedLocation() === loc.id" (click)="selectLocation(loc.id)">
-              <i class="fa-solid" [ngClass]="loc.icon"></i>
-              <span class="loc-name-full">{{ loc.name }}</span>
-              <span class="loc-name-short">{{ loc.shortName }}</span>
-            </button>
-          </div>
+          <!-- YouTube Player API Element for 16:9 Landscape Flycam Videos -->
+          <div *ngIf="!isVideoTikTok()" id="yt-hero-player" class="youtube-api-player"></div>
+
+          <div class="video-gradient-overlay" *ngIf="!isVideoTikTok()"></div>
         </div>
 
       </div>
+
+      <!-- FLOATING SEGMENTED CONTROL: MODERN PILL OVERLAPPING HERO BANNER BOUNDARY -->
+      <div class="hero-location-switcher-wrapper">
+        <div class="location-pill-container" role="tablist"
+          aria-label="Bộ chuyển đổi địa điểm Flycam trọng điểm Hà Nội">
+          <button *ngFor="let loc of locationOptions" type="button" role="tab" [id]="'hero-loc-pill-' + loc.id"
+            class="location-pill-btn" [class.active]="selectedLocation() === loc.id"
+            [attr.aria-selected]="selectedLocation() === loc.id" (click)="selectLocation(loc.id)">
+            <i class="fa-solid" [ngClass]="loc.icon"></i>
+            <span class="loc-name-full">{{ loc.name }}</span>
+            <span class="loc-name-short">{{ loc.shortName }}</span>
+          </button>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -643,6 +649,10 @@
             <button class="map-chip-btn" [class.active]="activeMapLocation() === 'Lang+lua+Van+Phuc+Ha+Dong'"
               (click)="selectMapLocation('Lang+lua+Van+Phuc+Ha+Dong', 'Làng lụa Vạn Phúc (Hà Đông)')">
               <i class="fa-solid fa-shirt"></i> Vạn Phúc
+            </button>
+            <button class="map-chip-btn" [class.active]="activeMapLocation() === 'Lang+Chu+tich+Ho+Chi+Minh+Ha+Noi'"
+              (click)="selectMapLocation('Lang+Chu+tich+Ho+Chi+Minh+Ha+Noi', 'Lăng Chủ tịch Hồ Chí Minh (Quận Ba Đình)')">
+              <i class="fa-solid fa-star text-gold"></i> Lăng Bác
             </button>
           </div>
 
@@ -1259,6 +1269,19 @@
           Dự án Website Du lịch Thông minh điều tiết luồng du khách Thủ đô Hà Nội, kết nối giao thông xanh ra làng nghề
           vùng ven và bảo tồn di sản bằng công nghệ số.
         </p>
+
+        <!-- Danh sách địa điểm trọng điểm tại Cột 1 Footer (Yêu cầu 1) -->
+        <div class="footer-locations-block">
+          <h6 class="footer-subheading"><i class="fa-solid fa-location-dot text-gold"></i> Điểm Đến Trọng Điểm:</h6>
+          <div class="footer-location-chips">
+            <button *ngFor="let loc of locationOptions" type="button" class="footer-loc-btn"
+              [class.active]="selectedLocation() === loc.id" (click)="selectLocationAndScroll(loc.id)"
+              [title]="'Chọn ' + loc.name + ' và xem video / bản đồ'">
+              <i class="fa-solid" [ngClass]="loc.icon"></i>
+              <span>{{ loc.name }}</span>
+            </button>
+          </div>
+        </div>
       </div>
 
       <div class="footer-links-col">

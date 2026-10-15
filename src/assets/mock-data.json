@@ -1238,7 +1238,8 @@
           ],
           "mapUrl": "https://maps.google.com/?q=Duong+Nguyen+Dinh+Thi+Ha+Noi"
         }
-      ]
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=KPwNA0PidEY"
     },
     "ba-dinh": {
       "id": "ba-dinh",
@@ -1648,6 +1649,1205 @@
           "mapUrl": "https://maps.google.com/?q=Duong+Hoang+Dieu+Ha+Noi"
         }
       ]
+    },
+    "lang-bac": {
+      "id": "lang-bac",
+      "warningArea": "Lăng Chủ tịch Hồ Chí Minh & Quảng trường Ba Đình",
+      "district": "Quận Ba Đình",
+      "coordinates": [
+        21.0369,
+        105.8347
+      ],
+      "videoUrl": "https://www.tiktok.com/@nguyennhuquang/video/7594084833874201876",
+      "mapQuery": "Lang+Chu+tich+Ho+Chi+Minh+Ha+Noi",
+      "peakStatus": {
+        "day": "Chủ Nhật",
+        "timeRange": "07:30 - 10:30",
+        "density": 88,
+        "level": "Cao điểm viếng Lăng (Cảnh báo vàng)",
+        "statusType": "warning",
+        "statusBadge": "Cao điểm viếng Lăng",
+        "message": "Lăng Bác: Lượng khách và các đoàn viếng đang ở mức cao (88%) — Khuyến nghị gửi xe đúng tuyến đường quy định và tuân thủ hướng dẫn"
+      },
+      "offPeakRecommendations": [
+        {
+          "timeRange": "05:30 - 06:30",
+          "description": "Sáng sớm trang nghiêm đón xem lễ thượng cờ tại Quảng trường Ba Đình, không khí trong trẻo và thanh bình.",
+          "avgDensity": 20,
+          "badge": "Lý tưởng nhất"
+        },
+        {
+          "timeRange": "14:00 - 16:30",
+          "description": "Buổi chiều tham quan khuôn viên Nhà sàn Bác Hồ, vườn cây ao cá và Bảo tàng Hồ Chí Minh thoáng mát, thong thả.",
+          "avgDensity": 32,
+          "badge": "Thư thả tham quan"
+        }
+      ],
+      "weeklySchedule": {
+        "Thứ Hai": [
+          {
+            "hour": "06:00",
+            "density": 15,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "14:00",
+            "density": 35,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 50,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "20:00",
+            "density": 55,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "22:00",
+            "density": 20,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Ba": [
+          {
+            "hour": "06:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 50,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 25,
+            "label": "Vắng"
+          },
+          {
+            "hour": "14:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 55,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "20:00",
+            "density": 60,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "22:00",
+            "density": 22,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Tư": [
+          {
+            "hour": "06:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 52,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 25,
+            "label": "Vắng"
+          },
+          {
+            "hour": "14:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 55,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "20:00",
+            "density": 62,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 22,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Năm": [
+          {
+            "hour": "06:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 55,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 25,
+            "label": "Vắng"
+          },
+          {
+            "hour": "14:00",
+            "density": 42,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 58,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "20:00",
+            "density": 65,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 25,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Sáu": [
+          {
+            "hour": "06:00",
+            "density": 25,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 50,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 55,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 52,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 65,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 70,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 30,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Bảy": [
+          {
+            "hour": "06:00",
+            "density": 35,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 78,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "10:00",
+            "density": 85,
+            "label": "Quá tải"
+          },
+          {
+            "hour": "12:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 55,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 65,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "18:00",
+            "density": 75,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 80,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 35,
+            "label": "Vắng"
+          }
+        ],
+        "Chủ Nhật": [
+          {
+            "hour": "06:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "08:00",
+            "density": 85,
+            "label": "Quá tải"
+          },
+          {
+            "hour": "10:00",
+            "density": 88,
+            "label": "Quá tải"
+          },
+          {
+            "hour": "12:00",
+            "density": 50,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 58,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 68,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "18:00",
+            "density": 78,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 82,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 35,
+            "label": "Vắng"
+          }
+        ]
+      },
+      "alternativeDestinations": [
+        {
+          "id": "chua-mot-cot",
+          "name": "Chùa Một Cột (Diên Hựu Tự)",
+          "category": "Di sản kiến trúc Phật giáo thời Lý",
+          "badge": "Ngay sát Lăng Bác",
+          "density": 35,
+          "distance": "150m phía sau Lăng Chủ tịch",
+          "image": "assets/images/national-library.jpg",
+          "description": "Ngôi chùa độc đáo hình bông sen nghìn năm tuổi vươn trên cột đá, không gian thanh tịnh tĩnh lặng giữa lòng thủ đô.",
+          "highlights": [
+            "Kiến trúc hoa sen đá độc bản",
+            "Cây bồ đề cổ thụ quà tặng ngoại giao",
+            "Không gian thanh tịnh trang nghiêm"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Chua+Mot+Cot+Ha+Noi"
+        },
+        {
+          "id": "bao-tang-ho-chi-minh",
+          "name": "Bảo tàng Hồ Chí Minh",
+          "category": "Công trình văn hóa biểu tượng",
+          "badge": "Không gian máy lạnh rộng thoáng",
+          "density": 28,
+          "distance": "200m bên cạnh Lăng",
+          "image": "assets/images/thong-nhat-park.jpg",
+          "description": "Bảo tàng hiện đại với các không gian nghệ thuật thị giác trưng bày sinh động về cuộc đời Chủ tịch Hồ Chí Minh.",
+          "highlights": [
+            "Gian trưng bày biểu tượng bông sen trắng",
+            "Tư liệu lịch sử đa phương tiện",
+            "Hệ thống điều hòa không khí thoáng mát"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Bao+tang+Ho+Chi+Minh"
+        },
+        {
+          "id": "khu-nha-san-ao-ca",
+          "name": "Khu di tích Phủ Chủ tịch & Nhà sàn Ao cá",
+          "category": "Không gian sinh thái & Di tích lịch sử",
+          "badge": "Rợp bóng cây xanh",
+          "density": 32,
+          "distance": "Trong quần thể Quảng trường Ba Đình",
+          "image": "assets/images/quiet-cafe.jpg",
+          "description": "Khuôn viên rợp bóng dừa và xoài cổ thụ, đường xoài thanh bình quanh ao cá Bác Hồ, gió mát rượi quanh năm.",
+          "highlights": [
+            "Đường xoài lịch sử rợp bóng",
+            "Ao cá Bác Hồ thư thái",
+            "Nhà sàn gỗ mộc mạc nguyên bản"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Khu+di+tich+Phu+Chu+tich"
+        }
+      ]
+    },
+    "ba-vi": {
+      "id": "ba-vi",
+      "warningArea": "Vườn Quốc gia Ba Vì (Rừng nguyên sinh & Săn mây)",
+      "shortName": "Ba Vì",
+      "district": "Huyện Ba Vì, Hà Nội",
+      "coordinates": [
+        21.0833,
+        105.3667
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=b5apHzIybjE",
+      "mapQuery": "Vuon+Quoc+Gia+Ba+Vi+Ha+Noi",
+      "peakStatus": {
+        "day": "Chủ Nhật",
+        "timeRange": "09:00 - 15:00",
+        "density": 62,
+        "level": "Lưu lượng ổn định (Mức xanh an toàn)",
+        "statusType": "success",
+        "statusBadge": "Vùng ven thoáng mát",
+        "message": "Ba Vì: Mật độ ổn định (62%) — Không gian rừng nguyên sinh bạt ngàn, thoáng mát, lý tưởng cắm trại và nghỉ dưỡng cuối tuần"
+      },
+      "offPeakRecommendations": [
+        {
+          "timeRange": "06:00 - 08:30",
+          "description": "Sáng sớm săn mây đỉnh Vua tuyệt đẹp, không khí se lạnh trong lành như Đà Lạt giữa lòng thủ đô.",
+          "avgDensity": 22,
+          "badge": "Lý tưởng nhất"
+        },
+        {
+          "timeRange": "13:30 - 16:30",
+          "description": "Buổi chiều nắng nhẹ xuyên qua rừng thông, thích hợp tham quan Nhà thờ Pháp cổ và Vườn xương rồng.",
+          "avgDensity": 35,
+          "badge": "Thư thái khám phá"
+        }
+      ],
+      "weeklySchedule": {
+        "Thứ Hai": [
+          {
+            "hour": "06:00",
+            "density": 10,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 20,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 18,
+            "label": "Vắng"
+          },
+          {
+            "hour": "18:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "20:00",
+            "density": 10,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 8,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Ba": [
+          {
+            "hour": "06:00",
+            "density": 10,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 22,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "18:00",
+            "density": 15,
+            "label": "Vắng"
+          },
+          {
+            "hour": "20:00",
+            "density": 10,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 8,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Tư": [
+          {
+            "hour": "06:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 22,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 28,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 26,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "18:00",
+            "density": 15,
+            "label": "Vắng"
+          },
+          {
+            "hour": "20:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 10,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Năm": [
+          {
+            "hour": "06:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 22,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 28,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 26,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 22,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 16,
+            "label": "Vắng"
+          },
+          {
+            "hour": "20:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 10,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Sáu": [
+          {
+            "hour": "06:00",
+            "density": 15,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 28,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 35,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 32,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 35,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 38,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "20:00",
+            "density": 22,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 15,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Bảy": [
+          {
+            "hour": "06:00",
+            "density": 25,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 50,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 65,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "12:00",
+            "density": 58,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 62,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "16:00",
+            "density": 55,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "20:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "22:00",
+            "density": 20,
+            "label": "Vắng"
+          }
+        ],
+        "Chủ Nhật": [
+          {
+            "hour": "06:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "08:00",
+            "density": 55,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 62,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "12:00",
+            "density": 55,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 58,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 35,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "20:00",
+            "density": 25,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 15,
+            "label": "Vắng"
+          }
+        ]
+      },
+      "alternativeDestinations": [
+        {
+          "id": "ao-vua-resort",
+          "name": "Khu du lịch sinh thái Ao Vua",
+          "category": "Khu vui chơi sinh thái & Thác nước",
+          "badge": "Không gian thoáng đãng",
+          "density": 35,
+          "distance": "Dưới chân núi Ba Vì",
+          "image": "assets/images/thong-nhat-park.jpg",
+          "description": "Thắng cảnh thác nước tự nhiên, suối mát rượi và các trò chơi dân gian hấp dẫn dưới chân núi Tản Viên.",
+          "highlights": [
+            "Thác nước và suối thiên nhiên",
+            "Khu vui chơi công viên nước",
+            "Khí hậu trong lành dịu mát"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Ao+Vua+Ba+Vi"
+        },
+        {
+          "id": "lang-van-hoa-dan-toc",
+          "name": "Làng Văn hóa - Du lịch các Dân tộc Việt Nam",
+          "category": "Bảo tàng văn hóa ngoài trời",
+          "badge": "Khuôn viên 1.500ha cực rộng",
+          "density": 28,
+          "distance": "Đồng Mô, Sơn Tây (Gần Ba Vì)",
+          "image": "assets/images/national-library.jpg",
+          "description": "Quần thể kiến trúc tái hiện bản làng 54 dân tộc anh em, tháp Chăm lung linh và chùa Khmer độc đáo.",
+          "highlights": [
+            "Quần thể Tháp Chăm và Chùa Khmer",
+            "Giao lưu nghệ thuật cùng đồng bào",
+            "Hồ Đồng Mô thoáng đãng"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Lang+Van+Hoa+Cac+Dan+Toc+Dong+Mo"
+        }
+      ]
+    },
+    "dai-lai": {
+      "id": "dai-lai",
+      "warningArea": "Hồ Đại Lải & Quần thể Nghỉ dưỡng Flamingo",
+      "shortName": "Đại Lải",
+      "district": "Phúc Yên, Vĩnh Phúc",
+      "coordinates": [
+        21.325,
+        105.7167
+      ],
+      "videoUrl": "https://www.youtube.com/watch?v=TdHbEbpIA5o",
+      "mapQuery": "Ho+Dai+Lai+Flamingo+Vinh+Phuc",
+      "peakStatus": {
+        "day": "Thứ Bảy",
+        "timeRange": "14:00 - 18:00",
+        "density": 55,
+        "level": "Không gian hồ nước thênh thang",
+        "statusType": "success",
+        "statusBadge": "Thư thái ven hồ",
+        "message": "Đại Lải: Lưu lượng ổn định (55%) — Mặt hồ lộng gió 525ha, nhiều hoạt động giải trí chèo thuyền và dã ngoại"
+      },
+      "offPeakRecommendations": [
+        {
+          "timeRange": "06:30 - 09:00",
+          "description": "Bình minh trên mặt hồ sương sớm mờ ảo, không gian tĩnh lặng thích hợp đi dạo ven rừng thông.",
+          "avgDensity": 20,
+          "badge": "Lý tưởng nhất"
+        },
+        {
+          "timeRange": "14:00 - 17:00",
+          "description": "Tham quan bảo tàng nghệ thuật ngoài trời Art in the Forest và chèo thuyền Kayak trên hồ.",
+          "avgDensity": 38,
+          "badge": "Thư thả dã ngoại"
+        }
+      ],
+      "weeklySchedule": {
+        "Thứ Hai": [
+          {
+            "hour": "06:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 18,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 22,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 20,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 18,
+            "label": "Vắng"
+          },
+          {
+            "hour": "18:00",
+            "density": 15,
+            "label": "Vắng"
+          },
+          {
+            "hour": "20:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 10,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Ba": [
+          {
+            "hour": "06:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 18,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 22,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 22,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "18:00",
+            "density": 15,
+            "label": "Vắng"
+          },
+          {
+            "hour": "20:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 10,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Tư": [
+          {
+            "hour": "06:00",
+            "density": 14,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 28,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 24,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 22,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 18,
+            "label": "Vắng"
+          },
+          {
+            "hour": "20:00",
+            "density": 15,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 10,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Năm": [
+          {
+            "hour": "06:00",
+            "density": 14,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 22,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 28,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 26,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 24,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "20:00",
+            "density": 16,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 12,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Sáu": [
+          {
+            "hour": "06:00",
+            "density": 16,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 35,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 38,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 35,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "20:00",
+            "density": 25,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 15,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Bảy": [
+          {
+            "hour": "06:00",
+            "density": 22,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 52,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 50,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 55,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 52,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 42,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "20:00",
+            "density": 32,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "22:00",
+            "density": 18,
+            "label": "Vắng"
+          }
+        ],
+        "Chủ Nhật": [
+          {
+            "hour": "06:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "08:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 54,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "20:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 15,
+            "label": "Vắng"
+          }
+        ]
+      },
+      "alternativeDestinations": [
+        {
+          "id": "thung-lung-thanh-xuan",
+          "name": "Thung lũng Thanh Xuân (Valley of Spring)",
+          "category": "Khu sinh thái đồi thông & Hồ nước",
+          "badge": "Tĩnh lặng, mát mẻ",
+          "density": 25,
+          "distance": "Cạnh hồ Đại Lải",
+          "image": "assets/images/quiet-cafe.jpg",
+          "description": "Thung lũng được bao bọc bởi đồi thông xanh ngắt, hồ nước tự nhiên phẳng lặng, cực kỳ thích hợp cho đi dạo và cắm trại chill.",
+          "highlights": [
+            "Đồi thông ngút ngàn xanh mát",
+            "Cung đường dạo bộ quanh hồ",
+            "Cà phê ngắm hoàng hôn lãng mạn"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Thung+lung+Thanh+Xuan+Dai+Lai"
+        }
+      ]
     }
   },
   "tab2_suburbs": {
@@ -2041,5 +3241,79 @@
         }
       }
     ]
-  }
+  },
+  "flycam_locations": [
+    {
+      "id": "ba-vi",
+      "name": "Vườn Quốc gia Ba Vì",
+      "shortName": "Ba Vì",
+      "district": "Huyện Ba Vì",
+      "icon": "fa-mountain-sun",
+      "videoUrl": "https://www.youtube.com/watch?v=b5apHzIybjE",
+      "coordinates": [
+        21.0833,
+        105.3667
+      ]
+    },
+    {
+      "id": "dai-lai",
+      "name": "Hồ Đại Lải & Flamingo",
+      "shortName": "Đại Lải",
+      "district": "Phúc Yên - Vĩnh Phúc",
+      "icon": "fa-water",
+      "videoUrl": "https://www.youtube.com/watch?v=TdHbEbpIA5o",
+      "coordinates": [
+        21.325,
+        105.7167
+      ]
+    },
+    {
+      "id": "ho-tay",
+      "name": "Hồ Tây & Trúc Bạch",
+      "shortName": "Hồ Tây",
+      "district": "Tây Hồ - Ba Đình",
+      "icon": "fa-water",
+      "videoUrl": "https://www.youtube.com/watch?v=KPwNA0PidEY",
+      "coordinates": [
+        21.0583,
+        105.8242
+      ]
+    },
+    {
+      "id": "ho-guom",
+      "name": "Hồ Gươm & Phố Cổ",
+      "shortName": "Hồ Gươm",
+      "district": "Quận Hoàn Kiếm",
+      "icon": "fa-landmark",
+      "videoUrl": "https://www.youtube.com/watch?v=T0xxOYuWKsQ",
+      "coordinates": [
+        21.0285,
+        105.8542
+      ]
+    },
+    {
+      "id": "ba-dinh",
+      "name": "Hoàng Thành Thăng Long",
+      "shortName": "Hoàng Thành",
+      "district": "Quận Ba Đình",
+      "icon": "fa-monument",
+      "videoUrl": "https://www.youtube.com/watch?v=8_ADNBqH7KE",
+      "coordinates": [
+        21.0336,
+        105.8407
+      ]
+    },
+    {
+      "id": "lang-bac",
+      "name": "Lăng Chủ tịch Hồ Chí Minh",
+      "shortName": "Lăng Bác",
+      "district": "Quận Ba Đình",
+      "icon": "fa-star",
+      "videoUrl": "https://www.tiktok.com/@nguyennhuquang/video/7594084833874201876",
+      "coordinates": [
+        21.0369,
+        105.8347
+      ]
+    }
+  ]
 }

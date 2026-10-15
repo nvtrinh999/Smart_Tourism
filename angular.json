@@ -71,8 +71,14 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "60kb",
+                  "maximumWarning": "75kb",
                   "maximumError": "100kb"
+                }
+              ],
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.development.ts",
+                  "with": "src/environments/environment.ts"
                 }
               ],
               "outputHashing": "all"

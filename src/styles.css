@@ -32,9 +32,11 @@
   --border-gold: rgba(197, 160, 89, 0.45);
 
   /* Typography Color Tokens */
-  --text-main: #09090B;       /* Deep Carbon Black */
+  --text-main: #09090B;
+  /* Deep Carbon Black */
   --text-primary: #09090B;
-  --text-secondary: #475569;  /* Metallic Slate Grey */
+  --text-secondary: #475569;
+  /* Metallic Slate Grey */
   --text-muted: #64748B;
   --text-faint: #94A3B8;
   --text-inverse: #FFFFFF;
@@ -109,9 +111,11 @@
   --border-gold: rgba(197, 160, 89, 0.35);
 
   /* Typography Color Tokens */
-  --text-main: #FAFAFA;       /* Crisp White */
+  --text-main: #FAFAFA;
+  /* Crisp White */
   --text-primary: #FAFAFA;
-  --text-secondary: #A1A1AA;  /* Metallic Silver Grey */
+  --text-secondary: #A1A1AA;
+  /* Metallic Silver Grey */
   --text-muted: #71717A;
   --text-faint: #52525B;
   --text-inverse: #09090B;
@@ -160,7 +164,9 @@
 /* --------------------------------------------------------------------------
    3. GLOBAL RESET & BASE STYLES
    -------------------------------------------------------------------------- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -204,19 +210,27 @@ body {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-deep);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--border-hover);
   border-radius: var(--radius-xs);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--text-muted);
 }
 
 /* Typography Helpers: Modern Elegant Sans-serif */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text-primary);
   font-family: var(--font-heading);
   font-weight: 700;
@@ -322,6 +336,7 @@ button {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -329,18 +344,24 @@ button {
 }
 
 @keyframes pulseGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.35;
   }
 }
 
 @keyframes waveform {
-  0%, 100% {
+
+  0%,
+  100% {
     height: 4px;
   }
+
   50% {
     height: 22px;
   }
@@ -351,10 +372,12 @@ button {
     top: 0;
     opacity: 0.8;
   }
+
   50% {
     top: calc(100% - 2px);
     opacity: 1;
   }
+
   100% {
     top: 0;
     opacity: 0.8;
@@ -365,4 +388,27 @@ button {
   to {
     stroke-dashoffset: -100;
   }
+}
+
+/* YouTube Hero Banner Full Coverage Enforcer (Global) */
+.hero-video-banner {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
+.video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 177.78vh !important;
+  height: 56.25vw !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
 }

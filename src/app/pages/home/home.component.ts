@@ -1,27 +1,30 @@
-import { Component, OnInit, AfterViewInit, OnDestroy, inject, signal } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, HostListener, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Router } from '@angular/router';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { TourismService } from '../../services/tourism.service';
 import { ThemeService } from '../../services/theme.service';
-import { YoutubeSafeUrlPipe } from '../../pipes/youtube-safe-url.pipe';
-import { 
-  TourismData, 
-  AlternativeDestination, 
-  HeritageAudio, 
+import { YoutubeSafeUrlPipe, extractYouTubeId } from '../../pipes/youtube-safe-url.pipe';
+import {
+  TourismData,
+  AlternativeDestination,
+  HeritageAudio,
   SuburbDestination,
   SurroundingDestination,
   HourlyData,
-  Tab1LocationData
+  Tab1LocationData,
+  FlycamLocation
 } from '../../models/tourism.model';
 
 export interface LocationOption {
-  id: 'ho-guom' | 'ho-tay' | 'ba-dinh';
+  id: string;
   name: string;
   shortName: string;
   district: string;
   icon: string;
+  videoUrl?: string;
+  coordinates?: [number, number];
 }
 
 export interface VideoOption {
@@ -55,54 +58,110 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   private sanitizer = inject(DomSanitizer);
   private router = inject(Router);
 
-  // Hero Video state
-  activeVideoId = signal<string>('T0xxOYuWKsQ');
+  // YouTube IFrame Player API state
+  private ytPlayer: any = null;
+  private isYouTubeApiLoaded = false;
+  private isAutoAdvancing = false;
+
+  // Hero Video state - Ba Vì as initial default
+  activeVideoId = signal<string>('https://www.youtube.com/watch?v=b5apHzIybjE');
   videoOptions: VideoOption[] = [
     {
-      id: 'T0xxOYuWKsQ',
+      id: 'https://www.youtube.com/watch?v=b5apHzIybjE',
+      title: 'Flycam 4K Vườn Quốc Gia Ba Vì - Núi Tản Săn Mây',
+      label: 'Flycam Ba Vì',
+      tag: 'Vùng ven 4K'
+    },
+    {
+      id: 'https://www.youtube.com/watch?v=TdHbEbpIA5o',
+      title: 'Flycam 4K Hồ Đại Lải & Quần Thể Nghỉ Dưỡng Flamingo',
+      label: 'Flycam Đại Lải',
+      tag: 'Hồ nước 4K'
+    },
+    {
+      id: 'https://www.youtube.com/watch?v=KPwNA0PidEY',
+      title: 'Flycam 4K Toàn Cảnh Hồ Tây & Bán Đảo Quảng An',
+      label: 'Flycam Hồ Tây',
+      tag: 'Hồ Tây 4K'
+    },
+    {
+      id: 'https://www.youtube.com/watch?v=T0xxOYuWKsQ',
       title: 'Flycam 4K Toàn Cảnh Hà Nội & Hồ Gươm',
       label: 'Flycam Hồ Gươm',
       tag: 'Nội đô 4K'
     },
     {
-      id: 'DMlE4p_OYmw',
-      title: 'Hành Trình Khám Phá Di Sản Phố Cổ & Văn Miếu 4K',
-      label: 'Di Sản & Phố Cổ',
-      tag: 'Văn hóa số'
+      id: 'https://www.youtube.com/watch?v=8_ADNBqH7KE',
+      title: 'Nhịp Sống & Cảnh Sắc Hoàng Thành Thăng Long 4K',
+      label: 'Hoàng Thành Thăng Long',
+      tag: 'Di sản 4K'
     },
     {
-      id: '8_ADNBqH7KE',
-      title: 'Nhịp Sống & Cảnh Sắc Làng Nghề Vùng Ven 4K',
-      label: 'Làng Nghề Vùng Ven',
-      tag: 'Vùng ven xanh'
+      id: 'https://www.youtube.com/watch?v=uPHK-wj6wIo',
+      title: 'Lễ Thượng Cờ & Không Khí Trang Nghiêm Tại Lăng Bác (TikTok 4K)',
+      label: 'Lăng Bác TikTok',
+      tag: 'TikTok Video'
     }
   ];
 
-  // Tab 1 state: 3 Locations (Mercedes-Benz Brand Switcher style)
+  // Tab 1 state: 6 Flycam Locations - Unified Order: 1. Ba Vì, 2. Đại Lải, 3. Hồ Tây, then Hồ Gươm, Hoàng Thành, Lăng Bác
   locationOptions: LocationOption[] = [
     {
-      id: 'ho-guom',
-      name: 'Hồ Gươm & Phố Cổ',
-      shortName: 'Hồ Gươm',
-      district: 'Quận Hoàn Kiếm',
-      icon: 'fa-landmark'
+      id: 'ba-vi',
+      name: 'Vườn Quốc gia Ba Vì',
+      shortName: 'Ba Vì',
+      district: 'Huyện Ba Vì',
+      icon: 'fa-mountain-sun',
+      videoUrl: 'https://www.youtube.com/watch?v=b5apHzIybjE',
+      coordinates: [21.0833, 105.3667]
+    },
+    {
+      id: 'dai-lai',
+      name: 'Hồ Đại Lải & Flamingo',
+      shortName: 'Đại Lải',
+      district: 'Phúc Yên - Vĩnh Phúc',
+      icon: 'fa-water',
+      videoUrl: 'https://www.youtube.com/watch?v=TdHbEbpIA5o',
+      coordinates: [21.3250, 105.7167]
     },
     {
       id: 'ho-tay',
       name: 'Hồ Tây & Trúc Bạch',
       shortName: 'Hồ Tây',
       district: 'Tây Hồ - Ba Đình',
-      icon: 'fa-water'
+      icon: 'fa-water',
+      videoUrl: 'https://www.youtube.com/watch?v=KPwNA0PidEY',
+      coordinates: [21.0583, 105.8242]
+    },
+    {
+      id: 'ho-guom',
+      name: 'Hồ Gươm & Phố Cổ',
+      shortName: 'Hồ Gươm',
+      district: 'Quận Hoàn Kiếm',
+      icon: 'fa-landmark',
+      videoUrl: 'https://www.youtube.com/watch?v=T0xxOYuWKsQ',
+      coordinates: [21.0285, 105.8542]
     },
     {
       id: 'ba-dinh',
-      name: 'Hoàng Thành & Ba Đình',
+      name: 'Hoàng Thành Thăng Long',
       shortName: 'Hoàng Thành',
       district: 'Quận Ba Đình',
-      icon: 'fa-monument'
+      icon: 'fa-monument',
+      videoUrl: 'https://www.youtube.com/watch?v=8_ADNBqH7KE',
+      coordinates: [21.0336, 105.8407]
+    },
+    {
+      id: 'lang-bac',
+      name: 'Lăng Chủ tịch Hồ Chí Minh',
+      shortName: 'Lăng Bác',
+      district: 'Quận Ba Đình',
+      icon: 'fa-star',
+      videoUrl: 'https://www.youtube.com/watch?v=uPHK-wj6wIo',
+      coordinates: [21.0369, 105.8347]
     }
   ];
-  selectedLocation = signal<'ho-guom' | 'ho-tay' | 'ba-dinh'>('ho-guom');
+  selectedLocation = signal<string>('ba-vi');
   selectedDay = signal<string>('Thứ Bảy');
   selectedHour = signal<string>('20:00');
   selectedDestinationModal = signal<AlternativeDestination | null>(null);
@@ -145,10 +204,15 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit(): void {
     this.tourismService.loadData().subscribe(data => {
+      if (data?.flycam_locations && data.flycam_locations.length > 0) {
+        this.locationOptions = data.flycam_locations;
+      }
       if (data && data.tab2_suburbs.destinations.length > 0) {
         this.selectedSuburb.set(data.tab2_suburbs.destinations[0]);
       }
     });
+
+    this.loadYouTubeIframeApi();
 
     this.updateClock();
     setInterval(() => this.updateClock(), 1000);
@@ -161,10 +225,10 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   updateClock(): void {
     const now = new Date();
     this.currentTime.set(now);
-    const options: Intl.DateTimeFormatOptions = { 
+    const options: Intl.DateTimeFormatOptions = {
       timeZone: 'Asia/Ho_Chi_Minh',
-      hour: '2-digit', 
-      minute: '2-digit', 
+      hour: '2-digit',
+      minute: '2-digit',
       second: '2-digit',
       hour12: false
     };
@@ -238,7 +302,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     }
   }
 
-  calculateDynamicCrowd(locId: 'ho-guom' | 'ho-tay' | 'ba-dinh', date: Date): RealtimeCrowdStatus {
+  calculateDynamicCrowd(locId: string, date: Date): RealtimeCrowdStatus {
     const dayIndex = date.getDay(); // 0 = Chủ Nhật, 1 = Thứ Hai, ..., 6 = Thứ Bảy
     const dayNames = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
     const day = dayNames[dayIndex];
@@ -248,7 +312,85 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const isWeekend = (dayIndex === 0 || dayIndex === 6);
     const isEveningPeak = (hour >= 18 && hour < 22);
 
-    if (locId === 'ho-guom') {
+    if (locId === 'ba-vi') {
+      // Vườn Quốc gia Ba Vì
+      if (isWeekend && hour >= 8 && hour < 16) {
+        const density = 62;
+        return {
+          day,
+          timeString,
+          density,
+          level: 'Lưu lượng ổn định (Mức xanh an toàn)',
+          statusType: 'success',
+          statusBadge: 'Vùng ven thoáng mát',
+          headline: `Ba Vì: Mật độ ổn định (${density}%) — Rừng nguyên sinh bạt ngàn, thoáng đãng`,
+          recommendation: 'Không gian núi rừng Ba Vì trong lành, nhiệt độ dịu mát hơn nội đô 3-5°C. Rất lý tưởng cắm trại, dã ngoại, tham quan Nhà thờ Pháp cổ và Vườn xương rồng.'
+        };
+      } else if (!isWeekend && hour >= 7 && hour < 17) {
+        const density = 25;
+        return {
+          day,
+          timeString,
+          density,
+          level: 'Mức xanh an toàn',
+          statusType: 'success',
+          statusBadge: 'Rất thông thoáng',
+          headline: `Ba Vì: Rất thông thoáng (${density}%) — Thời điểm vàng săn mây`,
+          recommendation: 'Đường đèo thông thoáng, không khí mát lành như Đà Lạt, thời điểm lý tưởng để săn mây đỉnh Vua và tham quan Đền Thượng.'
+        };
+      } else {
+        const density = 12;
+        return {
+          day,
+          timeString,
+          density,
+          level: 'Thanh bình núi rừng',
+          statusType: 'success',
+          statusBadge: 'Tuyệt đối thông thoáng',
+          headline: `Ba Vì: Yên tĩnh (${density}%) — Cảnh sắc núi rừng tĩnh mịch`,
+          recommendation: 'Khu vực rừng thông yên ả, nhiệt độ se lạnh về đêm, hoàn toàn không có khói bụi.'
+        };
+      }
+    } else if (locId === 'dai-lai') {
+      // Hồ Đại Lải & Flamingo
+      if (isWeekend && hour >= 14 && hour < 19) {
+        const density = 55;
+        return {
+          day,
+          timeString,
+          density,
+          level: 'Lưu lượng ổn định (Mức xanh an toàn)',
+          statusType: 'success',
+          statusBadge: 'Thư thái ven hồ',
+          headline: `Đại Lải: Mật độ ổn định (${density}%) — Mặt hồ lộng gió 525ha, nhiều hoạt động giải trí`,
+          recommendation: 'Mặt hồ phẳng lặng, cảnh sắc thơ mộng. Rất thích hợp cho hoạt động chèo kayak, đạp xe quanh rừng thông và tham quan bảo tàng ngoài trời Art in the Forest.'
+        };
+      } else if (!isWeekend && hour >= 8 && hour < 17) {
+        const density = 22;
+        return {
+          day,
+          timeString,
+          density,
+          level: 'Mức xanh an toàn',
+          statusType: 'success',
+          statusBadge: 'Rất thông thoáng',
+          headline: `Đại Lải: Rất thông thoáng (${density}%) — Không gian trong lành`,
+          recommendation: 'Khuôn viên ven hồ thoáng đãng, thư thái dạo bước dưới tán thông reo và thưởng ngoạn nghệ thuật.'
+        };
+      } else {
+        const density = 10;
+        return {
+          day,
+          timeString,
+          density,
+          level: 'Thanh bình ven hồ',
+          statusType: 'success',
+          statusBadge: 'Tuyệt đối thông thoáng',
+          headline: `Đại Lải: Thanh bình (${density}%) — Gió hồ dịu mát`,
+          recommendation: 'Không gian tĩnh lặng, thích hợp nghỉ ngơi thư giãn.'
+        };
+      }
+    } else if (locId === 'ho-guom') {
       // 1. Hồ Gươm & Phố Cổ Hà Nội
       if (isWeekend && isEveningPeak) {
         // Cuối tuần giờ cao điểm tối: 90% - 95%, Đỏ, Cực đại - Nên tránh / Quá tải nghiêm trọng
@@ -384,10 +526,10 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           recommendation: 'Cung đường dạo bộ sát mép nước tĩnh lặng, gió hồ mát mẻ, hoàn hảo cho chạy bộ sáng sớm hoặc ngắm cảnh đêm.'
         };
       }
-    } else {
+    } else if (locId === 'ba-dinh') {
       // 3. Hoàng Thành Thăng Long & Quảng trường Ba Đình
       if (isWeekend && hour >= 8 && hour < 12) {
-        // Cuối tuần buổi sáng cao điểm viếng Lăng & tham quan Hoàng Thành
+        // Cuối tuần buổi sáng cao điểm tham quan Hoàng Thành
         const density = 82;
         return {
           day,
@@ -437,6 +579,61 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           statusBadge: 'Rất thông thoáng',
           headline: `Hoàng Thành & Ba Đình: Tuyệt đối thông thoáng (${density}%) — Không gian trang nghiêm`,
           recommendation: 'Quảng trường Ba Đình thoáng đãng, lộng gió. Thích hợp theo dõi nghi lễ thượng cờ (06:00) hoặc hạ cờ (21:00) trang trọng.'
+        };
+      }
+    } else {
+      // 4. Lăng Chủ tịch Hồ Chí Minh (Lăng Bác)
+      if (isWeekend && hour >= 7 && hour < 12) {
+        // Cuối tuần sáng cao điểm viếng Lăng Bác
+        const density = 88;
+        return {
+          day,
+          timeString,
+          density,
+          level: 'Cao điểm viếng Lăng (Cảnh báo vàng)',
+          statusType: 'warning',
+          statusBadge: 'Cao điểm viếng Lăng',
+          headline: `Lăng Bác: Cao điểm viếng Lăng (${density}%) — Lượng đoàn khách thập phương đông`,
+          recommendation: 'Quảng trường Ba Đình và dòng người viếng Lăng Bác đang rất đông. Khuyến nghị xếp hàng theo hướng dẫn của tiêu binh, giữ trật tự và trang nghiêm.'
+        };
+      } else if (isWeekend && hour >= 12 && hour < 21) {
+        // Cuối tuần chiều / tối
+        const density = 45;
+        return {
+          day,
+          timeString,
+          density,
+          level: 'Mức xanh an toàn',
+          statusType: 'success',
+          statusBadge: 'Thông thoáng',
+          headline: `Lăng Bác: Lưu lượng ổn định (${density}%) — Thư thái tham quan Nhà sàn & Ao cá`,
+          recommendation: 'Khuôn viên Phủ Chủ tịch và Nhà sàn Bác Hồ rợp bóng mát, không khí trong lành, rất thích hợp cho gia đình và đoàn tham quan.'
+        };
+      } else if (!isWeekend && hour >= 7 && hour < 17) {
+        // Ngày thường ban ngày
+        const density = 30;
+        return {
+          day,
+          timeString,
+          density,
+          level: 'Mức xanh an toàn',
+          statusType: 'success',
+          statusBadge: 'Rất thông thoáng',
+          headline: `Lăng Bác: Rất thông thoáng (${density}%) — Thuận tiện vào viếng`,
+          recommendation: 'Lưu lượng khách ngày thường ở mức thấp, không phải xếp hàng chờ lâu, thuận tiện tham quan Lăng và Bảo tàng Hồ Chí Minh.'
+        };
+      } else {
+        // Đêm muộn & sáng sớm
+        const density = 18;
+        return {
+          day,
+          timeString,
+          density,
+          level: 'Trang nghiêm - Thanh tịnh',
+          statusType: 'success',
+          statusBadge: 'Tuyệt đối thông thoáng',
+          headline: `Lăng Bác: Trang nghiêm & Thanh bình (${density}%) — Thời khắc thiêng liêng`,
+          recommendation: 'Quảng trường Ba Đình tĩnh lặng, trang trọng. Khuyến nghị có mặt lúc 06:00 xem Thượng cờ hoặc 21:00 xem Hạ cờ của đội tiêu binh danh dự.'
         };
       }
     }
@@ -532,12 +729,223 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     setTimeout(() => {
       this.setupScrollDrivenTabs();
       this.setupTouchSwipe();
-    }, 200);
+      this.initOrUpdatePlayer();
+    }, 250);
   }
+
+  private playbackMonitorInterval?: any;
 
   ngOnDestroy(): void {
     this.scrollObserver?.disconnect();
     clearTimeout(this.scrollTimeout);
+    if (this.playbackMonitorInterval) {
+      clearInterval(this.playbackMonitorInterval);
+    }
+    if (this.ytPlayer) {
+      try {
+        this.ytPlayer.destroy();
+      } catch (e) { }
+      this.ytPlayer = null;
+    }
+  }
+
+  loadYouTubeIframeApi(): void {
+    if (typeof window === 'undefined') return;
+
+    if ((window as any).YT && (window as any).YT.Player) {
+      this.isYouTubeApiLoaded = true;
+      this.initOrUpdatePlayer();
+      return;
+    }
+
+    const prevCallback = (window as any).onYouTubeIframeAPIReady;
+    (window as any).onYouTubeIframeAPIReady = () => {
+      if (typeof prevCallback === 'function') {
+        try { prevCallback(); } catch (e) { }
+      }
+      this.isYouTubeApiLoaded = true;
+      this.initOrUpdatePlayer();
+    };
+
+    if (!document.getElementById('youtube-iframe-api-script')) {
+      const tag = document.createElement('script');
+      tag.id = 'youtube-iframe-api-script';
+      tag.src = 'https://www.youtube.com/iframe_api';
+      document.head.appendChild(tag);
+    }
+  }
+
+  @HostListener('window:resize')
+  onWindowResize(): void {
+    this.syncPlayerDimensions();
+  }
+
+  syncPlayerDimensions(): void {
+    if (typeof window === 'undefined' || this.isVideoTikTok()) return;
+
+    const container = document.querySelector('.video-iframe-wrapper') as HTMLElement;
+    const iframe = document.getElementById('yt-hero-player') as HTMLElement;
+    if (!container || !iframe) return;
+
+    // Eliminate fixed 640x360 inline styles and attributes injected by YouTube API
+    iframe.removeAttribute('width');
+    iframe.removeAttribute('height');
+
+    const cWidth = container.clientWidth;
+    const cHeight = container.clientHeight;
+    if (!cWidth || !cHeight) return;
+
+    const containerRatio = cWidth / cHeight;
+    const targetRatio = 16 / 9;
+
+    let finalWidth: number;
+    let finalHeight: number;
+
+    // Scale-to-fill: make the iframe LARGER than the container
+    // so video covers 100% with overflow hidden clipping the excess
+    if (containerRatio > targetRatio) {
+      // Container is wider than 16:9 → match width, grow height
+      finalWidth = cWidth;
+      finalHeight = Math.ceil(cWidth / targetRatio);
+    } else {
+      // Container is taller than 16:9 → match height, grow width
+      finalHeight = cHeight;
+      finalWidth = Math.ceil(cHeight * targetRatio);
+    }
+
+    // Apply 8% overscan margin to eliminate any thin black edges
+    finalWidth = Math.ceil(finalWidth * 1.08);
+    finalHeight = Math.ceil(finalHeight * 1.08);
+
+    iframe.style.position = 'absolute';
+    iframe.style.top = '50%';
+    iframe.style.left = '50%';
+    iframe.style.transform = 'translate(-50%, -50%)';
+    iframe.style.width = `${finalWidth}px`;
+    iframe.style.height = `${finalHeight}px`;
+    iframe.style.minWidth = `${cWidth}px`;
+    iframe.style.minHeight = `${cHeight}px`;
+    iframe.style.border = '0';
+    iframe.style.margin = '0';
+    iframe.style.padding = '0';
+    iframe.style.display = 'block';
+
+    if (this.ytPlayer && typeof this.ytPlayer.setSize === 'function') {
+      try {
+        this.ytPlayer.setSize(finalWidth, finalHeight);
+      } catch (e) {}
+    }
+  }
+
+  private startPlaybackMonitor(): void {
+    if (this.playbackMonitorInterval) clearInterval(this.playbackMonitorInterval);
+    this.playbackMonitorInterval = setInterval(() => {
+      if (this.ytPlayer && typeof this.ytPlayer.getCurrentTime === 'function' && typeof this.ytPlayer.getDuration === 'function') {
+        try {
+          const current = this.ytPlayer.getCurrentTime();
+          const duration = this.ytPlayer.getDuration();
+          if (duration > 5 && current >= duration - 0.7) {
+            this.handleVideoEnded();
+          }
+        } catch (e) {}
+      }
+    }, 500);
+  }
+
+  initOrUpdatePlayer(): void {
+    if (typeof window === 'undefined') return;
+    if (this.isVideoTikTok()) return;
+
+    const currentUrl = this.activeVideoId();
+    const ytId = extractYouTubeId(currentUrl);
+    if (!ytId) return;
+
+    if (!this.isYouTubeApiLoaded || !(window as any).YT || !(window as any).YT.Player) {
+      // API not yet ready; will be invoked when onYouTubeIframeAPIReady triggers
+      return;
+    }
+
+    // If player already exists, smoothly load the new video ID without tearing down DOM
+    if (this.ytPlayer && typeof this.ytPlayer.loadVideoById === 'function') {
+      try {
+        this.ytPlayer.loadVideoById(ytId);
+        this.ytPlayer.mute();
+        this.ytPlayer.playVideo();
+        setTimeout(() => this.syncPlayerDimensions(), 100);
+        return;
+      } catch (err) {
+        console.warn('Error loading video on existing YouTube player:', err);
+        try { this.ytPlayer.destroy(); } catch (e) { }
+        this.ytPlayer = null;
+      }
+    }
+
+    const container = document.getElementById('yt-hero-player');
+    if (!container) {
+      setTimeout(() => this.initOrUpdatePlayer(), 120);
+      return;
+    }
+
+    try {
+      this.ytPlayer = new (window as any).YT.Player('yt-hero-player', {
+        width: '100%',
+        height: '100%',
+        videoId: ytId,
+        playerVars: {
+          autoplay: 1,
+          mute: 1,
+          controls: 0,
+          modestbranding: 1,
+          disablekb: 1,
+          loop: 1,
+          playlist: ytId,
+          playsinline: 1,
+          rel: 0,
+          iv_load_policy: 3,
+          enablejsapi: 1
+        },
+        events: {
+          onReady: (event: any) => {
+            try {
+              event.target.mute();
+              event.target.playVideo();
+              this.syncPlayerDimensions();
+              this.startPlaybackMonitor();
+            } catch (e) { }
+          },
+          onStateChange: (event: any) => {
+            // YT.PlayerState.ENDED is 0
+            if (event.data === 0) {
+              this.handleVideoEnded();
+            } else if (event.data === 1) {
+              this.syncPlayerDimensions();
+            }
+          },
+          onError: (event: any) => {
+            console.warn('YouTube Player error event:', event.data);
+          }
+        }
+      });
+    } catch (err) {
+      console.warn('Error instantiating YouTube Player:', err);
+    }
+  }
+
+  handleVideoEnded(): void {
+    if (this.isAutoAdvancing) return;
+    this.isAutoAdvancing = true;
+    setTimeout(() => {
+      this.isAutoAdvancing = false;
+    }, 1500);
+
+    const currentId = this.selectedLocation();
+    const currentIndex = this.locationOptions.findIndex(loc => loc.id === currentId);
+    const nextIndex = (currentIndex + 1) % this.locationOptions.length;
+    const nextLoc = this.locationOptions[nextIndex];
+    if (nextLoc) {
+      // Auto-advance to next location without scrolling the user away
+      this.selectLocation(nextLoc.id, false);
+    }
   }
 
   setupScrollDrivenTabs(): void {
@@ -646,17 +1054,66 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     }, 850);
   }
 
-  selectLocation(locId: 'ho-guom' | 'ho-tay' | 'ba-dinh'): void {
+  /**
+   * Unified Location Selector:
+   * Used for both manual tab clicks and auto-advance when video ends.
+   */
+  selectLocation(locId: string, shouldScroll = false): void {
     this.selectedLocation.set(locId);
 
-    // Switch video angle to match the location for a dynamic luxury Mercedes background experience
-    if (locId === 'ho-guom') {
-      this.activeVideoId.set('T0xxOYuWKsQ');
-    } else if (locId === 'ho-tay') {
-      this.activeVideoId.set('DMlE4p_OYmw');
-    } else if (locId === 'ba-dinh') {
-      this.activeVideoId.set('8_ADNBqH7KE');
+    const loc = this.locationOptions.find(l => l.id === locId);
+    const videoUrl = loc?.videoUrl || '';
+    this.activeVideoId.set(videoUrl);
+
+    if (this.isVideoTikTok()) {
+      if (this.ytPlayer) {
+        try {
+          this.ytPlayer.destroy();
+        } catch (e) { }
+        this.ytPlayer = null;
+      }
+    } else {
+      this.initOrUpdatePlayer();
+      setTimeout(() => this.syncPlayerDimensions(), 120);
     }
+
+    if (shouldScroll) {
+      setTimeout(() => {
+        const hero = document.querySelector('.hero-video-section');
+        if (hero) {
+          hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 120);
+    }
+  }
+
+  selectLocationAndScroll(locId: string): void {
+    this.selectLocation(locId, true);
+
+    // Switch to Tab 1 if currently in another tab
+    if (this.activeTab !== 'tab1') {
+      this.tourismService.setActiveTab('tab1');
+    }
+
+    // Synchronize Google Maps focus for Control Fit
+    if (locId === 'ba-vi') {
+      this.selectMapLocation('Vuon+Quoc+Gia+Ba+Vi+Ha+Noi', 'Vườn Quốc gia Ba Vì (Huyện Ba Vì)');
+    } else if (locId === 'dai-lai') {
+      this.selectMapLocation('Ho+Dai+Lai+Flamingo+Vinh+Phuc', 'Hồ Đại Lải & Flamingo (Phúc Yên)');
+    } else if (locId === 'lang-bac') {
+      this.selectMapLocation('Lang+Chu+tich+Ho+Chi+Minh+Ha+Noi', 'Lăng Chủ tịch Hồ Chí Minh (Quận Ba Đình)');
+    } else if (locId === 'ho-guom') {
+      this.selectMapLocation('Ho+Guom+Hoan+Kiem+Ha+Noi', 'Hồ Gươm & Phố Cổ (Quận Hoàn Kiếm)');
+    } else if (locId === 'ho-tay') {
+      this.selectMapLocation('Ho+Tay+Tay+Ho+Ha+Noi', 'Hồ Tây & Trúc Bạch (Quận Tây Hồ)');
+    } else if (locId === 'ba-dinh') {
+      this.selectMapLocation('Hoang+Thanh+Thang+Long+Ba+Dinh', 'Hoàng Thành Thăng Long (Quận Ba Đình)');
+    }
+  }
+
+  isVideoTikTok(): boolean {
+    const id = this.activeVideoId();
+    return !!id && (id.includes('tiktok.com') || /^\d{15,}$/.test(id));
   }
 
   selectDay(day: string): void {

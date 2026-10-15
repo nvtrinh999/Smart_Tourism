@@ -11,6 +11,16 @@ export interface OffPeakRecommendation {
   badge: string;
 }
 
+export interface FlycamLocation {
+  id: string;
+  name: string;
+  shortName: string;
+  district: string;
+  icon: string;
+  videoUrl: string;
+  coordinates?: [number, number];
+}
+
 export interface AlternativeDestination {
   id: string;
   name: string;
@@ -112,10 +122,13 @@ export interface HeritageAudio {
 }
 
 export interface Tab1LocationData {
-  id: 'ho-guom' | 'ho-tay' | 'ba-dinh';
+  id: 'ho-guom' | 'ho-tay' | 'ba-dinh' | 'lang-bac' | string;
   warningArea: string;
   shortName?: string;
   district: string;
+  coordinates?: [number, number];
+  videoUrl?: string;
+  mapQuery?: string;
   peakStatus: {
     day: string;
     timeRange: string;
@@ -144,6 +157,7 @@ export interface TourismData {
       warning: string;
     };
   };
+  flycam_locations?: FlycamLocation[];
   tab1_crowd: Tab1LocationData;
   tab1_locations?: Record<string, Tab1LocationData>;
   tab2_suburbs: {
