@@ -1,0 +1,140 @@
+<div class="mobile-heritage-page" *ngIf="heritage() as item">
+
+  <!-- 1. HEADER GỌN NHẸ KÈM NÚT QUAY VỀ TRANG CHỦ (3 TAB) -->
+  <header class="mobile-header">
+    <button class="btn-back-home" (click)="goBackHome('tab3')">
+      <i class="fa-solid fa-arrow-left"></i>
+      <span>Trang chủ (3 Tab)</span>
+    </button>
+    <div class="mobile-header-brand">
+      <span class="brand-sub">HÀ NỘI SMART TOURISM</span>
+      <span class="brand-tag">Thuyết Minh Di Sản Số</span>
+    </div>
+    <div class="mobile-header-actions">
+      <button class="btn-theme-toggle-sm" (click)="themeService.toggleTheme()" [title]="themeService.theme() === 'light' ? 'Chế độ Tối' : 'Chế độ Sáng'">
+        <i *ngIf="themeService.theme() === 'light'" class="fa-solid fa-moon"></i>
+        <i *ngIf="themeService.theme() === 'dark'" class="fa-solid fa-sun"></i>
+      </button>
+      <button class="btn-share" (click)="copyLink()" title="Sao chép liên kết">
+        <i class="fa-solid" [class.fa-check]="copiedShareLink()" [class.fa-share-nodes]="!copiedShareLink()"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- 2. ẢNH BÌA ĐỊA DANH / DI TÍCH CHẤT LƯỢNG CAO & TIÊU ĐỀ -->
+  <div class="hero-cover-container">
+    <img [src]="item.coverImage" [alt]="item.title" class="hero-cover-img">
+    <div class="hero-cover-overlay"></div>
+    
+    <div class="hero-meta-overlay">
+      <div class="meta-tag-row">
+        <span class="badge-status accent"><i class="fa-solid fa-landmark"></i> {{ item.heritageSite }}</span>
+        <span class="badge-status primary"><i class="fa-solid fa-clock"></i> {{ item.durationFormatted }}</span>
+      </div>
+      <h1 class="hero-title">{{ item.title }}</h1>
+      <div class="narrator-meta">
+        <i class="fa-solid fa-microphone-lines text-gold"></i>
+        <span>Giọng đọc: <strong>{{ item.narrator }}</strong></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. TRÌNH PHÁT AUDIO CỐ ĐỊNH (STICKY AUDIO PLAYER - High Contrast Mercedes-Benz Style) -->
+  <div class="sticky-audio-player-wrapper">
+    <div class="sticky-player-container">
+      
+      <!-- Big Play Button (Pure White #FAFAFA, Black #09090B Icon, Zero Glow) -->
+      <button 
+        class="big-tap-play-btn" 
+        [class.playing]="isCurrentPlaying"
+        (click)="toggleAudio()"
+        [title]="isCurrentPlaying ? 'Tạm dừng audio' : 'Phát audio thuyết minh'">
+        <i *ngIf="!isCurrentPlaying" class="fa-solid fa-play"></i>
+        <i *ngIf="isCurrentPlaying" class="fa-solid fa-pause"></i>
+      </button>
+
+      <!-- Player Content & Progress Scrubber -->
+      <div class="player-controls-area">
+        <div class="player-info-line">
+          <span class="player-status-text">
+            <span class="playing-pulse-dot" *ngIf="isCurrentPlaying"></span>
+            {{ isCurrentPlaying ? 'Đang phát thuyết minh' : 'Chạm để nghe đoạn thu âm' }}
+          </span>
+          <span class="player-time-count">
+            {{ tourismService.currentPlayingId() === item.id ? formatTime(tourismService.currentTime()) : '00:00' }} / {{ item.durationFormatted }}
+          </span>
+        </div>
+
+        <!-- Dynamic Waveform Bar Animation -->
+        <div class="audio-waves" [class.active-waves]="isCurrentPlaying">
+          <span *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18]" class="wave-stick"></span>
+        </div>
+
+        <!-- Touch Scrubber Slider -->
+        <input 
+          type="range" 
+          class="mobile-touch-slider"
+          min="0" 
+          [max]="item.durationSeconds"
+          [value]="tourismService.currentPlayingId() === item.id ? tourismService.currentTime() : 0"
+          (input)="tourismService.seekAudio(+$any($event.target).value)">
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 4. NỘI DUNG BÀI VIẾT THUYẾT MINH CHI TIẾT TRÌNH BÀY RÕ RÀNG, DỄ CUỘN ĐỌC -->
+  <main class="mobile-reading-container">
+    
+    <!-- Group Audio Info Note -->
+    <div class="audio-attribution-box">
+      <i class="fa-solid fa-circle-check text-gold"></i>
+      <span>Đoạn âm thanh <strong>{{ item.durationFormatted }}</strong> do các thành viên nhóm tự nghiên cứu và thu âm phục vụ số hóa du lịch.</span>
+    </div>
+
+    <!-- Article Lead / Intro -->
+    <div class="article-lead-card">
+      <p class="lead-quote">"{{ item.article.lead }}"</p>
+    </div>
+
+    <!-- Article Sections -->
+    <article class="article-body">
+      <section *ngFor="let sec of item.article.sections" class="article-section-block">
+        <h3 class="section-heading">{{ sec.heading }}</h3>
+        <p class="section-paragraph">{{ sec.content }}</p>
+      </section>
+    </article>
+
+    <!-- OTHER HERITAGE AUDIO STORIES SWITCHER -->
+    <div class="other-audios-section">
+      <h4 class="other-audios-title">
+        <i class="fa-solid fa-compass text-gold"></i> Khám Phá Các Di Tích Khác
+      </h4>
+      <div class="other-audios-list">
+        <div 
+          *ngFor="let aud of allAudios()" 
+          class="other-audio-card"
+          [class.current]="aud.id === item.id"
+          (click)="switchHeritage(aud.slug)">
+          <img [src]="aud.coverImage" [alt]="aud.title" class="other-audio-img">
+          <div class="other-audio-info">
+            <span class="other-tag">{{ aud.heritageSite }}</span>
+            <h5 class="other-name">{{ aud.title }}</h5>
+            <span class="other-duration"><i class="fa-solid fa-headphones"></i> {{ aud.durationFormatted }}</span>
+          </div>
+          <i class="fa-solid fa-chevron-right other-arrow"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM ACTION BUTTONS -->
+    <div class="mobile-footer-actions">
+      <button class="btn-return-all" (click)="goBackHome('tab1')">
+        <i class="fa-solid fa-house"></i>
+        <span>Về trang chủ khám phá cả 3 Tab</span>
+      </button>
+    </div>
+
+  </main>
+
+</div>

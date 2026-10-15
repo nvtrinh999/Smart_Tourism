@@ -1,0 +1,2045 @@
+{
+  "system": {
+    "title": "Hà Nội Smart Tourism",
+    "subtitle": "Cổng Điều Tiết Du Khách & Trải Nghiệm Di Sản Số Thủ Đô",
+    "theme": {
+      "primary": "#FAFAFA",
+      "primaryDark": "#E4E4E7",
+      "accent": "#C5A059",
+      "accentDark": "#A6823B",
+      "danger": "#EF4444",
+      "success": "#10B981",
+      "warning": "#F59E0B"
+    }
+  },
+  "tab1_crowd": {
+    "id": "ho-guom",
+    "warningArea": "Hồ Gươm & Phố Cổ Hà Nội",
+    "district": "Quận Hoàn Kiếm",
+    "peakStatus": {
+      "day": "Thứ Bảy",
+      "timeRange": "19:00 - 21:00",
+      "density": 95,
+      "level": "Quá tải nghiêm trọng (Báo động đỏ)",
+      "statusType": "danger",
+      "statusBadge": "Cực đại - Nên tránh!",
+      "message": "Hồ Gươm & Phố Cổ: Đang quá tải (95%) — Khuyến nghị đổi khung giờ hoặc chọn điểm đến thay thế"
+    },
+    "offPeakRecommendations": [
+      {
+        "timeRange": "06:30 - 08:30",
+        "description": "Sáng sớm trong lành, không gian phố cổ thanh bình, thích hợp đi dạo và thưởng thức phở truyền thống.",
+        "avgDensity": 25,
+        "badge": "Lý tưởng nhất"
+      },
+      {
+        "timeRange": "14:00 - 16:00",
+        "description": "Đầu giờ chiều ngày thường, phố cổ thưa thoáng, thuận lợi chụp ảnh check-in và ghé thăm hội quán di tích.",
+        "avgDensity": 38,
+        "badge": "Thông thoáng"
+      }
+    ],
+    "weeklySchedule": {
+      "Thứ Hai": [
+        {
+          "hour": "06:00",
+          "density": 15,
+          "label": "Vắng"
+        },
+        {
+          "hour": "08:00",
+          "density": 35,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "10:00",
+          "density": 45,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "12:00",
+          "density": 40,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "14:00",
+          "density": 35,
+          "label": "Lý tưởng"
+        },
+        {
+          "hour": "16:00",
+          "density": 50,
+          "label": "Đông nhẹ"
+        },
+        {
+          "hour": "18:00",
+          "density": 65,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "20:00",
+          "density": 60,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "22:00",
+          "density": 30,
+          "label": "Vắng"
+        }
+      ],
+      "Thứ Ba": [
+        {
+          "hour": "06:00",
+          "density": 15,
+          "label": "Vắng"
+        },
+        {
+          "hour": "08:00",
+          "density": 30,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "10:00",
+          "density": 42,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "12:00",
+          "density": 38,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "14:00",
+          "density": 32,
+          "label": "Lý tưởng"
+        },
+        {
+          "hour": "16:00",
+          "density": 48,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "18:00",
+          "density": 62,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "20:00",
+          "density": 65,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "22:00",
+          "density": 28,
+          "label": "Vắng"
+        }
+      ],
+      "Thứ Tư": [
+        {
+          "hour": "06:00",
+          "density": 18,
+          "label": "Vắng"
+        },
+        {
+          "hour": "08:00",
+          "density": 34,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "10:00",
+          "density": 45,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "12:00",
+          "density": 40,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "14:00",
+          "density": 35,
+          "label": "Lý tưởng"
+        },
+        {
+          "hour": "16:00",
+          "density": 52,
+          "label": "Đông nhẹ"
+        },
+        {
+          "hour": "18:00",
+          "density": 68,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "20:00",
+          "density": 70,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "22:00",
+          "density": 35,
+          "label": "Vắng"
+        }
+      ],
+      "Thứ Năm": [
+        {
+          "hour": "06:00",
+          "density": 20,
+          "label": "Vắng"
+        },
+        {
+          "hour": "08:00",
+          "density": 38,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "10:00",
+          "density": 48,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "12:00",
+          "density": 42,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "14:00",
+          "density": 36,
+          "label": "Lý tưởng"
+        },
+        {
+          "hour": "16:00",
+          "density": 55,
+          "label": "Đông nhẹ"
+        },
+        {
+          "hour": "18:00",
+          "density": 72,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "20:00",
+          "density": 75,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "22:00",
+          "density": 40,
+          "label": "Bình thường"
+        }
+      ],
+      "Thứ Sáu": [
+        {
+          "hour": "06:00",
+          "density": 22,
+          "label": "Vắng"
+        },
+        {
+          "hour": "08:00",
+          "density": 40,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "10:00",
+          "density": 55,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "12:00",
+          "density": 50,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "14:00",
+          "density": 48,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "16:00",
+          "density": 65,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "18:00",
+          "density": 82,
+          "label": "Đông đúc"
+        },
+        {
+          "hour": "20:00",
+          "density": 88,
+          "label": "Đông đúc"
+        },
+        {
+          "hour": "22:00",
+          "density": 60,
+          "label": "Đông vừa"
+        }
+      ],
+      "Thứ Bảy": [
+        {
+          "hour": "06:00",
+          "density": 25,
+          "label": "Lý tưởng"
+        },
+        {
+          "hour": "08:00",
+          "density": 58,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "10:00",
+          "density": 72,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "12:00",
+          "density": 65,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "14:00",
+          "density": 70,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "16:00",
+          "density": 80,
+          "label": "Đông đúc"
+        },
+        {
+          "hour": "18:00",
+          "density": 90,
+          "label": "Quá tải"
+        },
+        {
+          "hour": "20:00",
+          "density": 95,
+          "label": "Cực đại - Nên tránh!"
+        },
+        {
+          "hour": "22:00",
+          "density": 78,
+          "label": "Đông vừa"
+        }
+      ],
+      "Chủ Nhật": [
+        {
+          "hour": "06:00",
+          "density": 28,
+          "label": "Lý tưởng"
+        },
+        {
+          "hour": "08:00",
+          "density": 62,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "10:00",
+          "density": 78,
+          "label": "Đông đúc"
+        },
+        {
+          "hour": "12:00",
+          "density": 68,
+          "label": "Bình thường"
+        },
+        {
+          "hour": "14:00",
+          "density": 75,
+          "label": "Đông vừa"
+        },
+        {
+          "hour": "16:00",
+          "density": 85,
+          "label": "Quá tải"
+        },
+        {
+          "hour": "18:00",
+          "density": 92,
+          "label": "Quá tải"
+        },
+        {
+          "hour": "20:00",
+          "density": 91,
+          "label": "Quá tải"
+        },
+        {
+          "hour": "22:00",
+          "density": 65,
+          "label": "Đông vừa"
+        }
+      ]
+    },
+    "alternativeDestinations": [
+      {
+        "id": "thong-nhat-park",
+        "name": "Công viên Thống Nhất",
+        "category": "Không gian mở xanh mát",
+        "badge": "Rất thông thoáng",
+        "density": 22,
+        "distance": "2.3 km từ Hồ Gươm",
+        "image": "assets/images/thong-nhat-park.jpg",
+        "description": "Lá phổi xanh rộng hơn 50 hecta với hồ Bảy Mẫu thoáng mát, đường dạo ven hồ rợp bóng cây, phù hợp dã ngoại và thư giãn cuối tuần không chen chúc.",
+        "highlights": [
+          "Hồ Bảy Mẫu lộng gió",
+          "Đạp vịt ngắm hoàng hôn",
+          "Đường chạy bộ bóng mát"
+        ],
+        "mapUrl": "https://maps.google.com/?q=Cong+vien+Thong+Nhat+Ha+Noi"
+      },
+      {
+        "id": "national-library",
+        "name": "Thư viện Quốc gia Việt Nam",
+        "category": "Không gian văn hóa & Di sản yên tĩnh",
+        "badge": "Thông thoáng - Yên bình",
+        "density": 18,
+        "distance": "600m từ Hồ Gươm (31 Tràng Thi)",
+        "image": "assets/images/national-library.jpg",
+        "description": "Tòa kiến trúc Pháp cổ kính sang trọng được bao quanh bởi sân vườn rợp bóng cổ thụ. Nơi tuyệt vời để đọc sách, làm việc hoặc ngắm nhìn kiến trúc thanh lịch.",
+        "highlights": [
+          "Kiến trúc Pháp cổ 1917",
+          "Sân vườn rợp bóng xà cừ",
+          "Góc đọc sách yên tĩnh"
+        ],
+        "mapUrl": "https://maps.google.com/?q=Thu+vien+Quoc+gia+Viet+Nam+31+Trang+Thi"
+      },
+      {
+        "id": "quiet-cafe",
+        "name": "Tổ hợp Cà phê Yên tĩnh Phan Đình Phùng",
+        "category": "Góc cà phê thư giãn vintage",
+        "badge": "Thư thái, dễ chịu",
+        "density": 32,
+        "distance": "1.8 km từ Hồ Gươm (Trần Phú - Phan Đình Phùng)",
+        "image": "assets/images/quiet-cafe.jpg",
+        "description": "Những quán cà phê nép mình dưới hàng sấu cổ thụ đường Phan Đình Phùng và Trần Phú với giàn cây leo, ban công gỗ và âm nhạc mộc mạc lắng đọng.",
+        "highlights": [
+          "Cà phê trứng truyền thống",
+          "Ban công nhìn phố rợp lá vàng",
+          "Kệ sách văn học nghệ thuật"
+        ],
+        "mapUrl": "https://maps.google.com/?q=Phan+Dinh+Phung+Hanoi"
+      }
+    ]
+  },
+  "tab1_locations": {
+    "ho-guom": {
+      "id": "ho-guom",
+      "warningArea": "Hồ Gươm & Phố Cổ Hà Nội",
+      "district": "Quận Hoàn Kiếm",
+      "peakStatus": {
+        "day": "Thứ Bảy",
+        "timeRange": "19:00 - 21:00",
+        "density": 95,
+        "level": "Quá tải nghiêm trọng (Báo động đỏ)",
+        "statusType": "danger",
+        "statusBadge": "Cực đại - Nên tránh!",
+        "message": "Hồ Gươm & Phố Cổ: Đang quá tải (95%) — Khuyến nghị đổi khung giờ hoặc chọn điểm đến thay thế"
+      },
+      "offPeakRecommendations": [
+        {
+          "timeRange": "06:30 - 08:30",
+          "description": "Sáng sớm trong lành, không gian phố cổ thanh bình, thích hợp đi dạo ven hồ và thưởng thức phở truyền thống.",
+          "avgDensity": 25,
+          "badge": "Lý tưởng nhất"
+        },
+        {
+          "timeRange": "14:00 - 16:00",
+          "description": "Đầu giờ chiều ngày thường, phố cổ thưa thoáng, thuận lợi chụp ảnh check-in và ghé thăm hội quán di tích.",
+          "avgDensity": 38,
+          "badge": "Thông thoáng"
+        }
+      ],
+      "weeklySchedule": {
+        "Thứ Hai": [
+          {
+            "hour": "06:00",
+            "density": 15,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 35,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 35,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 50,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "18:00",
+            "density": 65,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 60,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 30,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Ba": [
+          {
+            "hour": "06:00",
+            "density": 15,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 42,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 38,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 32,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 62,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 65,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 28,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Tư": [
+          {
+            "hour": "06:00",
+            "density": 18,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 34,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 35,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 52,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "18:00",
+            "density": 68,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 70,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 35,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Năm": [
+          {
+            "hour": "06:00",
+            "density": 20,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 38,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 42,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 36,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 55,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "18:00",
+            "density": 72,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 75,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 40,
+            "label": "Bình thường"
+          }
+        ],
+        "Thứ Sáu": [
+          {
+            "hour": "06:00",
+            "density": 22,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 55,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 50,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 65,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "18:00",
+            "density": 82,
+            "label": "Đông đúc"
+          },
+          {
+            "hour": "20:00",
+            "density": 88,
+            "label": "Đông đúc"
+          },
+          {
+            "hour": "22:00",
+            "density": 60,
+            "label": "Đông vừa"
+          }
+        ],
+        "Thứ Bảy": [
+          {
+            "hour": "06:00",
+            "density": 25,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 58,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 72,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "12:00",
+            "density": 65,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 70,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "16:00",
+            "density": 80,
+            "label": "Đông đúc"
+          },
+          {
+            "hour": "18:00",
+            "density": 90,
+            "label": "Quá tải"
+          },
+          {
+            "hour": "20:00",
+            "density": 95,
+            "label": "Cực đại - Nên tránh!"
+          },
+          {
+            "hour": "22:00",
+            "density": 78,
+            "label": "Đông vừa"
+          }
+        ],
+        "Chủ Nhật": [
+          {
+            "hour": "06:00",
+            "density": 28,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 62,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "10:00",
+            "density": 78,
+            "label": "Đông đúc"
+          },
+          {
+            "hour": "12:00",
+            "density": 68,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 75,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "16:00",
+            "density": 85,
+            "label": "Quá tải"
+          },
+          {
+            "hour": "18:00",
+            "density": 92,
+            "label": "Quá tải"
+          },
+          {
+            "hour": "20:00",
+            "density": 91,
+            "label": "Quá tải"
+          },
+          {
+            "hour": "22:00",
+            "density": 65,
+            "label": "Đông vừa"
+          }
+        ]
+      },
+      "alternativeDestinations": [
+        {
+          "id": "thong-nhat-park",
+          "name": "Công viên Thống Nhất",
+          "category": "Không gian mở xanh mát",
+          "badge": "Rất thông thoáng",
+          "density": 22,
+          "distance": "2.3 km từ Hồ Gươm",
+          "image": "assets/images/thong-nhat-park.jpg",
+          "description": "Lá phổi xanh rộng hơn 50 hecta với hồ Bảy Mẫu thoáng mát, đường dạo ven hồ rợp bóng cây, phù hợp dã ngoại và thư giãn cuối tuần không chen chúc.",
+          "highlights": [
+            "Hồ Bảy Mẫu lộng gió",
+            "Đạp vịt ngắm hoàng hôn",
+            "Đường chạy bộ bóng mát"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Cong+vien+Thong+Nhat+Ha+Noi"
+        },
+        {
+          "id": "national-library",
+          "name": "Thư viện Quốc gia Việt Nam",
+          "category": "Không gian văn hóa & Di sản yên tĩnh",
+          "badge": "Thông thoáng - Yên bình",
+          "density": 18,
+          "distance": "600m từ Hồ Gươm (31 Tràng Thi)",
+          "image": "assets/images/national-library.jpg",
+          "description": "Tòa kiến trúc Pháp cổ kính sang trọng được bao quanh bởi sân vườn rợp bóng cổ thụ. Nơi tuyệt vời để đọc sách, làm việc hoặc ngắm nhìn kiến trúc thanh lịch.",
+          "highlights": [
+            "Kiến trúc Pháp cổ 1917",
+            "Sân vườn rợp bóng xà cừ",
+            "Góc đọc sách yên tĩnh"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Thu+vien+Quoc+gia+Viet+Nam+31+Trang+Thi"
+        },
+        {
+          "id": "quiet-cafe",
+          "name": "Tổ hợp Cà phê Yên tĩnh Phan Đình Phùng",
+          "category": "Góc cà phê thư giãn vintage",
+          "badge": "Thư thái, dễ chịu",
+          "density": 32,
+          "distance": "1.8 km từ Hồ Gươm (Trần Phú - Phan Đình Phùng)",
+          "image": "assets/images/quiet-cafe.jpg",
+          "description": "Những quán cà phê nép mình dưới hàng sấu cổ thụ đường Phan Đình Phùng và Trần Phú với giàn cây leo, ban công gỗ và âm nhạc mộc mạc lắng đọng.",
+          "highlights": [
+            "Cà phê trứng truyền thống",
+            "Ban công nhìn phố rợp lá vàng",
+            "Kệ sách văn học nghệ thuật"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Phan+Dinh+Phung+Hanoi"
+        }
+      ]
+    },
+    "ho-tay": {
+      "id": "ho-tay",
+      "warningArea": "Hồ Tây & Bán đảo Trúc Bạch",
+      "district": "Quận Tây Hồ & Ba Đình",
+      "peakStatus": {
+        "day": "Chủ Nhật",
+        "timeRange": "16:30 - 18:30",
+        "density": 78,
+        "level": "Đông đúc giờ hoàng hôn (Cảnh báo cam)",
+        "statusType": "warning",
+        "statusBadge": "Giờ cao điểm hoàng hôn",
+        "message": "Hồ Tây & Trúc Bạch: Đông đúc giờ hoàng hôn (78%) — Đoạn đường Thanh Niên & Trích Sài ùn ứ nhẹ, khuyến nghị sang ven hồ phía bắc"
+      },
+      "offPeakRecommendations": [
+        {
+          "timeRange": "06:00 - 08:30",
+          "description": "Bình minh lộng gió ven hồ Tây, không khí mát lành lý tưởng cho đạp xe, chạy bộ và thư thái ăn sáng ven hồ Trúc Bạch.",
+          "avgDensity": 20,
+          "badge": "Cực kỳ lý tưởng"
+        },
+        {
+          "timeRange": "12:00 - 15:00",
+          "description": "Đầu giờ chiều nắng êm, các quán trà sen và cà phê ven hồ Trúc Bạch tĩnh lặng, thích hợp làm việc và thư giãn yên bình.",
+          "avgDensity": 32,
+          "badge": "Yên tĩnh - Thoáng đãng"
+        }
+      ],
+      "weeklySchedule": {
+        "Thứ Hai": [
+          {
+            "hour": "06:00",
+            "density": 18,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 25,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 32,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 35,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 55,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 50,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "22:00",
+            "density": 35,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Ba": [
+          {
+            "hour": "06:00",
+            "density": 18,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 24,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 28,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 32,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 44,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 52,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "22:00",
+            "density": 30,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Tư": [
+          {
+            "hour": "06:00",
+            "density": 20,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 26,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 32,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 36,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 58,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 52,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "22:00",
+            "density": 32,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Năm": [
+          {
+            "hour": "06:00",
+            "density": 20,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 28,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 32,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 35,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 38,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 52,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "18:00",
+            "density": 62,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 55,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "22:00",
+            "density": 35,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Sáu": [
+          {
+            "hour": "06:00",
+            "density": 22,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 30,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 36,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 62,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "18:00",
+            "density": 70,
+            "label": "Đông đúc"
+          },
+          {
+            "hour": "20:00",
+            "density": 68,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 48,
+            "label": "Bình thường"
+          }
+        ],
+        "Thứ Bảy": [
+          {
+            "hour": "06:00",
+            "density": 25,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 42,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 52,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "16:00",
+            "density": 70,
+            "label": "Đông đúc"
+          },
+          {
+            "hour": "18:00",
+            "density": 74,
+            "label": "Cao điểm hoàng hôn"
+          },
+          {
+            "hour": "20:00",
+            "density": 68,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 50,
+            "label": "Bình thường"
+          }
+        ],
+        "Chủ Nhật": [
+          {
+            "hour": "06:00",
+            "density": 25,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 50,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 46,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 56,
+            "label": "Đông nhẹ"
+          },
+          {
+            "hour": "16:00",
+            "density": 75,
+            "label": "Đông đúc"
+          },
+          {
+            "hour": "18:00",
+            "density": 78,
+            "label": "Cao điểm hoàng hôn"
+          },
+          {
+            "hour": "20:00",
+            "density": 65,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "22:00",
+            "density": 42,
+            "label": "Bình thường"
+          }
+        ]
+      },
+      "alternativeDestinations": [
+        {
+          "id": "quang-ba-flower",
+          "name": "Không gian Vườn hoa Bãi bồi Nhật Tân",
+          "category": "Vành đai hoa cỏ & Không gian xanh ven sông",
+          "badge": "Rất thông thoáng",
+          "density": 22,
+          "distance": "3.5 km từ Trúc Bạch (Âu Cơ - Nhật Tân)",
+          "image": "assets/images/thong-nhat-park.jpg",
+          "description": "Khu vực bãi bồi ven sông Hồng với không gian lộng gió, những luống hoa cúc họa mi và vườn đào xanh biếc, không khí khoáng đạt tách biệt khói bụi.",
+          "highlights": [
+            "Bãi bồi sông Hồng thoáng đãng",
+            "Vườn hoa chụp ảnh thơ mộng",
+            "Gió sông mát rượi quanh năm"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Vuon+hoa+Nhat+Tan+Ha+Noi"
+        },
+        {
+          "id": "pho-linh-pagoda",
+          "name": "Chùa Phổ Linh & Bán đảo Quảng An",
+          "category": "Không gian tâm linh & Văn hóa Trà Sen",
+          "badge": "Thanh tịnh - Yên bình",
+          "density": 16,
+          "distance": "2.1 km từ Trúc Bạch (Đặng Thai Mai)",
+          "image": "assets/images/national-library.jpg",
+          "description": "Ngôi chùa cổ kính thế kỷ XI ẩn mình bên những đầm sen bán đảo Quảng An. Không gian thanh tịnh với tiếng chuông gió và hương sen êm dịu.",
+          "highlights": [
+            "Chùa cổ thế kỷ XI thanh tịnh",
+            "Đầm sen thơm ngát Quảng An",
+            "Trải nghiệm thưởng trà sen"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Chua+Pho+Linh+Quang+An"
+        },
+        {
+          "id": "nguyen-dinh-thi-walk",
+          "name": "Tuyến đường dạo ven hồ Nguyễn Đình Thi",
+          "category": "Cung đường đi dạo & Cà phê mặt nước",
+          "badge": "Thư thái, thoáng gió",
+          "density": 28,
+          "distance": "1.2 km từ Trúc Bạch",
+          "image": "assets/images/quiet-cafe.jpg",
+          "description": "Đoạn đường dạo uốn lượn rợp bóng cây liễu, tầm nhìn bao trọn mặt nước hồ Tây mênh mông, nhiều góc ngồi cà phê ngắm cảnh yên bình.",
+          "highlights": [
+            "Tầm nhìn panorama hồ Tây",
+            "Quán cà phê mộc mạc sát mép nước",
+            "Không khí lộng gió tự nhiên"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Duong+Nguyen+Dinh+Thi+Ha+Noi"
+        }
+      ]
+    },
+    "ba-dinh": {
+      "id": "ba-dinh",
+      "warningArea": "Hoàng Thành Thăng Long & Quảng trường Ba Đình",
+      "district": "Quận Ba Đình",
+      "peakStatus": {
+        "day": "Thứ Bảy",
+        "timeRange": "08:30 - 10:30",
+        "density": 58,
+        "level": "Lưu lượng ổn định (Mức xanh an toàn)",
+        "statusType": "success",
+        "statusBadge": "Thông thoáng - Thuận tiện",
+        "message": "Hoàng Thành & Ba Đình: Lưu lượng ổn định (58%) — Không gian di sản xanh thoáng mát, di chuyển thuận lợi và lý tưởng cho tour văn hóa"
+      },
+      "offPeakRecommendations": [
+        {
+          "timeRange": "07:00 - 08:30",
+          "description": "Buổi sáng tinh khôi, ngắm lễ thượng cờ trang nghiêm và dạo bước dưới hàng cây xà cừ cổ thụ đường Hoàng Diệu.",
+          "avgDensity": 18,
+          "badge": "Lý tưởng nhất"
+        },
+        {
+          "timeRange": "13:30 - 16:00",
+          "description": "Buổi chiều râm mát, không gian Hoàng Thành Thăng Long thênh thang, thích hợp tham quan di chỉ khảo cổ và Đoan Môn.",
+          "avgDensity": 30,
+          "badge": "Thư thả khám phá"
+        }
+      ],
+      "weeklySchedule": {
+        "Thứ Hai": [
+          {
+            "hour": "06:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 22,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 28,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 25,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 26,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 35,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 38,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "20:00",
+            "density": 30,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 15,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Ba": [
+          {
+            "hour": "06:00",
+            "density": 12,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 28,
+            "label": "Vắng"
+          },
+          {
+            "hour": "10:00",
+            "density": 32,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 28,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 28,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 38,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "20:00",
+            "density": 32,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 16,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Tư": [
+          {
+            "hour": "06:00",
+            "density": 14,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 35,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 30,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 30,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 42,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "20:00",
+            "density": 34,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 18,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Năm": [
+          {
+            "hour": "06:00",
+            "density": 14,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 32,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 38,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 32,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 32,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 42,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "20:00",
+            "density": 36,
+            "label": "Vắng"
+          },
+          {
+            "hour": "22:00",
+            "density": 20,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Sáu": [
+          {
+            "hour": "06:00",
+            "density": 16,
+            "label": "Vắng"
+          },
+          {
+            "hour": "08:00",
+            "density": 38,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 44,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "12:00",
+            "density": 36,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 38,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "18:00",
+            "density": 52,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 42,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "22:00",
+            "density": 22,
+            "label": "Vắng"
+          }
+        ],
+        "Thứ Bảy": [
+          {
+            "hour": "06:00",
+            "density": 20,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 48,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 58,
+            "label": "Đông nhẹ - Giờ lễ viếng"
+          },
+          {
+            "hour": "12:00",
+            "density": 42,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 46,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 54,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "18:00",
+            "density": 56,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 45,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "22:00",
+            "density": 25,
+            "label": "Vắng"
+          }
+        ],
+        "Chủ Nhật": [
+          {
+            "hour": "06:00",
+            "density": 22,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "08:00",
+            "density": 46,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "10:00",
+            "density": 55,
+            "label": "Đông nhẹ - Giờ lễ viếng"
+          },
+          {
+            "hour": "12:00",
+            "density": 40,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "14:00",
+            "density": 48,
+            "label": "Lý tưởng"
+          },
+          {
+            "hour": "16:00",
+            "density": 52,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "18:00",
+            "density": 54,
+            "label": "Đông vừa"
+          },
+          {
+            "hour": "20:00",
+            "density": 42,
+            "label": "Bình thường"
+          },
+          {
+            "hour": "22:00",
+            "density": 24,
+            "label": "Vắng"
+          }
+        ]
+      },
+      "alternativeDestinations": [
+        {
+          "id": "bach-thao-park",
+          "name": "Công viên Bách Thảo Hà Nội",
+          "category": "Khu bảo tồn thực vật & Rừng nguyên sinh thu nhỏ",
+          "badge": "Rất thông thoáng",
+          "density": 15,
+          "distance": "800m từ Quảng trường Ba Đình (Hoàng Hoa Thám)",
+          "image": "assets/images/thong-nhat-park.jpg",
+          "description": "Khu vườn thực vật hơn 130 năm tuổi với đồi Khán Xuân, hồ Vị Danh và hàng ngàn cây gỗ quý rợp bóng, không gian mát mẻ tĩnh lặng bậc nhất thủ đô.",
+          "highlights": [
+            "Rừng cây cổ thụ trăm tuổi",
+            "Đồi Khán Xuân rợp bóng mát",
+            "Hồ nước và chim muông tự nhiên"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Cong+vien+Bach+Thao+Ha+Noi"
+        },
+        {
+          "id": "doan-mon-relic",
+          "name": "Khu di tích Đoan Môn & Khảo cổ 18 Hoàng Diệu",
+          "category": "Quần thể Di sản Văn hóa Thế giới UNESCO",
+          "badge": "Không gian di sản rộng lớn",
+          "density": 28,
+          "distance": "Ngay tại số 19C Hoàng Diệu",
+          "image": "assets/images/national-library.jpg",
+          "description": "Quần thể di sản nghìn năm với khuôn viên bãi cỏ xanh ngát, tháp Cột Cờ lịch sử và các hố khai quật khảo cổ mái ngói rồng thời Lý - Trần.",
+          "highlights": [
+            "Cổng Đoan Môn thành cổ",
+            "Hầm chỉ huy tác chiến T1",
+            "Trưng bày cổ vật nghìn năm"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Hoang+Thanh+Thang+Long"
+        },
+        {
+          "id": "hoang-dieu-boulevard",
+          "name": "Đại lộ di sản Hoàng Diệu & Phan Đình Phùng",
+          "category": "Tuyến phố di sản & Cà phê sân vườn cổ",
+          "badge": "Thư thái, dễ chịu",
+          "density": 20,
+          "distance": "Nối liền Ba Đình và Hoàng Thành",
+          "image": "assets/images/quiet-cafe.jpg",
+          "description": "Con đường rợp bóng hàng sấu cổ thụ đẹp bậc nhất thủ đô, với các biệt thự Pháp cổ kính, vỉa hè rộng thênh thang và những quán cà phê sân vườn yên ả.",
+          "highlights": [
+            "Hàng sấu 3 tầng lá vàng thơ mộng",
+            "Biệt thự kiến trúc Đông Dương",
+            "Cà phê dưới tán cây cổ thụ"
+          ],
+          "mapUrl": "https://maps.google.com/?q=Duong+Hoang+Dieu+Ha+Noi"
+        }
+      ]
+    }
+  },
+  "tab2_suburbs": {
+    "title": "Bản đồ số Vệ tinh & Làng nghề Hà Nội",
+    "description": "Khám phá các vành đai văn hóa di sản ven đô bằng phương tiện giao thông công cộng thông minh, tiết kiệm chi phí và thân thiện môi trường.",
+    "destinations": [
+      {
+        "id": "bat-trang",
+        "name": "Làng gốm Bát Tràng",
+        "district": "Huyện Gia Lâm, Hà Nội",
+        "distance": "14 km về phía Đông Nam",
+        "coords": {
+          "lat": 20.9786,
+          "lng": 105.9126
+        },
+        "image": "assets/images/bat-trang.jpg",
+        "summary": "Cái nôi gốm sứ truyền thống trên 700 năm bên bờ sông Hồng với kiệt tác kiến trúc 7 bàn xoay khổng lồ và hàng trăm xưởng gốm thủ công.",
+        "busRoute": "Tuyến 47A (Long Biên - Bát Tràng)",
+        "cost": "7.000đ / lượt",
+        "travelTime": "35 - 40 phút"
+      },
+      {
+        "id": "van-phuc",
+        "name": "Làng lụa Vạn Phúc",
+        "district": "Quận Hà Đông, Hà Nội",
+        "distance": "11 km về phía Tây Nam",
+        "coords": {
+          "lat": 20.9772,
+          "lng": 105.7725
+        },
+        "image": "assets/images/van-phuc.jpg",
+        "summary": "Thủ phủ lụa tơ tằm cổ kính hơn 1.000 năm với con đường ô dù rực rỡ sắc màu, tiếng thoi đưa nhịp nhàng và lụa vân mềm mại trứ danh.",
+        "busRoute": "Tuyến BRT 01 hoặc Tuyến Buýt 33, 19",
+        "cost": "7.000đ - 8.000đ / lượt",
+        "travelTime": "30 - 35 phút"
+      },
+      {
+        "id": "duong-lam",
+        "name": "Làng cổ Đường Lâm",
+        "district": "Thị xã Sơn Tây, Hà Nội",
+        "distance": "44 km về phía Tây",
+        "coords": {
+          "lat": 21.1448,
+          "lng": 105.4984
+        },
+        "image": "assets/images/duong-lam.jpg",
+        "summary": "Làng cổ đầu tiên được xếp hạng di tích quốc gia, đất hai vua với cổng làng Mông Phụ, tường đá ong màu gan gà và giếng nước đình làng ngàn năm.",
+        "busRoute": "Tuyến Xe Buýt 70A, 71 (Mỹ Đình - Sơn Tây)",
+        "cost": "20.000đ / lượt",
+        "travelTime": "60 - 75 phút"
+      }
+    ],
+    "surroundingDestinations": [
+      {
+        "id": "ba-vi",
+        "name": "Vườn Quốc gia Ba Vì",
+        "region": "west",
+        "regionLabel": "Phía Tây",
+        "location": "Sơn Tây - Hà Nội",
+        "distance": "Cách trung tâm Hà Nội khoảng 50km – 60km về phía Tây.",
+        "shortDistance": "50km – 60km • Phía Tây",
+        "description": "Thiên đường nghỉ dưỡng với rừng thông nguyên sinh ngút ngàn, khí hậu mát mẻ quanh năm. Nơi sở hữu các công trình kiến trúc cổ kính và không gian săn mây, cắm trại cực chill.",
+        "tags": [
+          "Săn mây",
+          "Rừng thông",
+          "Cắm trại",
+          "Không khí mát lạnh"
+        ],
+        "image": "https://upload.wikimedia.org/wikipedia/commons/6/60/Ba_Vi_Mountain.jpg?utm_source=vi.wikipedia.org&utm_campaign=index&utm_content=original",
+        "watermark": "BA VÌ",
+        "mapQuery": "Vuon+Quoc+Gia+Ba+Vi+Ha+Noi",
+        "busRoute": "Tuyến 74 (Bến xe Mỹ Đình - Xuân Khanh) nối tuyến 110 lên cổng Vườn Quốc gia",
+        "bestTime": "Quanh năm, đặc biệt mùa hoa dã quỳ nở rộ (Tháng 10 - Tháng 12)",
+        "highlights": [
+          "Rừng thông bạt ngàn mát lạnh",
+          "Nhà thờ Pháp cổ & Vườn xương rồng",
+          "Đỉnh Vua & Đền Thờ Bác Hồ"
+        ]
+      },
+      {
+        "id": "ecopark",
+        "name": "Khu đô thị sinh thái Ecopark",
+        "region": "east",
+        "regionLabel": "Đông Nam",
+        "location": "Văn Giang - Hưng Yên",
+        "distance": "Nằm ngay sát phía Đông Nam Hà Nội (chỉ mất khoảng 25–30 phút di chuyển).",
+        "shortDistance": "25–30 phút • Đông Nam",
+        "description": "Đại công viên xanh giữa lòng miền Bắc với hàng triệu cây xanh, mặt nước hồ Thiên Nga rộng lớn. Điểm đến lý tưởng để dã ngoại, chèo thuyền kayak và thưởng thức cà phê cuối tuần.",
+        "tags": [
+          "Không gian xanh",
+          "Chèo thuyền Kayak",
+          "Cà phê sân vườn",
+          "Dã ngoại gia đình"
+        ],
+        "image": "https://images.unsplash.com/photo-1519331379826-f10be5486c6f?auto=format&fit=crop&w=1400&q=85",
+        "watermark": "ECOPARK",
+        "mapQuery": "Khu+do+thi+Ecopark+Hung+Yen",
+        "busRoute": "Mạng lưới Ecobus chất lượng cao chạy liên tục từ Hồ Gươm, Mỹ Đình, Long Biên",
+        "bestTime": "Cuối tuần quanh năm, đẹp nhất sáng sớm hoặc hoàng hôn hồ Thiên Nga",
+        "highlights": [
+          "Hồ Thiên Nga rộng 54ha",
+          "Chèo thuyền Kayak & SUP ngắm chim thiên nga",
+          "Phố đi bộ & Cà phê bên rừng cây"
+        ]
+      },
+      {
+        "id": "tam-dao",
+        "name": "Thị trấn Tam Đảo",
+        "region": "north",
+        "regionLabel": "Phía Bắc",
+        "location": "Tam Đảo - Vĩnh Phúc",
+        "distance": "Cách Hà Nội khoảng 80km về phía Bắc.",
+        "shortDistance": "80km • Phía Bắc",
+        "description": "Được mệnh danh là 'Đà Lạt thu nhỏ' của miền Bắc với khung cảnh mây vờn đỉnh núi mờ sương, thời tiết 4 mùa trong một ngày và hàng loạt quán cà phê ngắm mây tuyệt đẹp.",
+        "tags": [
+          "Sương mù lãng mạn",
+          "Săn mây",
+          "Kiến trúc Pháp",
+          "Check-in sống ảo"
+        ],
+        "image": "https://cdn.24h.com.vn/upload/4-2024/images/2024-11-11/tam-dao-1-1731322756-206-width1970height2048.jpg",
+        "watermark": "TAM ĐẢO",
+        "mapQuery": "Thi+tran+Tam+Dao+Vinh+Phuc",
+        "busRoute": "Tuyến xe buýt Newway Hà Nội - Tam Đảo hoặc Limousine cao tốc 60 phút",
+        "bestTime": "Mùa hè trốn nóng mát lạnh (20°C) hoặc mùa thu đông ngắm biển mây",
+        "highlights": [
+          "Nhà thờ đá cổ kính thời Pháp",
+          "Quán Gió & Cầu Mây ngắm thung lũng",
+          "Thác Bạc & Tháp truyền hình"
+        ]
+      },
+      {
+        "id": "dai-lai",
+        "name": "Hồ Đại Lải & Flamingo",
+        "region": "north",
+        "regionLabel": "Phía Bắc",
+        "location": "Phúc Yên - Vĩnh Phúc",
+        "distance": "Cách trung tâm Hà Nội khoảng 40km – 45km.",
+        "shortDistance": "40km – 45km • Phía Bắc",
+        "description": "Tổ hợp nghỉ dưỡng sinh thái cao cấp bên lòng hồ Đại Lải trong xanh, nổi tiếng với các công trình kiến trúc nghệ thuật xanh độc đáo và các hoạt động thể thao nước hấp dẫn.",
+        "tags": [
+          "Nghỉ dưỡng cao cấp",
+          "Hồ nước thơ mộng",
+          "Thể thao dưới nước",
+          "Kiến trúc xanh"
+        ],
+        "image": "https://flamingoholdings.vn/public/media/fdlr/biet-thu-mat-dat.jpg",
+        "watermark": "ĐẠI LẢI",
+        "mapQuery": "Ho+Dai+Lai+Flamingo+Vinh+Phuc",
+        "busRoute": "Xe buýt tuyến 95 (Nam Thăng Long - Xuân Hòa) kết nối xe trung chuyển hồ Đại Lải",
+        "bestTime": "Tháng 4 đến tháng 10 cho thể thao nước, nghỉ dưỡng cuối tuần",
+        "highlights": [
+          "Hồ nước rộng 525ha trong vắt",
+          "Khu biệt thự kiến trúc rừng xanh",
+          "Bảo tàng nghệ thuật đương đại ngoài trời"
+        ]
+      },
+      {
+        "id": "duong-lam",
+        "name": "Làng cổ Đường Lâm",
+        "region": "west",
+        "regionLabel": "Phía Tây",
+        "location": "Sơn Tây - Hà Nội",
+        "distance": "Cách trung tâm Hà Nội khoảng 44km về phía Tây.",
+        "shortDistance": "44km • Phía Tây",
+        "description": "Ngôi làng cổ đầu tiên ở Việt Nam mang đậm dấu ấn kiến trúc thuần Việt với những ngôi nhà đá ong trăm tuổi, cổng làng rêu phong và không gian bình yên của làng quê Bắc Bộ.",
+        "tags": [
+          "Di sản văn hóa",
+          "Kiến trúc đá ong",
+          "Đậm chất truyền thống",
+          "Yên bình"
+        ],
+        "image": "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/3/25/1027197/275604768_1849703818.jpg",
+        "watermark": "ĐƯỜNG LÂM",
+        "mapQuery": "Lang+co+Duong+Lam+Son+Tay+Ha+Noi",
+        "busRoute": "Tuyến buýt 70A hoặc 71 (Bến xe Mỹ Đình - Bến xe Sơn Tây, 20.000đ/lượt)",
+        "bestTime": "Mùa lúa chín tháng 5 - 6 hoặc những ngày đầu xuân thanh bình",
+        "highlights": [
+          "Cổng làng Mông Phụ & Đình làng ngàn năm",
+          "Những ngôi nhà đá ong 300 - 400 tuổi",
+          "Đặc sản tương nếp & kẹo lạc truyền thống"
+        ]
+      },
+      {
+        "id": "ban-rom",
+        "name": "Khu sinh thái Bản Rõm",
+        "region": "north",
+        "regionLabel": "Phía Bắc",
+        "location": "Sóc Sơn - Hà Nội",
+        "distance": "Cách trung tâm Hà Nội khoảng 35km về phía Bắc.",
+        "shortDistance": "35km • Phía Bắc",
+        "description": "Khu rừng sinh thái ngập tràn thông xanh dưới chân núi Phượng Hoàng, được quy hoạch bài bản cho các hoạt động cắm trại, dã ngoại, tổ chức tiệc nướng BBQ và team building.",
+        "tags": [
+          "Cắm trại rừng thông",
+          "Tiệc nướng BBQ",
+          "Không gian hoang sơ",
+          "Dã ngoại nhóm"
+        ],
+        "image": "https://dulich9.com/wp-content/uploads/2023/05/Review-du-lich-Ban-Rom-Soc-Son.jpg",
+        "watermark": "BẢN RÕM",
+        "mapQuery": "Khu+du+lich+sinh+thai+Ban+Rom+Soc+Son",
+        "busRoute": "Tuyến buýt 56A hoặc 15 (Long Biên - Sóc Sơn) kết nối taxi/xe ôm 5km đến rừng",
+        "bestTime": "Mùa thu - đông thời tiết se lạnh, lý tưởng cắm trại lều và nướng BBQ",
+        "highlights": [
+          "Rừng thông bạt ngàn ven chân núi Phượng Hoàng",
+          "Khu cắm trại lều bạt & bếp nướng BBQ dã ngoại",
+          "Cầu treo & Khu huấn luyện kỹ năng sinh tồn"
+        ]
+      }
+    ],
+    "busGuide": {
+      "routeNumber": "Tuyến 47A",
+      "routeTitle": "Long Biên — Bát Tràng",
+      "ticketPrice": "7.000 VNĐ / lượt",
+      "studentPrice": "5.000 VNĐ (Vé tháng sinh viên: 100k/tháng cả mạng)",
+      "frequency": "15 — 20 phút / chuyến",
+      "operatingHours": "05:00 — 19:30 hàng ngày",
+      "pickUpPoint": "Điểm trung chuyển Long Biên (Làn E1.4)",
+      "dropOffPoint": "Cổng Chợ Gốm Bát Tràng",
+      "totalStops": 18,
+      "keyStops": [
+        "1. Điểm trung chuyển Long Biên (Đón xe)",
+        "2. Dốc Hàng Than - Trần Nhật Duật",
+        "3. Cầu Chương Dương vượt sông Hồng",
+        "4. Đê Long Biên - Xuân Quan",
+        "5. Cầu Thanh Trì rẽ đê Bát Tràng",
+        "6. Cổng Chợ Gốm Bát Tràng (Điểm xuống)"
+      ],
+      "proTips": [
+        "Nên chuẩn bị sẵn tiền lẻ 7.000đ hoặc quét mã QR qua ví điện tử / thẻ vé xe buýt ảo (TheBus Hà Nội).",
+        "Học sinh, sinh viên mang thẻ HSSV để được hưởng chính sách ưu đãi vé mạng lưới giao thông công cộng.",
+        "Tải ứng dụng 'Tìm Buýt' (Timbus) để theo dõi thời gian thực xe buýt 47A đang di chuyển đến trạm nào."
+      ]
+    },
+    "itinerary1Day": {
+      "destination": "Làng gốm Bát Tràng",
+      "targetAudience": "Học sinh, Giới trẻ, Khách du lịch tự túc",
+      "budget": "~120.000 - 150.000 VNĐ / người (bao gồm vé xe buýt, nặn gốm, ăn trưa)",
+      "timeline": [
+        {
+          "phase": "Buổi Sáng (08:00 - 11:30)",
+          "time": "08:00",
+          "title": "Bắt buýt 47A từ Trung tâm Long Biên",
+          "detail": "Có mặt tại điểm trung chuyển Long Biên làn E1.4. Lên xe buýt 47A ngắm cảnh bãi bồi ven sông Hồng và vườn chuối trù phú, thời gian di chuyển khoảng 35 phút.",
+          "tag": "Di chuyển xanh"
+        },
+        {
+          "phase": "Buổi Sáng (08:00 - 11:30)",
+          "time": "09:00",
+          "title": "Khám phá Trung tâm Tinh hoa Làng nghề Việt",
+          "detail": "Check-in bảo tàng kiến trúc 7 bàn xoay khổng lồ độc nhất vô nhị. Chiêm ngưỡng triển lãm nghệ thuật điêu khắc đất nung và các tác phẩm gốm cung đình tinh xảo.",
+          "tag": "Check-in đỉnh cao"
+        },
+        {
+          "phase": "Buổi Trưa (11:30 - 13:30)",
+          "time": "11:30",
+          "title": "Ăn trưa đặc sản & Trải nghiệm vuốt gốm",
+          "detail": "Thưởng thức món canh măng mực Bát Tràng đặc sản nức tiếng. Sau đó tự tay ngồi vào bàn xoay nặn chiếc cốc hoặc đĩa kỷ niệm dưới sự hướng dẫn của nghệ nhân (chỉ 50.000đ/lượt).",
+          "tag": "Ẩm thực & Trải nghiệm"
+        },
+        {
+          "phase": "Buổi Chiều (13:30 - 17:00)",
+          "time": "14:00",
+          "title": "Dạo ngõ cổ làng gốm & Tham quan Lò Bầu cổ",
+          "detail": "Đi bộ trong các con ngõ hẹp lát gạch nghiêng Bát Tràng cổ kính, ghé thăm Lò Bầu cổ 700 năm duy nhất còn lại và mua sắm chén đĩa gốm mộc mạc tại chợ Bát Tràng.",
+          "tag": "Khám phá di sản"
+        },
+        {
+          "phase": "Buổi Chiều (13:30 - 17:00)",
+          "time": "16:30",
+          "title": "Lên buýt 47A thảnh thơi về lại nội đô",
+          "detail": "Bắt chuyến xe buýt 47A chiều về, ngắm hoàng hôn đỏ ối trên sông Hồng qua cửa sổ xe buýt. Về đến trung tâm lúc 17:15, hoàn toàn né tránh ùn tắc nội đô.",
+          "tag": "Trở về an toàn"
+        }
+      ],
+      "checkInGallery": [
+        {
+          "title": "Bảo tàng Bàn Xoay Gốm",
+          "desc": "Kiến trúc 7 khối xoắn ốc uốn lượn tượng trưng cho bàn xoay gốm của người thợ Bát Tràng. Góc chụp từ sân dưới hướng lên trời cực kỳ ấn tượng.",
+          "tip": "Chụp góc rộng 0.5x từ bậc thang trung tâm để bắt trọn vòng cung xoắn đất nung.",
+          "image": "assets/images/bat-trang.jpg"
+        },
+        {
+          "title": "Lò Bầu Cổ Bát Tràng",
+          "desc": "Công trình lò nung cổ hình mai rùa độc đáo gồm nhiều bầu nung liên hoàn, minh chứng cho kỹ thuật nung củi truyền thống hàng trăm năm.",
+          "tip": "Đứng trước cửa vòm bầu gốm, căn góc nghiêng lấy ánh sáng rọi qua khe gạch nung.",
+          "image": "assets/images/bat-trang.jpg"
+        },
+        {
+          "title": "Ngõ Nhỏ Tường Than & Gạch Cổ",
+          "desc": "Những bức tường xếp bằng bầu gốm cũ và vỉa gạch nghiêng phủ rêu phong, mang đậm vẻ đẹp xưa mộc mạc tĩnh mịch của Hà Nội ven sông.",
+          "tip": "Chụp chân dung dáng đi tự nhiên ở giữa ngõ hun hút.",
+          "image": "assets/images/bat-trang.jpg"
+        }
+      ]
+    }
+  },
+  "tab3_heritage": {
+    "title": "Chạm Di Sản — Audio Guide & QR Code Thông Minh",
+    "description": "Thuyết minh di sản số đa phương tiện: Nghe audio tự động, đọc bài viết chuyên sâu và quét mã QR tương tác trực tiếp trên thiết bị di động.",
+    "forJudgesNotice": "Kính mời Ban Giám khảo dùng camera điện thoại cá nhân quét các mã QR mẫu bên dưới để trải nghiệm ngay giao diện Mobile Audio Player trên màn hình điện thoại!",
+    "audios": [
+      {
+        "id": "bat-trang",
+        "slug": "bat-trang",
+        "title": "Lịch sử 700 năm Lò Bầu Bát Tràng",
+        "heritageSite": "Làng gốm Bát Tràng, Gia Lâm, Hà Nội",
+        "narrator": "Nhóm nghiên cứu Di sản Trẻ Hà Nội",
+        "durationFormatted": "01:45",
+        "durationSeconds": 105,
+        "audioUrl": "assets/audio/bat-trang.mp3",
+        "coverImage": "assets/images/bat-trang.jpg",
+        "qrCodeLabel": "Mã QR Di tích #01 — Lò Bầu Bát Tràng",
+        "summary": "Tìm hiểu kết cấu lò gốm nhiều bầu nung bằng củi độc nhất vô nhị và hành trình 7 thế kỷ giữ lửa đất nung bên dòng Nhị Hà của các dòng họ tổ nghề gốm.",
+        "article": {
+          "lead": "Nằm trầm mặc giữa những con ngõ cổ Bát Tràng, khu Lò Bầu cổ là chứng nhân vô giá cho thời kỳ hưng thịnh rực rỡ nhất của kỹ nghệ nung gốm thủ công Thăng Long.",
+          "sections": [
+            {
+              "heading": "1. Kỳ tích kỹ thuật nung củi truyền thống",
+              "content": "Khác với các lò gốm hiện đại nung bằng gas hay điện, Lò Bầu cổ (còn gọi là lò rồng) được xây dựng theo sườn đồi thoai thoải với 5 đến 7 bầu lò hình vòm mai rùa nối tiếp nhau. Nhờ nguyên lý đối lưu nhiệt tự nhiên, ngọn lửa từ bầu thứ nhất bốc lên sẽ sưởi ấm liên hoàn cho các bầu tiếp theo, đưa nhiệt độ trong lò chạm ngưỡng 1.300 độ C. Chính nhiệt độ này đã tôi luyện nên thứ men ngọc, men lam, men rạn danh bất hư truyền của gốm Bát Tràng."
+            },
+            {
+              "heading": "2. Hồn cốt 700 năm của đất và người",
+              "content": "Kể từ thời vua Lý Thái Tổ dời đô về Thăng Long năm 1010, các thợ gốm vùng Bồ Bát (Ninh Bình) đã theo dòng sông Hồng tụ hội về vùng đất sét trắng tả ngạn Nhị Hà lập nên làng gốm Bát Tràng. Trải qua hơn 7 thế kỷ thăng trầm, từng thớ đất sét dẻo quánh dưới đôi bàn tay điêu luyện của nghệ nhân đã hóa thân thành những chiếc bình hút lộc, ấm chén cung đình và gạch Bát Tràng 'xây hồ bán nguyệt'."
+            },
+            {
+              "heading": "3. Chuyển mình số hóa thời đại thông minh",
+              "content": "Ngày nay, Bát Tràng không chỉ đón khách đến mua đồ gốm mà đã trở thành điểm đến văn hóa du lịch thông minh kiểu mẫu. Với sự xuất hiện của Trung tâm Tinh hoa Làng nghề Việt và các ứng dụng quét mã QR thuyết minh tự động, thế hệ trẻ và bạn bè quốc tế có thể dễ dàng tiếp cận kho tàng tri thức di sản mà không cần phụ thuộc vào hướng dẫn viên truyền thống."
+            }
+          ]
+        }
+      },
+      {
+        "id": "van-phuc",
+        "slug": "van-phuc",
+        "title": "Nghệ thuật dệt lụa Vạn Phúc Hà Đông",
+        "heritageSite": "Làng lụa Vạn Phúc, Hà Đông, Hà Nội",
+        "narrator": "Ban truyền thông Du lịch Vùng ven",
+        "durationFormatted": "01:30",
+        "durationSeconds": 90,
+        "audioUrl": "assets/audio/van-phuc.mp3",
+        "coverImage": "assets/images/van-phuc.jpg",
+        "qrCodeLabel": "Mã QR Di tích #02 — Lụa Vạn Phúc",
+        "summary": "Khám phá kỹ thuật dệt Lụa Vân thượng hạng 'mùa đông ấm, mùa hè mát' và truyền thống dệt lụa tơ tằm nghìn năm bên bờ sông Nhuệ.",
+        "article": {
+          "lead": "Lụa Hà Đông từ lâu đã đi vào thi ca như biểu tượng của vẻ đẹp dịu dàng, trang nhã của người con gái Thăng Long - Hà Nội xưa.",
+          "sections": [
+            {
+              "heading": "1. Đỉnh cao lụa Vân - Tinh túy tơ tằm Việt",
+              "content": "Lụa Vạn Phúc nổi tiếng nhất với dòng 'Lụa Vân' - loại lụa mà hoa văn chìm nổi tinh tế ngay trên mặt sợi dệt. Nhìn nghiêng thấy óng ánh sắc tơ, sờ vào cảm giác mềm mại như làn mây mỏng. Đặc tính kỳ diệu của lụa tơ tằm thiên nhiên Vạn Phúc là mặc vào mùa đông thì giữ ấm cơ thể, còn mặc vào mùa hè thì thoáng khí và mát rượi."
+            },
+            {
+              "heading": "2. Tiếng thoi đưa bên dòng sông Nhuệ",
+              "content": "Theo truyền tích, bà Ả Lã Thị Nương - một phụ nữ tài đức quê ở Cao Bằng - đã về định cư tại Vạn Phúc từ thời vua Ngô Quyền và dạy dân cách ươm tơ, dệt lụa. Suốt hàng nghìn năm qua, dù trải qua bao biến cố thời cuộc, tiếng lách cách của con thoi trên khung cửi gỗ vẫn vang lên khắp các ngõ xóm Vạn Phúc như nhịp đập trường tồn của làng nghề."
+            },
+            {
+              "heading": "3. Kết nối tuyến buýt công cộng xanh",
+              "content": "Nằm cách trung tâm Hà Nội chỉ khoảng 11km, du khách trẻ hoàn toàn có thể tiếp cận làng lụa Vạn Phúc bằng tuyến buýt nhanh BRT 01 hoặc buýt thường số 33. Xuống tại nhà chờ Vạn Phúc, bạn chỉ cần đi bộ 3 phút là đã bước vào con phố ngập tràn ô dù ngũ sắc và không gian lụa rực rỡ."
+            }
+          ]
+        }
+      },
+      {
+        "id": "duong-lam",
+        "slug": "duong-lam",
+        "title": "Kiến trúc nhà cổ đá ong Đường Lâm",
+        "heritageSite": "Làng cổ Đường Lâm, Sơn Tây, Hà Nội",
+        "narrator": "Nhóm thuyết minh Smart Heritage",
+        "durationFormatted": "01:55",
+        "durationSeconds": 115,
+        "audioUrl": "assets/audio/duong-lam.mp3",
+        "coverImage": "assets/images/duong-lam.jpg",
+        "qrCodeLabel": "Mã QR Di tích #03 — Đá Ong Đường Lâm",
+        "summary": "Chiêm ngưỡng kiến trúc nhà cổ đá ong độc bản của vùng đất 'Một ấp hai vua' (Phùng Hưng & Ngô Quyền) với cổng làng Mông Phụ và đình cổ ngàn năm.",
+        "article": {
+          "lead": "Đường Lâm là bảo tàng sống của văn hóa làng xã vùng đồng bằng châu thổ sông Hồng, nơi lưu giữ gần 1.000 ngôi nhà cổ được xây từ đá ong màu đất nung sẫm.",
+          "sections": [
+            {
+              "heading": "1. Độc bản chất liệu đá ong xứ Đoài",
+              "content": "Đá ong là loại đá tự nhiên nằm sâu dưới lòng đất xứ Đoài. Khi mới đào lên, đá ong mềm dẻo như đất sét, người thợ dễ dàng dùng rìu đẽo gọt thành từng phiến chữ nhật vuông vức. Sau khi phơi nắng sương, đá ong trở nên cứng như thép, có khả năng cách nhiệt tuyệt vời: mùa đông giữ nhà ấm cúng, mùa hè giữ nhà mát lạnh tự nhiên mà không cần điều hòa không khí."
+            },
+            {
+              "heading": "2. Cổng làng Mông Phụ và giếng nước đình làng",
+              "content": "Bước qua chiếc cổng làng Mông Phụ cổ kính rợp bóng cây đa cổ thụ hàng trăm năm tuổi, du khách như bước ngược thời gian về miền ký ức xưa cũ. Con đường làng lát gạch nghiêng dẫn tới đình Mông Phụ - đỉnh cao của nghệ thuật điêu khắc gỗ thế kỷ XVII với rồng bay, phượng múa và họa tiết dân gian sinh động."
+            },
+            {
+              "heading": "3. Trải nghiệm du lịch sinh thái tự túc",
+              "content": "Với vé xe buýt tuyến 71 từ bến xe Mỹ Đình lên Sơn Tây chỉ 20.000đ, các bạn học sinh sinh viên có thể thuê một chiếc xe đạp nhỏ tại cổng làng (chỉ 30.000đ - 50.000đ/ngày) thong dong đạp xe quanh các cánh đồng lúa chín vàng, thưởng thức chén trà xanh cùng kẹo dồi, kẹo lạc bùi béo đặc sản quê hương."
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

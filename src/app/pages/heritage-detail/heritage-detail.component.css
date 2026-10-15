@@ -1,0 +1,433 @@
+/* ==========================================================================
+   MOBILE HERITAGE DETAIL COMPONENT (LANDING PAGE KHI QUÉT MÃ QR)
+   Mercedes-Benz x PrimeNG Luxury Minimalist Mobile View
+   ========================================================================== */
+
+.mobile-heritage-page {
+  max-width: 680px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  border-left: 1px solid var(--border-hairline);
+  border-right: 1px solid var(--border-hairline);
+}
+
+/* 1. Mobile Header */
+.mobile-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-hairline);
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+
+.btn-back-home {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-primary);
+  font-size: 0.78125rem;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: var(--radius-xs);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  transition: all var(--transition-fast);
+}
+
+.btn-back-home:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-hover);
+}
+
+.mobile-header-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-sub {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+}
+
+.brand-tag {
+  font-size: 0.625rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mobile-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-theme-toggle-sm,
+.btn-share {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-xs);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-theme-toggle-sm:hover,
+.btn-share:hover {
+  color: var(--text-primary);
+  border-color: var(--border-hover);
+  background: var(--bg-elevated);
+}
+
+/* 2. Hero Cover Photo Container */
+.hero-cover-container {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.hero-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #09090B 0%, rgba(9, 9, 11, 0.4) 60%, transparent 100%);
+}
+
+.hero-meta-overlay {
+  position: absolute;
+  bottom: 14px;
+  left: 18px;
+  right: 18px;
+}
+
+.meta-tag-row {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.hero-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.25;
+  margin-bottom: 6px;
+}
+
+.narrator-meta {
+  font-size: 0.78125rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.text-gold { color: var(--accent-gold-light); }
+
+/* 3. Sticky Audio Player (Trình phát Audio Cố Định - Mercedes-Benz High Contrast) */
+.sticky-audio-player-wrapper {
+  position: sticky;
+  top: 53px;
+  z-index: 90;
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-hairline);
+  padding: 12px 18px;
+  transition: background-color var(--transition-normal), border-color var(--transition-normal);
+}
+
+.sticky-player-container {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.big-tap-play-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: var(--active-tab-bg);
+  color: var(--active-tab-fg);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-fast);
+}
+
+.big-tap-play-btn:hover {
+  background: var(--btn-primary-hover);
+}
+
+.big-tap-play-btn.playing {
+  background: var(--accent-gold);
+  color: #09090B;
+}
+
+.player-controls-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.player-info-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+}
+
+.player-status-text {
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.playing-pulse-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  animation: pulseGlow 1.5s infinite ease-in-out;
+}
+
+.player-time-count {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+/* Sound Wave Sticks */
+.audio-waves {
+  display: flex;
+  align-items: center;
+  gap: 2.5px;
+  height: 14px;
+}
+
+.wave-stick {
+  flex: 1;
+  background: var(--border-hairline);
+  height: 3px;
+  border-radius: 1px;
+  transition: height 0.2s ease, background 0.2s ease;
+}
+
+.audio-waves.active-waves .wave-stick {
+  background: var(--accent-gold);
+  animation: waveform 1s infinite ease-in-out;
+}
+
+.active-waves .wave-stick:nth-child(2n) { animation-delay: 0.15s; }
+.active-waves .wave-stick:nth-child(3n) { animation-delay: 0.3s; }
+.active-waves .wave-stick:nth-child(4n) { animation-delay: 0.45s; }
+
+.mobile-touch-slider {
+  width: 100%;
+  height: 4px;
+  accent-color: var(--accent-gold);
+  cursor: pointer;
+}
+
+/* 4. Reading Article Body */
+.mobile-reading-container {
+  padding: 20px 18px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.audio-attribution-box {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
+  padding: 10px 14px;
+  font-size: 0.78125rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.article-lead-card {
+  background: var(--bg-surface);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
+  padding: 14px 16px;
+}
+
+.lead-quote {
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.article-body {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.article-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-heading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.section-paragraph {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* Other Heritage Stories */
+.other-audios-section {
+  border-top: 1px solid var(--border-hairline);
+  padding-top: 20px;
+}
+
+.other-audios-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.other-audios-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.other-audio-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.other-audio-card:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-hover);
+}
+
+.other-audio-card.current {
+  border-color: var(--accent-gold);
+}
+
+.other-audio-img {
+  width: 52px;
+  height: 52px;
+  border-radius: var(--radius-xs);
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.other-audio-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.other-tag {
+  font-size: 0.65rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.other-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 1px 0;
+}
+
+.other-duration {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.other-arrow {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Mobile Footer Actions */
+.mobile-footer-actions {
+  margin-top: 8px;
+}
+
+.btn-return-all {
+  width: 100%;
+  padding: 12px;
+  background: var(--btn-primary-bg);
+  border-radius: var(--radius-xs);
+  color: var(--btn-primary-fg);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--border-active);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-return-all:hover {
+  background: var(--btn-primary-hover);
+}

@@ -1,1 +1,368 @@
-/* You can add global styles to this file, and also import other style files */
+/* ==========================================================================
+   HÀ NỘI SMART TOURISM — DUAL-THEME LUXURY MINIMALIST ENTERPRISE
+   Mercedes-Benz Digital Style x PrimeNG Aura/Nora Theme
+   Light Mode (Showroom Daylight) & Dark Mode (Carbon Night)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. ROOT VARIABLES: LIGHT MODE (DEFAULT)
+   -------------------------------------------------------------------------- */
+:root,
+[data-theme="light"] {
+  /* Typography */
+  --font-main: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Be Vietnam Pro', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, Menlo, monospace;
+
+  /* Background Tokens (Alabaster Porcelain & Pure White) */
+  --bg-deep: #F8FAFC;
+  --bg-main: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
+  --bg-elevated: #F1F5F9;
+  --bg-glass: rgba(255, 255, 255, 0.92);
+  --bg-input: #FFFFFF;
+
+  /* Border Hairlines */
+  --border-hairline: #E2E8F0;
+  --border-subtle: #E2E8F0;
+  --border-hover: #CBD5E1;
+  --border-active: #09090B;
+  --border-gold: rgba(197, 160, 89, 0.45);
+
+  /* Typography Color Tokens */
+  --text-main: #09090B;       /* Deep Carbon Black */
+  --text-primary: #09090B;
+  --text-secondary: #475569;  /* Metallic Slate Grey */
+  --text-muted: #64748B;
+  --text-faint: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  /* Interactive Elements (High Contrast: Black Active / White Text) */
+  --active-tab-bg: #09090B;
+  --active-tab-fg: #FFFFFF;
+  --btn-primary-bg: #09090B;
+  --btn-primary-fg: #FFFFFF;
+  --btn-primary-hover: #18181B;
+
+  /* Champagne Gold Accent (Refined Warm Gold) */
+  --accent-gold: #9A7B38;
+  --accent-gold-light: #9A7B38;
+  --accent-gold-bg: rgba(254, 249, 195, 0.65);
+  --accent-gold-border: rgba(197, 160, 89, 0.45);
+
+  /* Emerald Transit / Safe Accent */
+  --success: #10B981;
+  --success-light: #047857;
+  --success-bg: rgba(209, 250, 229, 0.7);
+  --success-border: rgba(16, 185, 129, 0.4);
+
+  /* Crimson Alert Accent */
+  --danger: #EF4444;
+  --danger-light: #B91C1C;
+  --danger-bg: rgba(254, 226, 226, 0.7);
+  --danger-border: rgba(239, 68, 68, 0.4);
+
+  /* Warning Accent */
+  --warning: #F59E0B;
+  --warning-light: #B45309;
+  --warning-bg: rgba(254, 243, 199, 0.7);
+  --warning-border: rgba(245, 158, 11, 0.4);
+
+  /* Precision Radii (No 9999px Pills) */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Restrained Enterprise Shadows */
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
+  --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
+  --shadow-lg: 0 12px 28px rgba(15, 23, 42, 0.08), 0 4px 8px rgba(15, 23, 42, 0.03);
+
+  /* Map Canvas Tint */
+  --map-bg: #F1F5F9;
+  --map-grid-color: rgba(15, 23, 42, 0.04);
+}
+
+/* --------------------------------------------------------------------------
+   2. DARK MODE OVERRIDES (CARBON NIGHT)
+   -------------------------------------------------------------------------- */
+[data-theme="dark"] {
+  /* Background Tokens (Pure Carbon Black & Obsidian) */
+  --bg-deep: #09090B;
+  --bg-main: #09090B;
+  --bg-surface: #121215;
+  --bg-card: #121215;
+  --bg-card-hover: #18181B;
+  --bg-elevated: #18181B;
+  --bg-glass: rgba(18, 18, 21, 0.92);
+  --bg-input: #121215;
+
+  /* Border Hairlines */
+  --border-hairline: #27272A;
+  --border-subtle: #27272A;
+  --border-hover: #52525B;
+  --border-active: #E4E4E7;
+  --border-gold: rgba(197, 160, 89, 0.35);
+
+  /* Typography Color Tokens */
+  --text-main: #FAFAFA;       /* Crisp White */
+  --text-primary: #FAFAFA;
+  --text-secondary: #A1A1AA;  /* Metallic Silver Grey */
+  --text-muted: #71717A;
+  --text-faint: #52525B;
+  --text-inverse: #09090B;
+
+  /* Interactive Elements (High Contrast: White Active / Black Text) */
+  --active-tab-bg: #FAFAFA;
+  --active-tab-fg: #09090B;
+  --btn-primary-bg: #FAFAFA;
+  --btn-primary-fg: #09090B;
+  --btn-primary-hover: #E4E4E7;
+
+  /* Champagne Gold Accent */
+  --accent-gold: #C5A059;
+  --accent-gold-light: #E5C158;
+  --accent-gold-bg: rgba(197, 160, 89, 0.14);
+  --accent-gold-border: rgba(197, 160, 89, 0.35);
+
+  /* Emerald Transit / Safe Accent */
+  --success: #10B981;
+  --success-light: #34D399;
+  --success-bg: rgba(16, 185, 129, 0.12);
+  --success-border: rgba(16, 185, 129, 0.28);
+
+  /* Crimson Alert Accent */
+  --danger: #EF4444;
+  --danger-light: #F87171;
+  --danger-bg: rgba(239, 68, 68, 0.12);
+  --danger-border: rgba(239, 68, 68, 0.28);
+
+  /* Warning Accent */
+  --warning: #F59E0B;
+  --warning-light: #FBBF24;
+  --warning-bg: rgba(245, 158, 11, 0.12);
+  --warning-border: rgba(245, 158, 11, 0.28);
+
+  /* Dark Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px -2px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 12px 28px -4px rgba(0, 0, 0, 0.7);
+
+  /* Map Canvas Tint */
+  --map-bg: #0C0C0E;
+  --map-grid-color: rgba(255, 255, 255, 0.02);
+}
+
+/* --------------------------------------------------------------------------
+   3. GLOBAL RESET & BASE STYLES
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-deep);
+  color: var(--text-main);
+  line-height: 1.55;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth Transition for Surface and Borders */
+.glass-panel,
+.app-header,
+.tab-btn,
+.alt-card,
+.suburb-nav-pill,
+.bus-guide-card,
+.itinerary-card,
+.heritage-card,
+.custom-audio-player-box,
+.qr-standee-card,
+.alert-banner-danger,
+.hero-video-banner {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Custom Minimalist Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-deep);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-hover);
+  border-radius: var(--radius-xs);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Typography Helpers: Modern Elegant Sans-serif */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+p {
+  color: var(--text-secondary);
+  font-family: var(--font-main);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  outline: none;
+  font-size: inherit;
+}
+
+/* Eyebrow Label Standard (Mercedes-Benz Precision Style) */
+.eyebrow-label {
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-gold);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+/* PrimeNG Aura / Nora Minimalist Glass Panel */
+.glass-panel {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.glass-panel:hover {
+  border-color: var(--border-hover);
+}
+
+/* Enterprise Precision Badges (No 9999px Pills) */
+.badge-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.badge-status.danger {
+  background: var(--danger-bg);
+  color: var(--danger-light);
+  border: 1px solid var(--danger-border);
+}
+
+.badge-status.success {
+  background: var(--success-bg);
+  color: var(--success-light);
+  border: 1px solid var(--success-border);
+}
+
+.badge-status.warning {
+  background: var(--warning-bg);
+  color: var(--warning-light);
+  border: 1px solid var(--warning-border);
+}
+
+.badge-status.primary {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border: 1px solid var(--border-hairline);
+}
+
+.badge-status.accent {
+  background: var(--accent-gold-bg);
+  color: var(--accent-gold-light);
+  border: 1px solid var(--accent-gold-border);
+}
+
+/* --------------------------------------------------------------------------
+   4. 60FPS MICRO-ANIMATIONS
+   -------------------------------------------------------------------------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes waveform {
+  0%, 100% {
+    height: 4px;
+  }
+  50% {
+    height: 22px;
+  }
+}
+
+@keyframes laserScan {
+  0% {
+    top: 0;
+    opacity: 0.8;
+  }
+  50% {
+    top: calc(100% - 2px);
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    opacity: 0.8;
+  }
+}
+
+@keyframes dashMove {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
