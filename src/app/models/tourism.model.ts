@@ -50,8 +50,9 @@ export interface SuburbDestination {
 export interface SurroundingDestination {
   id: string;
   name: string;
-  region: 'all' | 'west' | 'north' | 'east';
+  region: 'all' | 'west' | 'north' | 'east' | 'south' | 'craft' | string;
   regionLabel: string;
+  category?: string;
   location: string;
   distance: string;
   shortDistance: string;
@@ -63,6 +64,18 @@ export interface SurroundingDestination {
   busRoute: string;
   bestTime: string;
   highlights?: string[];
+  history?: string;
+  transportDetail?: {
+    motorcycle?: string;
+    bus?: string;
+    parking?: string;
+  };
+  experiences?: string[];
+  checkInSpots?: string[];
+  source?: string;
+  audioUrl?: string;
+  audioDuration?: string;
+  audioTitle?: string;
 }
 
 

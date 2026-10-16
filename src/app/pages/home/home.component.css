@@ -1732,25 +1732,31 @@
   margin-bottom: 24px;
 }
 
-.merc-wide-card {
+/* ==================================================================== */
+/* LUXURY MINIMALIST LOCATION & CRAFT VILLAGE CARDS (SENIOR UI/UX TUNED) */
+/* ==================================================================== */
+.merc-wide-card,
+.merc-standing-card {
   position: relative;
-  border-radius: 20px;
+  border-radius: 16px;
   overflow: hidden;
   background: #0D1117;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  min-height: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  min-height: 380px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
   cursor: pointer;
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
+  box-sizing: border-box;
 }
 
-.merc-wide-card:hover {
+.merc-wide-card:hover,
+.merc-standing-card:hover {
   transform: translateY(-4px);
   border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
 }
 
 .merc-card-media {
@@ -1774,218 +1780,233 @@
   transform: scale(1.05);
 }
 
-/* Giant Elegant Watermark (Mercedes CLA / GLS Style) */
-.merc-watermark {
-  position: absolute;
-  top: 14%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--font-heading);
-  font-size: clamp(3rem, 5.5vw, 4.75rem);
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  color: rgba(255, 255, 255, 0.32);
-  text-transform: uppercase;
-  pointer-events: none;
-  user-select: none;
-  z-index: 1;
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
-  white-space: nowrap;
-}
-
+/* 2. ẨN HOÀN TOÀN WATERMARK IN HOA CỠ LỚN ĐỂ KHÔNG CHE ẢNH NỀN */
+.merc-watermark,
 .merc-watermark.standing {
-  top: 10%;
-  font-size: clamp(2.4rem, 3.8vw, 3.2rem);
-  letter-spacing: 0.1em;
+  display: none !important;
 }
 
-/* Card Dark Bottom Gradient Overlay */
+/* 5. HẠ THẤP LỚP PHỦ TỐI (GRADIENT OVERLAY): 60% PHẦN TRÊN SÁNG RÕ */
 .merc-card-gradient {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(9, 11, 15, 0.96) 0%, rgba(9, 11, 15, 0.72) 42%, rgba(9, 11, 15, 0.15) 75%, transparent 100%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.55) 38%, rgba(0, 0, 0, 0.1) 65%, transparent 100%) !important;
   z-index: 1;
   pointer-events: none;
 }
 
-/* Top Floating Meta Badges */
+/* 3.1. HÀNG BADGES TRÊN CÙNG: 1 HÀNG NGANG GỌN GÀNG, SÁT ĐỈNH TRÊN */
 .merc-card-top-badges {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  right: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  padding: 12px 12px 0 12px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  gap: 6px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
   z-index: 2;
-  gap: 12px;
+  flex-wrap: nowrap !important;
+}
+
+.merc-badge-region,
+.merc-badge-dist {
+  padding: 3px 8px !important;
+  border-radius: 9999px !important;
+  font-size: 10px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  letter-spacing: 0.02em !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  line-height: 1.35 !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 
 .merc-badge-region {
-  padding: 6px 14px;
-  border-radius: 9999px;
-  background: rgba(14, 18, 26, 0.75);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #FFFFFF;
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  background: rgba(14, 18, 26, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  color: #FFFFFF !important;
+  max-width: 62% !important;
 }
 
 .merc-badge-dist {
-  padding: 6px 14px;
-  border-radius: 9999px;
-  background: rgba(0, 120, 214, 0.3);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 120, 214, 0.5);
-  color: #93C5FD;
-  font-size: 0.75rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+  background: rgba(0, 120, 214, 0.3) !important;
+  border: 1px solid rgba(0, 120, 214, 0.5) !important;
+  color: #93C5FD !important;
+  font-family: var(--font-mono, monospace) !important;
+  flex-shrink: 0 !important;
 }
 
-/* Bottom Content Overlay */
+/* 3. KHỐI NỘI DUNG VĂN BẢN: NEO SÁT ĐÁY DƯỚI, CHỈ CHIẾM GỌN ~35-40% THẺ */
 .merc-card-bottom-content {
-  position: relative;
+  position: relative !important;
   z-index: 2;
-  padding: 24px 28px;
-  width: 100%;
+  padding: 10px 12px 12px 12px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+  margin-top: auto !important;
 }
 
-.merc-card-title {
-  font-family: var(--font-heading);
-  font-size: 1.55rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  color: #FFFFFF;
-  margin-bottom: 8px;
-  line-height: 1.3;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+/* Tiêu đề phụ (Category/Subtitle màu vàng) */
+.merc-card-category,
+.merc-standing-category {
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  color: var(--accent-gold, #C5A059) !important;
+  margin-bottom: 2px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 1 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  white-space: nowrap !important;
+  text-overflow: ellipsis !important;
+  line-height: 1.3 !important;
 }
 
+/* Tiêu đề chính (Tên địa điểm / Làng nghề) */
+.merc-card-title,
 .merc-card-title.standing {
-  font-size: 1.3rem;
-  margin-bottom: 6px;
+  font-family: var(--font-heading) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  color: #FFFFFF !important;
+  margin-bottom: 4px !important;
+  line-height: 1.25 !important;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6) !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
 }
 
-.merc-card-desc {
-  font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.6;
-  margin-bottom: 16px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-}
-
+/* Đoạn văn mô tả (Description) */
+.merc-card-desc,
 .merc-card-desc.standing {
-  font-size: 0.8125rem;
-  -webkit-line-clamp: 2;
-  margin-bottom: 12px;
+  font-size: 12px !important;
+  line-height: 1.35 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  margin-bottom: 6px !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5) !important;
 }
 
-/* Tags Pills */
+/* 4.1. DANH SÁCH TAGS (PILLS) THU NHỎ, TỐI ĐA 1 HÀNG */
 .merc-card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 20px;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  overflow: hidden !important;
+  gap: 4px !important;
+  margin-bottom: 8px !important;
+  width: 100% !important;
 }
 
 .merc-tag-pill {
-  padding: 4px 12px;
-  border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: rgba(255, 255, 255, 0.92);
-  font-size: 0.75rem;
-  font-weight: 500;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
+  font-size: 10.5px !important;
+  padding: 2px 8px !important;
+  border-radius: 9999px !important;
+  white-space: nowrap !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(6px) !important;
+  -webkit-backdrop-filter: blur(6px) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  line-height: 1.35 !important;
+  flex-shrink: 0 !important;
 }
 
-/* Action Pill Buttons (Mercedes Electric Blue + Pill Outlined) */
-.merc-card-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+.merc-tag-pill.audio-pill {
+  background: rgba(197, 160, 89, 0.18) !important;
+  color: var(--accent-gold, #C5A059) !important;
+  border-color: rgba(197, 160, 89, 0.4) !important;
+  font-weight: 600 !important;
+}
+
+/* 4.2. CỤM 3 NÚT TƯƠNG TÁC GỘP GỌN TRÊN 1 HÀNG NGANG DUY NHẤT */
+.merc-card-actions,
+.merc-card-actions.standing {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 6px !important;
+  margin-top: 8px !important;
+  flex-wrap: nowrap !important;
+  width: 100% !important;
+}
+
+.btn-merc-primary,
+.btn-merc-secondary,
+.btn-merc-link {
+  flex: 1 1 0 !important;
+  padding: 5px 8px !important;
+  font-size: 11.5px !important;
+  border-radius: 6px !important;
+  justify-content: center !important;
+  white-space: nowrap !important;
+  min-height: 28px !important;
+  height: 28px !important;
+  box-sizing: border-box !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  line-height: 1 !important;
+  transition: all 0.2s ease !important;
 }
 
 .btn-merc-primary {
-  background: #0078D6;
-  color: #FFFFFF;
-  border-radius: 9999px;
-  padding: 10px 22px;
-  font-weight: 600;
-  font-size: 0.875rem;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 4px 14px rgba(0, 120, 214, 0.4);
-  text-decoration: none;
+  background: #0078D6 !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  font-weight: 600 !important;
+  box-shadow: 0 2px 8px rgba(0, 120, 214, 0.3) !important;
 }
 
 .btn-merc-primary:hover {
-  background: #0086F0;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 120, 214, 0.55);
+  background: #0086F0 !important;
+  transform: translateY(-1px) !important;
 }
 
 .btn-merc-secondary {
-  background: rgba(255, 255, 255, 0.08);
-  color: #FFFFFF;
-  border-radius: 9999px;
-  padding: 9px 18px;
-  font-weight: 600;
-  font-size: 0.875rem;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.2s ease;
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  font-weight: 500 !important;
 }
 
 .btn-merc-secondary:hover {
-  background: rgba(255, 255, 255, 0.18);
-  border-color: rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.18) !important;
 }
 
 .btn-merc-link {
-  color: #FFFFFF;
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  padding: 8px 10px;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  cursor: pointer;
-  transition: color 0.2s ease;
+  background: rgba(147, 197, 253, 0.08) !important;
+  color: #93C5FD !important;
+  border: 1px solid rgba(147, 197, 253, 0.25) !important;
+  font-weight: 500 !important;
 }
 
 .btn-merc-link:hover {
-  color: #60A5FA;
+  background: rgba(147, 197, 253, 0.18) !important;
+  color: #FFFFFF !important;
 }
 
 /* BOTTOM STANDING CARDS GRID: 4 COLUMNS ON DESKTOP */
@@ -1995,31 +2016,118 @@
   gap: 20px;
 }
 
-.merc-standing-card {
-  position: relative;
-  border-radius: 18px;
-  overflow: hidden;
-  background: #0D1117;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  min-height: 480px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  cursor: pointer;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.4s ease;
-}
-
-.merc-standing-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.55);
-}
-
 .merc-standing-card.hidden-by-filter,
 .merc-wide-card.hidden-by-filter {
   display: none !important;
 }
+
+/* Craft Search Container */
+.craft-search-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.craft-search-box {
+  position: relative;
+  flex: 1;
+  min-width: 280px;
+}
+
+.craft-search-input {
+  width: 100%;
+  padding: 12px 42px 12px 44px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: 9999px;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.craft-search-input:focus {
+  border-color: var(--accent-gold);
+  background: var(--bg-deep);
+  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+}
+
+.craft-search-box .search-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  pointer-events: none;
+}
+
+.btn-clear-search {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: var(--text-secondary);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.btn-clear-search:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.search-result-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-hairline);
+  border-radius: 9999px;
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.search-empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+.search-empty-state .empty-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.8;
+}
+
+.search-empty-state h4 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.search-empty-state p {
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto 20px;
+  line-height: 1.5;
+  font-size: 0.875rem;
+}
+
 
 /* ==========================================================================
    KHỐI 2.2: SỬA LỖI GOOGLE MAP & CHUẨN HÓA MÀU SẮC BẢN ĐỒ THỰC TẾ
@@ -3129,6 +3237,114 @@
   background: var(--bg-surface);
 }
 
+.modal-card.merc-detail-modal {
+  max-width: 760px;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-hover) transparent;
+}
+
+.modal-top-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.modal-loc-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.modal-rich-section {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-hairline);
+}
+
+.modal-history-box {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-hairline);
+  border-left: 3px solid var(--accent-gold);
+  border-radius: var(--radius-xs);
+  padding: 14px 16px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.modal-transit-detail-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.transit-detail-card {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--radius-xs);
+  padding: 12px 14px;
+}
+
+.tdc-header {
+  font-size: 0.8125rem;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tdc-text {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.modal-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-bullet-list .bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  background: var(--bg-deep);
+  border: 1px solid var(--border-hairline);
+  padding: 10px 14px;
+  border-radius: var(--radius-xs);
+}
+
+.modal-bullet-list .bullet-item i {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.modal-source-footer {
+  margin-top: 20px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed var(--border-hairline);
+  border-radius: var(--radius-xs);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 .btn-close-modal {
   position: absolute;
   top: 14px;
@@ -3906,39 +4122,106 @@
 
   .merc-wide-card, 
   .merc-standing-card {
-    min-height: 420px;
+    min-height: 380px !important;
     border-radius: 16px;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
   }
 
-  .merc-watermark {
-    font-size: 2.8rem;
-    top: 10%;
+  .merc-watermark,
+  .merc-watermark.standing {
+    display: none !important;
+  }
+
+  .merc-card-top-badges {
+    padding: 10px 10px 0 10px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 6px !important;
+    flex-wrap: nowrap !important;
+  }
+
+  .merc-badge-region,
+  .merc-badge-dist {
+    font-size: 9.5px !important;
+    padding: 2.5px 7px !important;
+    white-space: nowrap !important;
   }
 
   .merc-card-bottom-content {
-    padding: 20px 18px;
+    padding: 8px 10px 10px 10px !important;
+    margin-top: auto !important;
   }
 
-  .merc-card-title {
-    font-size: 1.35rem;
+  .merc-card-category,
+  .merc-standing-category {
+    font-size: 9.5px !important;
+    letter-spacing: 0.5px !important;
+    margin-bottom: 2px !important;
   }
 
-  .merc-card-actions {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
+  .merc-card-title,
+  .merc-card-title.standing {
+    font-size: 15px !important;
+    line-height: 1.25 !important;
+    margin-bottom: 3px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .merc-card-desc,
+  .merc-card-desc.standing {
+    font-size: 11.5px !important;
+    line-height: 1.35 !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    margin-bottom: 5px !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+
+  .merc-card-tags {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow: hidden !important;
+    gap: 4px !important;
+    margin-bottom: 6px !important;
+  }
+
+  .merc-tag-pill {
+    font-size: 10px !important;
+    padding: 2px 6px !important;
+  }
+
+  .merc-card-actions,
+  .merc-card-actions.standing {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 5px !important;
+    flex-wrap: nowrap !important;
+    width: 100% !important;
+    margin-top: 6px !important;
   }
 
   .btn-merc-primary,
-  .btn-merc-secondary {
-    width: 100%;
-    justify-content: center;
-    min-height: 46px; /* Touch target >= 44px */
-  }
-
+  .btn-merc-secondary,
   .btn-merc-link {
-    justify-content: center;
-    padding: 8px;
+    flex: 1 1 0 !important;
+    width: auto !important;
+    padding: 4px 5px !important;
+    font-size: 10.5px !important;
+    min-height: 28px !important;
+    height: 28px !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    gap: 3px !important;
   }
 
   /* Google Maps Mobile Viewport */
@@ -4436,3 +4719,134 @@
     font-size: 0.78125rem;
   }
 }
+
+/* ==================================================================== */
+/* LUXURY AUDIO GUIDE BANNER IN MODAL & AUDIO PILL BADGES */
+/* ==================================================================== */
+.modal-audio-banner {
+  margin: 16px 0 20px 0;
+  border-radius: var(--radius-md, 10px);
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.14) 0%, rgba(18, 18, 21, 0.95) 100%);
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  padding: 14px 18px;
+}
+
+.audio-banner-inner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.audio-banner-btn {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #C5A059 0%, #9A7B38 100%);
+  border: none;
+  color: #09090B;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 16px rgba(197, 160, 89, 0.4);
+}
+
+.audio-banner-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.55);
+}
+
+.audio-banner-btn.playing {
+  background: #10B981;
+  color: #FFFFFF;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.45);
+}
+
+.audio-banner-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.abt-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+  gap: 8px;
+}
+
+.abt-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-gold, #C5A059);
+}
+
+.abt-status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: var(--font-mono, monospace);
+}
+
+.abt-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-main, #FAFAFA);
+  margin: 0 0 2px 0;
+  line-height: 1.35;
+}
+
+.abt-desc {
+  font-size: 0.8125rem;
+  color: var(--text-muted, #71717A);
+  margin: 0;
+}
+
+.audio-qr-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm, 6px);
+  padding: 8px 12px;
+  color: var(--text-main, #FAFAFA);
+  font-size: 0.72rem;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.audio-qr-btn:hover {
+  background: rgba(197, 160, 89, 0.18);
+  border-color: rgba(197, 160, 89, 0.4);
+}
+
+.audio-pill {
+  background: rgba(197, 160, 89, 0.15) !important;
+  color: var(--accent-gold, #C5A059) !important;
+  border-color: rgba(197, 160, 89, 0.35) !important;
+  font-weight: 600 !important;
+}
+
+@media (max-width: 640px) {
+  .audio-banner-inner {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .audio-qr-btn {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    padding: 6px 10px;
+  }
+}
+

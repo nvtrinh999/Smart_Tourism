@@ -432,121 +432,154 @@
           <!-- Section Controls Header: Title & Brand/Region Switcher -->
           <div class="merc-section-header">
             <div>
-
+              <span class="eyebrow-label">
+                <i class="fa-solid fa-shapes text-gold"></i> HANOI TRADITIONAL CRAFT & SUBURBS • KHÔNG GIAN VĂN HÓA
+              </span>
               <h2 class="merc-section-title">
-                Khám Phá 6 Điểm Đến Sinh Thái & Di Sản Ngoại Thành
+                Khám Phá {{ surroundingDestinations.length }} Điểm Đến & Làng Nghề Truyền Thống Thủ Đô
               </h2>
             </div>
 
-            <!-- Mercedes-Benz Style Region Filter (Pill Segmented Control) -->
+            <!-- Region & Category Filter (Pill Segmented Control) -->
             <div class="merc-region-switcher" role="tablist">
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'all'"
                 (click)="selectRegion('all')">
-                Tất cả (6 điểm đến)
+                <i class="fa-solid fa-border-all"></i> Tất cả ({{ surroundingDestinations.length }})
+              </button>
+              <button class="merc-region-pill" [class.active]="selectedRegion() === 'craft'"
+                (click)="selectRegion('craft')">
+                <i class="fa-solid fa-fire text-gold"></i> 20 Làng nghề thủ công
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'west'"
                 (click)="selectRegion('west')">
-                Phía Tây (Ba Vì, Đường Lâm)
+                Phía Tây (Ba Vì, Đường Lâm, Chàng Sơn...)
               </button>
-              <button class="merc-region-pill" [class.active]="selectedRegion() === 'north'"
-                (click)="selectRegion('north')">
-                Phía Bắc (Tam Đảo, Đại Lải, Bản Rõm)
+              <button class="merc-region-pill" [class.active]="selectedRegion() === 'south'"
+                (click)="selectRegion('south')">
+                Phía Nam (Quảng Phú Cầu, Làng Chuông, Phú Vinh...)
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'east'"
                 (click)="selectRegion('east')">
-                Đông Nam (Ecopark)
+                Đông & Đông Nam (Bát Tràng, Kiêu Kỵ, Đại Bái...)
+              </button>
+              <button class="merc-region-pill" [class.active]="selectedRegion() === 'north'"
+                (click)="selectRegion('north')">
+                Nội đô & Phía Bắc (Ngũ Xã, Cốm Vòng, Tam Đảo...)
               </button>
             </div>
           </div>
 
-          <!-- TOP ASYMMETRICAL ROW: 2 PANORAMIC / WIDE HERO CARDS (Ba Vì & Ecopark) -->
-          <div class="merc-top-row-grid">
+          <!-- Dynamic Craft Search Bar -->
+          <div class="craft-search-container">
+            <div class="craft-search-box">
+              <i class="fa-solid fa-magnifying-glass search-icon"></i>
+              <input type="text"
+                class="craft-search-input"
+                placeholder="Tìm nhanh làng nghề, di sản, đặc sản (Bát Tràng, Đường Lâm, Quảng Phú Cầu, Nón Chuông, Cốm Vòng, Quạt, Diều sáo...)"
+                [ngModel]="searchQuery()"
+                (ngModelChange)="searchQuery.set($event)">
+              <button *ngIf="searchQuery()" class="btn-clear-search" (click)="clearSearch()" title="Xóa tìm kiếm">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+            <div class="search-result-pill">
+              <i class="fa-solid fa-compass text-gold"></i>
+              <span>Hiển thị <strong>{{ filteredSurroundingDestinations.length }}</strong> địa điểm phù hợp</span>
+            </div>
+          </div>
+
+          <!-- TOP ASYMMETRICAL ROW: 2 PANORAMIC / WIDE HERO CARDS (Only on initial All view without search) -->
+          <div *ngIf="selectedRegion() === 'all' && !searchQuery()" class="merc-top-row-grid">
 
             <!-- Card 1: Vườn Quốc gia Ba Vì -->
             <div *ngIf="topWideDestinations[0] as dest1" class="merc-wide-card"
-              [class.hidden-by-filter]="selectedRegion() !== 'all' && selectedRegion() !== dest1.region"
               (click)="selectMapForDestination(dest1)">
               <div class="merc-card-media">
-                <img [src]="dest1.image" [alt]="dest1.name" class="merc-card-img" loading="lazy">
+                <img [src]="dest1.image" (error)="onImageError($event)" [alt]="dest1.name" class="merc-card-img" loading="lazy">
                 <div class="merc-watermark">{{ dest1.watermark }}</div>
                 <div class="merc-card-gradient"></div>
               </div>
 
               <!-- Top Floating Meta Badges -->
               <div class="merc-card-top-badges">
-                <span class="merc-badge-region"><i class="fa-solid fa-mountain-sun"></i> {{ dest1.regionLabel }}</span>
-                <span class="merc-badge-dist"><i class="fa-solid fa-location-arrow"></i> {{ dest1.shortDistance
-                  }}</span>
+                <span class="merc-badge-region"><i class="fa-solid fa-fire text-gold"></i> {{ dest1.regionLabel }}</span>
+                <span class="merc-badge-dist"><i class="fa-solid fa-location-arrow"></i> {{ dest1.shortDistance }}</span>
               </div>
 
               <!-- Bottom Content Overlay -->
               <div class="merc-card-bottom-content">
+                <div *ngIf="dest1.category" class="merc-card-category">{{ dest1.category }}</div>
                 <h3 class="merc-card-title">{{ dest1.name }}</h3>
                 <p class="merc-card-desc">{{ dest1.description }}</p>
 
                 <!-- Tags Pills -->
                 <div class="merc-card-tags">
-                  <span *ngFor="let t of dest1.tags" class="merc-tag-pill">
-                    <i class="fa-solid fa-leaf text-accent"></i> {{ t }}
+                  <span *ngIf="dest1.audioUrl" class="merc-tag-pill audio-pill">
+                    <i class="fa-solid fa-headphones text-gold"></i> Audio {{ dest1.audioDuration || '1:25' }}
+                  </span>
+                  <span *ngFor="let t of dest1.tags.slice(0, 2)" class="merc-tag-pill">
+                    <i class="fa-solid fa-tag text-accent"></i> {{ t }}
                   </span>
                 </div>
 
-                <!-- Action Pill Buttons (Mercedes Electric Blue + Secondary Outline) -->
+                <!-- Action Pill Buttons -->
                 <div class="merc-card-actions" (click)="$event.stopPropagation()">
                   <button class="btn-merc-primary" (click)="selectMapForDestination(dest1)">
-                    <i class="fa-solid fa-location-dot"></i> Khám phá ngay
+                    <i class="fa-solid fa-location-dot"></i> Khám phá
                   </button>
                   <button class="btn-merc-secondary" (click)="openSurroundingModal(dest1)">
-                    <i class="fa-solid fa-circle-info"></i> Xem chi tiết
+                    <i class="fa-solid fa-book-open"></i> Cẩm nang
                   </button>
                   <a [href]="'https://www.google.com/maps/search/?api=1&query=' + dest1.mapQuery" target="_blank"
                     rel="noopener noreferrer" class="btn-merc-link">
-                    Chỉ đường Google Map <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-diamond-turn-right"></i> Chỉ đường
                   </a>
                 </div>
               </div>
             </div>
 
-            <!-- Card 2: Khu đô thị sinh thái Ecopark -->
+            <!-- Card 2: Làng gốm Bát Tràng -->
             <div *ngIf="topWideDestinations[1] as dest2" class="merc-wide-card"
-              [class.hidden-by-filter]="selectedRegion() !== 'all' && selectedRegion() !== dest2.region"
               (click)="selectMapForDestination(dest2)">
               <div class="merc-card-media">
-                <img [src]="dest2.image" [alt]="dest2.name" class="merc-card-img" loading="lazy">
+                <img [src]="dest2.image" (error)="onImageError($event)" [alt]="dest2.name" class="merc-card-img" loading="lazy">
                 <div class="merc-watermark">{{ dest2.watermark }}</div>
                 <div class="merc-card-gradient"></div>
               </div>
 
               <!-- Top Floating Meta Badges -->
               <div class="merc-card-top-badges">
-                <span class="merc-badge-region"><i class="fa-solid fa-tree"></i> {{ dest2.regionLabel }}</span>
-                <span class="merc-badge-dist"><i class="fa-solid fa-location-arrow"></i> {{ dest2.shortDistance
-                  }}</span>
+                <span class="merc-badge-region"><i class="fa-solid fa-landmark text-gold"></i> {{ dest2.regionLabel }}</span>
+                <span class="merc-badge-dist"><i class="fa-solid fa-location-arrow"></i> {{ dest2.shortDistance }}</span>
               </div>
 
               <!-- Bottom Content Overlay -->
               <div class="merc-card-bottom-content">
+                <div *ngIf="dest2.category" class="merc-card-category">{{ dest2.category }}</div>
                 <h3 class="merc-card-title">{{ dest2.name }}</h3>
                 <p class="merc-card-desc">{{ dest2.description }}</p>
 
                 <!-- Tags Pills -->
                 <div class="merc-card-tags">
-                  <span *ngFor="let t of dest2.tags" class="merc-tag-pill">
-                    <i class="fa-solid fa-leaf text-accent"></i> {{ t }}
+                  <span *ngIf="dest2.audioUrl" class="merc-tag-pill audio-pill">
+                    <i class="fa-solid fa-headphones text-gold"></i> Audio {{ dest2.audioDuration || '1:25' }}
+                  </span>
+                  <span *ngFor="let t of dest2.tags.slice(0, 2)" class="merc-tag-pill">
+                    <i class="fa-solid fa-tag text-accent"></i> {{ t }}
                   </span>
                 </div>
 
                 <!-- Action Pill Buttons -->
                 <div class="merc-card-actions" (click)="$event.stopPropagation()">
                   <button class="btn-merc-primary" (click)="selectMapForDestination(dest2)">
-                    <i class="fa-solid fa-location-dot"></i> Khám phá ngay
+                    <i class="fa-solid fa-location-dot"></i> Khám phá
                   </button>
                   <button class="btn-merc-secondary" (click)="openSurroundingModal(dest2)">
-                    <i class="fa-solid fa-circle-info"></i> Xem chi tiết
+                    <i class="fa-solid fa-book-open"></i> Cẩm nang
                   </button>
                   <a [href]="'https://www.google.com/maps/search/?api=1&query=' + dest2.mapQuery" target="_blank"
                     rel="noopener noreferrer" class="btn-merc-link">
-                    Chỉ đường Google Map <i class="fa-solid fa-arrow-right"></i>
+                    <i class="fa-solid fa-diamond-turn-right"></i> Chỉ đường
                   </a>
                 </div>
               </div>
@@ -554,15 +587,14 @@
 
           </div>
 
-          <!-- BOTTOM ROW: 4 STANDING VERTICAL CARDS (Tam Đảo, Đại Lải, Đường Lâm, Bản Rõm) -->
+          <!-- STANDING GRID: CARDS FOR ALL DESTINATIONS & CRAFT VILLAGES -->
           <div class="merc-standing-grid">
 
             <div *ngFor="let dest of standingDestinations" class="merc-standing-card"
-              [class.hidden-by-filter]="selectedRegion() !== 'all' && selectedRegion() !== dest.region"
               (click)="selectMapForDestination(dest)">
 
               <div class="merc-card-media">
-                <img [src]="dest.image" [alt]="dest.name" class="merc-card-img" loading="lazy">
+                <img [src]="dest.image" (error)="onImageError($event)" [alt]="dest.name" class="merc-card-img" loading="lazy">
                 <div class="merc-watermark standing">{{ dest.watermark }}</div>
                 <div class="merc-card-gradient"></div>
               </div>
@@ -575,12 +607,16 @@
 
               <!-- Bottom Content Overlay -->
               <div class="merc-card-bottom-content">
+                <div *ngIf="dest.category" class="merc-standing-category">{{ dest.category }}</div>
                 <h4 class="merc-card-title standing">{{ dest.name }}</h4>
                 <p class="merc-card-desc standing">{{ dest.description }}</p>
 
                 <!-- Tags -->
                 <div class="merc-card-tags">
-                  <span *ngFor="let t of dest.tags" class="merc-tag-pill">
+                  <span *ngIf="dest.audioUrl" class="merc-tag-pill audio-pill">
+                    <i class="fa-solid fa-headphones text-gold"></i> Audio {{ dest.audioDuration || '1:25' }}
+                  </span>
+                  <span *ngFor="let t of dest.tags.slice(0, 2)" class="merc-tag-pill">
                     {{ t }}
                   </span>
                 </div>
@@ -591,17 +627,27 @@
                     <i class="fa-solid fa-location-dot"></i> Khám phá
                   </button>
                   <button class="btn-merc-secondary" (click)="openSurroundingModal(dest)">
-                    Chi tiết
+                    <i class="fa-solid fa-book-open"></i> Cẩm nang
                   </button>
                   <a [href]="'https://www.google.com/maps/search/?api=1&query=' + dest.mapQuery" target="_blank"
                     rel="noopener noreferrer" class="btn-merc-link">
-                    Chỉ đường <i class="fa-solid fa-diamond-turn-right"></i>
+                    <i class="fa-solid fa-diamond-turn-right"></i> Chỉ đường
                   </a>
                 </div>
               </div>
 
             </div>
 
+          </div>
+
+          <!-- Empty state if search returns no results -->
+          <div *ngIf="filteredSurroundingDestinations.length === 0" class="search-empty-state glass-panel">
+            <i class="fa-solid fa-compass-drafting empty-icon text-gold"></i>
+            <h4>Không tìm thấy địa điểm phù hợp</h4>
+            <p>Không có kết quả nào khớp với từ khóa "<strong>{{ searchQuery() }}</strong>". Hãy thử tìm theo tên huyện (Gia Lâm, Sơn Tây, Ứng Hòa...) hoặc nghề thủ công (gốm, nón, đúc đồng, cốm...).</p>
+            <button class="btn-primary" (click)="clearSearch(); selectRegion('all')">
+              <i class="fa-solid fa-rotate-left"></i> Xem tất cả địa điểm
+            </button>
           </div>
 
         </div>
@@ -1105,32 +1151,119 @@
       </div>
 
       <div class="modal-body-content">
-        <span class="modal-cat">{{ selectedSurroundingModal()!.location }}</span>
+        <div class="modal-top-meta-row">
+          <span class="modal-cat">{{ selectedSurroundingModal()!.category || selectedSurroundingModal()!.location }}</span>
+          <span *ngIf="selectedSurroundingModal()!.category" class="modal-loc-sub"><i class="fa-solid fa-location-dot"></i> {{ selectedSurroundingModal()!.location }}</span>
+        </div>
         <h3 class="modal-title">{{ selectedSurroundingModal()!.name }}</h3>
-        <p class="modal-distance"><i class="fa-solid fa-route text-gold"></i> {{ selectedSurroundingModal()!.distance }}
-        </p>
+        <p class="modal-distance"><i class="fa-solid fa-route text-gold"></i> {{ selectedSurroundingModal()!.distance }}</p>
         <p class="modal-desc">{{ selectedSurroundingModal()!.description }}</p>
 
-        <!-- Best Travel Season & Transit Info -->
-        <div class="modal-transit-box">
-          <div class="transit-box-item">
-            <span class="tb-label"><i class="fa-solid fa-calendar-check text-gold"></i> Thời điểm lý tưởng:</span>
-            <span class="tb-val">{{ selectedSurroundingModal()!.bestTime }}</span>
-          </div>
-          <div class="transit-box-item">
-            <span class="tb-label"><i class="fa-solid fa-bus text-accent"></i> Hướng dẫn xe buýt:</span>
-            <span class="tb-val">{{ selectedSurroundingModal()!.busRoute }}</span>
+        <!-- Audio Thuyết Minh Di Sản Bản Quyền (~1p - 1p30s) -->
+        <div *ngIf="selectedSurroundingModal()!.audioUrl" class="modal-audio-banner">
+          <div class="audio-banner-inner">
+            <button class="audio-banner-btn"
+              [class.playing]="tourismService.currentPlayingId() === selectedSurroundingModal()!.id && tourismService.isPlaying()"
+              (click)="playSurroundingAudio(selectedSurroundingModal()!)"
+              [title]="(tourismService.currentPlayingId() === selectedSurroundingModal()!.id && tourismService.isPlaying()) ? 'Tạm dừng audio' : 'Phát audio thuyết minh'">
+              <i *ngIf="!(tourismService.currentPlayingId() === selectedSurroundingModal()!.id && tourismService.isPlaying())" class="fa-solid fa-play"></i>
+              <i *ngIf="tourismService.currentPlayingId() === selectedSurroundingModal()!.id && tourismService.isPlaying()" class="fa-solid fa-pause"></i>
+            </button>
+            <div class="audio-banner-text">
+              <div class="abt-top">
+                <span class="abt-tag"><i class="fa-solid fa-headphones text-gold"></i> Audio Thuyết Minh Di Sản ({{ selectedSurroundingModal()!.audioDuration || '01:25' }})</span>
+                <span *ngIf="tourismService.currentPlayingId() === selectedSurroundingModal()!.id" class="abt-status text-gold">
+                  <i class="fa-solid fa-chart-simple fa-beat"></i> {{ formatTime(tourismService.currentTime()) }}
+                </span>
+              </div>
+              <h5 class="abt-title">{{ selectedSurroundingModal()!.audioTitle || selectedSurroundingModal()!.name }}</h5>
+              <p class="abt-desc">Giọng đọc truyền cảm tự nhiên • Viện Nghiên cứu Di sản Trẻ Hà Nội (Thời lượng: {{ selectedSurroundingModal()!.audioDuration || '1p30s' }})</p>
+            </div>
+            <button class="audio-qr-btn" (click)="openMobileSimulator(selectedSurroundingModal()!.id); closeSurroundingModal()" title="Mô phỏng trải nghiệm quét mã QR di động">
+              <i class="fa-solid fa-qrcode text-gold"></i>
+              <span>Mô phỏng QR</span>
+            </button>
           </div>
         </div>
 
-        <h5 class="modal-subhead"><i class="fa-solid fa-star text-gold"></i> Điểm nổi bật & Trải nghiệm:</h5>
-        <div class="modal-hl-chips">
-          <span *ngFor="let hl of selectedSurroundingModal()!.highlights" class="hl-chip">
-            <i class="fa-solid fa-check text-muted-icon"></i> {{ hl }}
-          </span>
-          <span *ngFor="let tag of selectedSurroundingModal()!.tags" class="hl-chip tag">
-            #{{ tag }}
-          </span>
+        <!-- Lịch sử hình thành & Giá trị văn hóa -->
+        <div *ngIf="selectedSurroundingModal()!.history" class="modal-rich-section">
+          <h5 class="modal-subhead"><i class="fa-solid fa-landmark text-gold"></i> Lịch Sử Hình Thành & Văn Hóa:</h5>
+          <div class="modal-history-box">
+            <p>{{ selectedSurroundingModal()!.history }}</p>
+          </div>
+        </div>
+
+        <!-- Hướng dẫn di chuyển chi tiết (Xe máy/ô tô, xe buýt, bãi gửi xe) -->
+        <div class="modal-rich-section">
+          <h5 class="modal-subhead"><i class="fa-solid fa-route text-accent"></i> Hướng Dẫn Di Chuyển & Thời Điểm:</h5>
+          <div class="modal-transit-box">
+            <div class="transit-box-item" *ngIf="selectedSurroundingModal()!.bestTime">
+              <span class="tb-label"><i class="fa-solid fa-calendar-check text-gold"></i> Thời điểm lý tưởng:</span>
+              <span class="tb-val">{{ selectedSurroundingModal()!.bestTime }}</span>
+            </div>
+            <div class="transit-box-item" *ngIf="selectedSurroundingModal()!.busRoute">
+              <span class="tb-label"><i class="fa-solid fa-bus text-accent"></i> Tuyến xe buýt:</span>
+              <span class="tb-val">{{ selectedSurroundingModal()!.busRoute }}</span>
+            </div>
+          </div>
+
+          <!-- Chi tiết phương tiện cá nhân & xe buýt cụ thể -->
+          <div class="modal-transit-detail-cards" *ngIf="selectedSurroundingModal()!.transportDetail">
+            <div class="transit-detail-card" *ngIf="selectedSurroundingModal()!.transportDetail?.motorcycle">
+              <div class="tdc-header"><i class="fa-solid fa-motorcycle text-gold"></i> <strong>Phương tiện cá nhân (Ô tô / Xe máy):</strong></div>
+              <p class="tdc-text">{{ selectedSurroundingModal()!.transportDetail!.motorcycle }}</p>
+            </div>
+            <div class="transit-detail-card" *ngIf="selectedSurroundingModal()!.transportDetail?.bus">
+              <div class="tdc-header"><i class="fa-solid fa-bus-simple text-accent"></i> <strong>Lộ trình xe buýt & Điểm xuống:</strong></div>
+              <p class="tdc-text">{{ selectedSurroundingModal()!.transportDetail!.bus }}</p>
+            </div>
+            <div class="transit-detail-card" *ngIf="selectedSurroundingModal()!.transportDetail?.parking">
+              <div class="tdc-header"><i class="fa-solid fa-square-parking text-success"></i> <strong>Gửi xe & Tham quan:</strong></div>
+              <p class="tdc-text">{{ selectedSurroundingModal()!.transportDetail!.parking }}</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Trải nghiệm thực tế có thể thử -->
+        <div *ngIf="selectedSurroundingModal()!.experiences && selectedSurroundingModal()!.experiences!.length > 0" class="modal-rich-section">
+          <h5 class="modal-subhead"><i class="fa-solid fa-wand-magic-sparkles text-gold"></i> Trải Nghiệm Thực Tế Không Thể Bỏ Lỡ:</h5>
+          <ul class="modal-bullet-list">
+            <li *ngFor="let exp of selectedSurroundingModal()!.experiences" class="bullet-item">
+              <i class="fa-solid fa-circle-check text-success"></i>
+              <span>{{ exp }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Góc check-in sống ảo đẹp -->
+        <div *ngIf="selectedSurroundingModal()!.checkInSpots && selectedSurroundingModal()!.checkInSpots!.length > 0" class="modal-rich-section">
+          <h5 class="modal-subhead"><i class="fa-solid fa-camera-retro text-gold"></i> Góc Check-in Sống Ảo Đẹp Nhất:</h5>
+          <ul class="modal-bullet-list checkin-list">
+            <li *ngFor="let spot of selectedSurroundingModal()!.checkInSpots" class="bullet-item">
+              <i class="fa-solid fa-location-dot text-danger"></i>
+              <span>{{ spot }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Điểm nổi bật & Hashtags -->
+        <div class="modal-rich-section" *ngIf="selectedSurroundingModal()!.highlights || selectedSurroundingModal()!.tags">
+          <h5 class="modal-subhead"><i class="fa-solid fa-star text-gold"></i> Điểm Nổi Bật & Thẻ Phân Loại:</h5>
+          <div class="modal-hl-chips">
+            <span *ngFor="let hl of selectedSurroundingModal()!.highlights" class="hl-chip">
+              <i class="fa-solid fa-check text-muted-icon"></i> {{ hl }}
+            </span>
+            <span *ngFor="let tag of selectedSurroundingModal()!.tags" class="hl-chip tag">
+              #{{ tag }}
+            </span>
+          </div>
+        </div>
+
+        <!-- Nguồn thông tin tư liệu -->
+        <div *ngIf="selectedSurroundingModal()!.source" class="modal-source-footer">
+          <i class="fa-solid fa-circle-info text-muted"></i>
+          <span>Nguồn tư liệu & hình ảnh tham khảo: <em>{{ selectedSurroundingModal()!.source }}</em></span>
         </div>
 
         <div class="modal-footer-actions">

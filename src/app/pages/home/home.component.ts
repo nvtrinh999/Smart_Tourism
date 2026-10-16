@@ -167,7 +167,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   selectedDestinationModal = signal<AlternativeDestination | null>(null);
 
   // Tab 2 state
-  selectedRegion = signal<'all' | 'west' | 'north' | 'east'>('all');
+  selectedRegion = signal<'all' | 'craft' | 'west' | 'north' | 'east' | 'south'>('all');
+  searchQuery = signal<string>('');
   selectedSurroundingModal = signal<SurroundingDestination | null>(null);
   activeMapLocation = signal<string>('Hanoi+Ba+Vi+Tam+Dao+Ecopark');
   activeMapTitle = signal<string>('Toàn cảnh Vành đai Thủ Đô (Hà Nội, Ba Vì, Tam Đảo, Ecopark)');
@@ -702,18 +703,60 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.data?.tab2_suburbs.surroundingDestinations || [];
   }
 
+  private removeAccents(str: string): string {
+    return (str || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/đ/g, 'd')
+      .replace(/Đ/g, 'D')
+      .toLowerCase();
+  }
+
   get filteredSurroundingDestinations(): SurroundingDestination[] {
     const reg = this.selectedRegion();
-    if (reg === 'all') return this.surroundingDestinations;
-    return this.surroundingDestinations.filter(d => d.region === reg);
+    const rawQuery = this.searchQuery().toLowerCase().trim();
+    const query = this.removeAccents(rawQuery);
+    let list = this.surroundingDestinations;
+
+    if (reg === 'craft') {
+      list = list.filter(d => d.id !== 'ba-vi' && d.id !== 'ecopark' && d.id !== 'tam-dao' && d.id !== 'dai-lai' && d.id !== 'ban-rom');
+    } else if (reg === 'south') {
+      list = list.filter(d => d.region === 'south');
+    } else if (reg !== 'all') {
+      list = list.filter(d => d.region === reg);
+    }
+
+    if (rawQuery) {
+      list = list.filter(d => {
+        const textToSearch = [
+          d.name,
+          d.location,
+          d.description,
+          ...(d.tags || []),
+          d.category || '',
+          d.history || ''
+        ].join(' ');
+        
+        const rawText = textToSearch.toLowerCase();
+        const normText = this.removeAccents(textToSearch);
+        return rawText.includes(rawQuery) || normText.includes(query);
+      });
+    }
+
+    return list;
   }
 
   get topWideDestinations(): SurroundingDestination[] {
-    return this.surroundingDestinations.slice(0, 2);
+    // Return first 2 matching destinations
+    return this.filteredSurroundingDestinations.slice(0, 2);
   }
 
   get standingDestinations(): SurroundingDestination[] {
-    return this.surroundingDestinations.slice(2);
+    // If user filtered or searched, show all matching in grid; otherwise show from index 2
+    if (this.selectedRegion() !== 'all' || this.searchQuery().trim()) {
+      return this.filteredSurroundingDestinations;
+    }
+    return this.filteredSurroundingDestinations.slice(2);
   }
 
   get googleMapsExternalUrl(): string {
@@ -1175,8 +1218,19 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.selectedSuburb.set(suburb);
   }
 
-  selectRegion(reg: 'all' | 'west' | 'north' | 'east'): void {
+  selectRegion(reg: 'all' | 'craft' | 'west' | 'north' | 'east' | 'south'): void {
     this.selectedRegion.set(reg);
+  }
+
+  clearSearch(): void {
+    this.searchQuery.set('');
+  }
+
+  onImageError(event: Event): void {
+    const target = event.target as HTMLImageElement;
+    if (target) {
+      target.src = 'assets/images/bat-trang.jpg';
+    }
   }
 
   onMapLoaded(): void {
@@ -1209,6 +1263,24 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   closeSurroundingModal(): void {
     this.selectedSurroundingModal.set(null);
+  }
+
+  playSurroundingAudio(dest: SurroundingDestination): void {
+    const audioObj: HeritageAudio = {
+      id: dest.id,
+      slug: dest.id,
+      title: dest.audioTitle || dest.name,
+      heritageSite: `${dest.name}, ${dest.location}`,
+      narrator: 'Nhóm nghiên cứu Di sản Trẻ Hà Nội',
+      durationFormatted: dest.audioDuration || '01:25',
+      durationSeconds: 85,
+      audioUrl: dest.audioUrl || `assets/audio/${dest.id}.mp3`,
+      coverImage: dest.image,
+      qrCodeLabel: dest.name,
+      summary: dest.description,
+      article: { lead: dest.description, sections: [] }
+    };
+    this.tourismService.playAudio(audioObj);
   }
 
   nextCheckInPhoto(): void {

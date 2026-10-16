@@ -439,16 +439,32 @@ Khi người dùng hỏi về các địa điểm, dữ liệu mật độ đám
 - Hoàng Thành Thăng Long & Ba Đình: Cuối tuần sáng 08:30 - 10:30 (58% - ổn định). Điểm thay thế: Công viên Bách Thảo, Đoan Môn, Đại lộ Hoàng Diệu rợp bóng xà cừ.
 - Lăng Chủ tịch Hồ Chí Minh (Lăng Bác): Tọa độ [21.0369, 105.8347]. Cao điểm sáng Chủ Nhật 07:30 - 10:30 (88%). Khung giờ lý tưởng: 05:30 - 06:30 (lễ thượng cờ trang nghiêm) và 14:00 - 16:30 (Nhà sàn, ao cá, Bảo tàng Hồ Chí Minh thoáng mát ~32%). Điểm kế cận: Chùa Một Cột (150m), Bảo tàng Hồ Chí Minh, Công viên Bách Thảo. Video tư liệu TikTok chính thức đã được tích hợp trên Hero Banner.
 
-2. TAB 2 - VÙNG VEN VÀNH ĐAI XANH & LÀNG NGHỀ TRUYỀN THỐNG:
-- 6 Điểm đến sinh thái: Vườn Quốc gia Ba Vì (48km), Khu đô thị Ecopark (15km), Thị trấn Tam Đảo (75km), Hồ Đại Lải (45km), Làng cổ Đường Lâm (45km - đá ong), Khu sinh thái Bản Rõm Sóc Sơn (32km).
-- Cẩm nang xe buýt 47A đi Làng gốm Bát Tràng:
-  • Điểm đón: Điểm trung chuyển Long Biên ➔ Bát Tràng.
-  • Giá vé: 9.000 VNĐ/lượt (Học sinh - Sinh viên 5.000 VNĐ/vé tháng).
-  • Tần suất: 15 - 20 phút/chuyến. Hoạt động từ 05:00 - 19:40 hàng ngày.
-- Lịch trình tự túc 1 ngày Bát Tràng: Chi phí ước tính ~120.000đ - 180.000đ/người. Sáng đón xe buýt 47A, vuốt nặn gốm tại Lò Bầu cổ 700 năm, trưa thưởng thức canh măng mực và ổi Đông Dư, chiều check-in Trung tâm Tinh hoa Làng nghề Việt.
+2. TAB 2 - VÙNG VEN VÀNH ĐAI XANH & 20 LÀNG NGHỀ TRUYỀN THỐNG:
+- Hệ thống 25 Điểm đến & Làng nghề:
+  • Làng gốm Bát Tràng (Gia Lâm): Hơn 500 năm thời Lý, bảo tàng 7 bàn xoay khổng lồ, nhà cổ Vạn Vân 300 cổ vật, xe buýt 47A từ Long Biên.
+  • Làng cổ Đường Lâm (Sơn Tây): Di tích quốc gia làng cổ, nhà đá ong 300-400 năm, quê hương 2 vua Phùng Hưng & Ngô Quyền, xe buýt 70A.
+  • Làng hương Quảng Phú Cầu (Ứng Hòa): Hơn 100 năm, sân phơi bó hương đỏ rực như đóa hoa khổng lồ, hương OCOP 3-4 sao, xe buýt 91 từ Yên Nghĩa.
+  • Làng nón Chuông (Thanh Oai): Hàng trăm năm bên sông Đáy, nón 16 vòng nan tre, chợ phiên từ 5h sáng, xe buýt 78, 103A/B, 91.
+  • Làng mây tre đan Phú Vinh (Chương Mỹ): Hơn 400 năm (Phú Hoa Trang), tranh mây chân dung, xe buýt 72 kết hợp Metro Cát Linh.
+  • Làng đúc đồng Đại Bái (Gia Bình, Bắc Ninh): Hơn 900 năm thời Lý thờ tổ nghề Nguyễn Công Triều, tranh đồng chạm nổi lộng lẫy.
+  • Làng chuồn chuồn tre Thạch Xá (Thạch Thất): Hơn 20 năm chân Chùa Tây Phương, chuồn chuồn tre thăng bằng trên đầu ngón tay, xe buýt 89.
+  • Làng quạt Chàng Sơn (Thạch Thất): Hàng trăm năm xứ Đoài, từng triển lãm tại Paris, xe buýt 89/107.
+  • Làng quạt lá châm nón Nghĩa Đồng (Chương Mỹ): Chằm nón lá cọ và quạt lá thủ công bền mát, xe buýt 72/114.
+  • Làng đúc đồng Ngũ Xã (Ba Đình): Thời Hậu Lê, tượng Phật Thích Ca Mâu Ni 12.3 tấn Chùa Thần Quang & phố ẩm thực phở cuốn Đảo Ngọc.
+  • Làng làm diều sáo Hồng Hà (Đan Phượng): Di sản văn hóa phi vật thể quốc gia 2024, sáo gỗ vàng tâm ven sông Hồng, buýt 20A/29/117.
+  • Làng may áo dài Trạch Xá (Ứng Hòa): Từ thời Đinh thờ bà tổ Nguyễn Thị Sen, khâu tay giấu chỉ 'năm mũi một', buýt 78/103.
+  • Làng khảm trai Chuôn Ngọ (Phú Xuyên): Thời Lý thờ danh tướng Trương Công Thành, ốc xà cừ ngũ sắc sập gụ tủ chè, buýt 06A.
+  • Làng làm tò he Xuân La (Phú Xuyên): Hơn 3 thế kỷ nặn bột nếp màu tự nhiên (gấc, lá nếp, nghệ), buýt 06A/108.
+  • Làng thêu ren Quất Động (Thường Tín): Thế kỷ XVII thờ tiến sĩ Lê Công Hành, tranh thêu chân dung phong cảnh sống động, buýt 06A/06E.
+  • Làng làm bánh chưng Tranh Khúc (Thanh Trì): Hàng trăm năm gói vo không khuôn, nếp cái hoa vàng, luộc xanh ngọc bích, buýt 08A/12/99.
+  • Làng mộc mỹ nghệ Chàng Sơn (Thạch Thất): Từng tạc cung điện hoàng gia Huế và Chùa Tây Phương, đồ gỗ tứ linh cao cấp.
+  • Làng rèn Dao Dẫy Đa Sỹ (Kiến Hưng, Hà Đông): Hơn 500 năm thời Hậu Lê, bí quyết tôi thép nước sắc bén bền bỉ, buýt 01/02/19.
+  • Làng cốm Vòng (Dịch Vọng Hậu, Cầu Giấy): Hàng trăm năm thời Lý, thức quà mùa thu Hà Nội bọc lá sen xanh, Metro Nhổn - Ga Hà Nội.
+  • Làng nghề dát vàng Kiêu Kỵ (Gia Lâm): Hơn 300 năm thời Hậu Lê, đập quỳ vàng mỏng như cánh ve thếp tượng Phật, buýt 69 / E02.
+  • Vườn Quốc gia Ba Vì (48km), Khu đô thị Ecopark (15km), Tam Đảo (75km), Hồ Đại Lải (45km), Bản Rõm Sóc Sơn (32km).
 
 3. TAB 3 - CHẠM DI SẢN BẰNG AUDIO GUIDE & QR CODE:
-- Hệ thống Audio Guide tự túc thu âm 1-2 phút kèm mã QR độc bản cho: Lò Bầu Bát Tràng (700 năm giữ lửa), Cổng Ô Quan Chưởng (Cửa ô cổ duy nhất thời Nguyễn), Kiến trúc đá ong Làng cổ Đường Lâm.
+- Hệ thống Audio Guide tự túc thu âm 1-2 phút kèm mã QR độc bản cho các làng nghề & di tích: Lò Bầu Bát Tràng, Làng lụa Vạn Phúc, Nhà cổ đá ong Đường Lâm, Làng hương Quảng Phú Cầu, Làng nón Chuông, Dát vàng Kiêu Kỵ, Cốm Làng Vòng.
 - Du khách có thể dùng smartphone quét mã QR trên màn hình hoặc standee để nghe thuyết minh trực tiếp.
 
 ⭐ ƯU TIÊN 2 (MỞ RỘNG NGOÀI LỀ & TRA CỨU TRỰC TUYẾN THỜI GIAN THỰC):
@@ -500,7 +516,177 @@ Khi người dùng hỏi về các địa điểm, dữ liệu mật độ đám
         `• **Điểm đến thay thế thông thoáng:** Vườn hoa Tao Đàn / Con Cóc (Diên Hồng), Bảo tàng Lịch sử Quốc gia (số 1 Tràng Tiền), Phố sách 19/12.`;
     }
 
-    // 5. Vườn Quốc gia Ba Vì
+    // 5. Làng gốm Bát Tràng (Gia Lâm)
+    if (q.includes('bát tràng') || q.includes('bat trang') || q.includes('làng gốm')) {
+      return `🏺 **Làng gốm Bát Tràng (Huyện Gia Lâm):**\n\n` +
+        `• **Vị trí:** Xã Bát Tràng, huyện Gia Lâm, ven tả ngạn sông Hồng, cách hồ Hoàn Kiếm 13 – 15 km về phía Đông Nam.\n` +
+        `• **Lịch sử:** Trên 500 năm từ thời nhà Lý, nổi tiếng sản phẩm gốm sứ tinh xảo và hoạt động trải nghiệm nặn gốm.\n` +
+        `• **Di chuyển:**\n` +
+        `  - Xe máy / ô tô: Qua cầu Long Biên, Chương Dương, Vĩnh Tuy hoặc Thanh Trì rồi chạy dọc đê sông Hồng.\n` +
+        `  - Xe buýt: Tuyến buýt 47A từ Long Biên đi thẳng đến cổng làng gốm (9.000đ/lượt, 15-20 phút/chuyến).\n` +
+        `• **Trải nghiệm:** Tham quan Chợ gốm, Đình làng Bát Tràng, Bảo tàng gốm Bát Tràng (kiến trúc 7 bàn xoay), tự tay vuốt nặn gốm với nghệ nhân, trẩy hội làng (14-15 tháng 2 âm lịch).\n` +
+        `• **Góc check-in:** Nhà cổ Vạn Vân (>300 cổ vật quý) và Bảo tàng gốm Bát Tràng với ánh sáng tự nhiên mềm mại.`;
+    }
+
+    // 6. Làng cổ Đường Lâm (Sơn Tây)
+    if (q.includes('đường lâm') || q.includes('duong lam') || q.includes('làng cổ')) {
+      return `🏡 **Làng cổ Đường Lâm (Thị xã Sơn Tây):**\n\n` +
+        `• **Vị trí:** Thị xã Sơn Tây, cách trung tâm Hà Nội khoảng 45–50 km về phía Tây. Ngôi làng cổ tiêu biểu đồng bằng Bắc Bộ với nhà đá ong và ngõ quanh co yên bình.\n` +
+        `• **Lịch sử:** Quê hương hai vị anh hùng dân tộc Phùng Hưng và Ngô Quyền. Năm 2006 trở thành làng cổ đầu tiên ở Việt Nam được xếp hạng Di tích lịch sử văn hóa quốc gia.\n` +
+        `• **Di chuyển:**\n` +
+        `  - Ô tô / Xe máy: Theo Đại lộ Thăng Long rẽ Hòa Lạc vào QL21 lên Sơn Tây (đi thêm 4.5km) hoặc theo Quốc lộ 32.\n` +
+        `  - Xe buýt: Tuyến 70A (BX Mỹ Đình – Trung Hà) xuống bến phà Đường Lâm. Hoặc buýt 20B, 67, 89 đến BX Sơn Tây rồi đón buýt 118 hoặc 126.\n` +
+        `• **Trải nghiệm:** Khám phá nhà cổ đá ong 300-400 năm, viếng đình Mông Phụ, đền Phùng Hưng, lăng Ngô Quyền, thử làm bánh trôi bánh chay, ăn chè lam, kẹo dồi, tương nếp và đạp xe ngắm cảnh đồng quê.\n` +
+        `• **Góc check-in:** Cổng làng Mông Phụ, Đình làng Mông Phụ, những con ngõ tường đá ong vàng nâu, sân gạch chum nước nhà cổ và Chùa Mía.`;
+    }
+
+    // 7. Làng hương Quảng Phú Cầu (Ứng Hòa)
+    if (q.includes('quảng phú cầu') || q.includes('quang phu cau') || q.includes('làng hương')) {
+      return `🌸 **Làng hương Quảng Phú Cầu (Huyện Ứng Hòa):**\n\n` +
+        `• **Vị trí:** Xã Quảng Phú Cầu, huyện Ứng Hòa, cách trung tâm Hà Nội khoảng 35 km về phía Nam.\n` +
+        `• **Lịch sử:** Xuất phát từ đầu thế kỷ XX do cụ Lê Xuân Vịnh (thôn Phú Lương Thượng) chẻ tăm hương bán cho thương lái, lan rộng ra 6 thôn toàn xã, nghề cha truyền con nối trứ danh.\n` +
+        `• **Di chuyển:** Xe máy theo Quốc lộ 21B / Tỉnh lộ 429. Xe buýt số 91 từ bến xe Yên Nghĩa đến thẳng làng.\n` +
+        `• **Trải nghiệm:** Dạo quanh làng ngắm sân phơi hương đỏ rực, tham quan cơ sở sản xuất lâu đời, tự tay chẻ nan tre se hương cùng nghệ nhân, mua hương nén hương vòng chuẩn OCOP 3-4 sao.\n` +
+        `• **Góc check-in:** Sân phơi bó hương xòe tròn như đóa hoa khổng lồ rực rỡ sắc vàng đỏ dưới ánh nắng.`;
+    }
+
+    // 8. Làng nón Chuông (Thanh Oai)
+    if (q.includes('làng chuông') || q.includes('nón chuông') || q.includes('non chuong')) {
+      return `👒 **Làng nón Chuông (Huyện Thanh Oai):**\n\n` +
+        `• **Vị trí:** Bờ bắc sông Đáy, xã Phương Trung, Thanh Oai, cách trung tâm Hà Nội khoảng 30km về phía Tây Nam (trên 481 ha gồm 8 thôn).\n` +
+        `• **Lịch sử:** Hàng trăm năm từ thời phong kiến (thế kỷ VIII hoặc XVII, tên cũ Trang Thì Trung), từng làm nón quai thao, nón ba tầm tiến cống hoàng cung.\n` +
+        `• **Di chuyển:** Xe máy theo QL6 & QL21B qua Kim Bài 2km rẽ đê sông Đáy (hoặc đường Cienco 5). Xe buýt tuyến 78, 103A/B hoặc 91 xuống trạm Cửa hàng Xăng dầu Phương Trung, đi bộ 200m-500m vào làng.\n` +
+        `• **Trải nghiệm:** Chợ nón Chuông họp các ngày 4, 10, 14, 20, 24, 30 âm lịch từ 5h00 sáng rộn rã; xem thợ làm khung 16 vòng nan tre, khâu lá cọ hơ diêm; ăn bánh cuốn làng Chuông, bánh đúc lạc.\n` +
+        `• **Góc check-in:** Cổng làng cổ kính, Đình làng Chuông (năm 1894 thời Thành Thái chạm tứ linh gỗ lim) và sân phơi lá cọ dưới hiên nhà.`;
+    }
+
+    // 9. Làng mây tre đan Phú Vinh (Chương Mỹ)
+    if (q.includes('phú vinh') || q.includes('phu vinh') || q.includes('mây tre đan')) {
+      return `🎋 **Làng mây tre đan Phú Vinh (Huyện Chương Mỹ):**\n\n` +
+        `• **Vị trí:** Thôn Phú Vinh, xã Phú Nghĩa, Chương Mỹ (ven QL6), cách trung tâm Hà Nội khoảng 25 – 30 km về phía Tây Nam.\n` +
+        `• **Lịch sử:** Hơn 400 năm hình thành (khoảng năm 1700 tên là Phú Hoa Trang - trời phú bàn tay tài hoa, năm 1800 đổi tên thành Phú Vinh). Xuất khẩu tranh mây, đồ mỹ nghệ khắp thế giới.\n` +
+        `• **Di chuyển:** QL6 qua Chúc Sơn tới xã Phú Nghĩa. Xe buýt tuyến 72 (Yên Nghĩa – Xuân Mai), kết hợp Metro Cát Linh - Hà Đông tới ga Yên Nghĩa bắt tiếp buýt 72 xuống Xã Phú Nghĩa.\n` +
+        `• **Trải nghiệm:** Xem quy trình tuốt nan, phơi hun khói, đan tranh chân dung tinh xảo; tự tay đan đĩa mây/lót ly kỷ niệm; mua sắm đèn mây, khay trà giá gốc xưởng.\n` +
+        `• **Góc check-in:** Sân phơi mây tre rực vàng dưới nắng, phòng trưng bày đèn lồng decor lung linh và Đình thôn Phú Vinh.`;
+    }
+
+    // 10. Làng đúc đồng Đại Bái & Ngũ Xã
+    if (q.includes('đại bái') || q.includes('dai bai') || q.includes('ngũ xã') || q.includes('ngu xa') || q.includes('đúc đồng')) {
+      if (q.includes('ngũ xã') || q.includes('ngu xa') || q.includes('phở cuốn')) {
+        return `🔔 **Làng đúc đồng Ngũ Xã (Quận Ba Đình):**\n\n` +
+          `• **Vị trí:** Bán đảo Ngũ Xã, phường Trúc Bạch, Ba Đình (sát hồ Trúc Bạch), cách Hồ Gươm chỉ ~3 km.\n` +
+          `• **Lịch sử:** Thế kỷ XVII thời nhà Lê, hội tụ thợ giỏi từ 5 làng đúc đồng vùng Kinh Bắc và Hải Dương. Đúc tượng Phật Thích Ca Mâu Ni 12,3 tấn tại Chùa Thần Quang (1952).\n` +
+          `• **Trải nghiệm:** Chiêm ngưỡng tượng Phật đồng nguyên khối Chùa Thần Quang, dạo phố đi bộ Đảo Ngọc, thưởng thức phở cuốn & phở chiên phồng chính gốc Ngũ Xã.\n` +
+          `• **Di chuyển:** Đi theo Quán Thánh hoặc Yên Phụ rẽ Nguyễn Trường Tộ. Buýt 31, 50, 55A/B, E05.`;
+      }
+      return `🔔 **Làng đúc đồng nghệ thuật Đại Bái (Gia Bình, Bắc Ninh):**\n\n` +
+        `• **Vị trí:** Xã Đại Bái, huyện Gia Bình, Bắc Ninh, cách Hà Nội khoảng 35 – 40 km về phía Đông Bắc.\n` +
+        `• **Lịch sử:** Trên 900 năm (tên cổ làng Bưởi hay Hạm Sảnh), thờ tổ nghề Nguyễn Công Triều từ thời nhà Lý (thế kỷ XI).\n` +
+        `• **Trải nghiệm:** Lắng nghe tiếng búa gò đồng lách cách rộn ràng, xem nung đồng đổ khuôn và kỹ thuật gò chạm nổi hoa văn sống động trên tấm kim loại, mua tranh đồng phong thủy.\n` +
+        `• **Di chuyển:** QL1A hoặc cao tốc HN - Bắc Giang rẽ QL38 qua thị trấn Hồ sang Gia Bình.`;
+    }
+
+    // 11. Chuồn chuồn tre Thạch Xá & Quạt Chàng Sơn & Mộc Chàng Sơn
+    if (q.includes('thạch xá') || q.includes('thach xa') || q.includes('chuồn chuồn tre') || q.includes('chàng sơn') || q.includes('chang son')) {
+      if (q.includes('chuồn chuồn') || q.includes('thạch xá') || q.includes('thach xa')) {
+        return `🦗 **Làng chuồn chuồn tre Thạch Xá (Huyện Thạch Thất):**\n\n` +
+          `• **Vị trí:** Xã Thạch Xá, ngay dưới chân Chùa Tây Phương, cách Hà Nội 35 – 40 km về phía Tây.\n` +
+          `• **Lịch sử & Nét độc đáo:** Hơn 20 năm phát triển, chuồn chuồn tre có khả năng tự giữ thăng bằng đối xứng trên đầu ngón tay kỳ diệu, xuất khẩu khắp thế giới.\n` +
+          `• **Di chuyển:** Đại lộ Thăng Long 25km rẽ Thạch Thất hướng Chùa Tây Phương. Xe buýt số 89 xuống gần chùa đi bộ 500m.\n` +
+          `• **Trải nghiệm:** Xem chọn tre già, cạo gọt thân uốn cánh, tự tay tô màu hoa văn sặc sỡ và check-in giàn phơi chuồn chuồn rực rỡ sắc màu.`;
+      }
+      if (q.includes('mộc') || q.includes('gỗ') || q.includes('tạc tượng')) {
+        return `🪵 **Làng mộc mỹ nghệ Chàng Sơn (Huyện Thạch Thất):**\n\n` +
+          `• **Vị trí:** Xã Chàng Sơn, huyện Thạch Thất, cách Hà Nội khoảng 30 – 35km về phía Tây.\n` +
+          `• **Lịch sử:** Thợ mộc tài hoa từng được triều đình nhà Nguyễn triệu về kinh đô Huế dựng cung điện hoàng gia và tham gia tạc các pho tượng Phật tuyệt tác Chùa Tây Phương.\n` +
+          `• **Sản phẩm:** Sập gụ, tủ chè, bàn ghế gỗ quý, hoành phi câu đối chạm tứ linh tinh xảo giá gốc tận xưởng.`;
+      }
+      return `🪭 **Làng quạt Chàng Sơn (Huyện Thạch Thất):**\n\n` +
+        `• **Vị trí:** Xã Chàng Sơn, Thạch Thất, cách Hà Nội khoảng 30 – 35 km về phía Tây.\n` +
+        `• **Lịch sử:** Hàng trăm năm từ thế kỷ XIX, cái nôi quạt xứ Đoài từng mang đi triển lãm tại Paris thời Pháp thuộc.\n` +
+        `• **Trải nghiệm:** Xem chẻ nan bấm lỗ xâu nan, dán quạt giấy quạt vải, vẽ thư pháp thủy mặc; tự làm quạt lưu niệm; check-in sân phơi nan quạt rực rỡ sắc màu.`;
+    }
+
+    // 12. Quạt lá Nghĩa Đồng & May áo dài Trạch Xá
+    if (q.includes('nghĩa đồng') || q.includes('nghia dong') || q.includes('trạch xá') || q.includes('trach xa') || q.includes('áo dài')) {
+      if (q.includes('trạch xá') || q.includes('trach xa') || q.includes('áo dài')) {
+        return `👘 **Làng may áo dài Trạch Xá (Huyện Ứng Hòa):**\n\n` +
+          `• **Vị trí:** Thôn Trạch Xá, xã Hòa Lâm, Ứng Hòa (ven sông Đáy), cách Hà Nội 40 – 45 km về phía Nam.\n` +
+          `• **Lịch sử:** Ngàn năm từ thời Đinh thờ Đức thánh tổ Nguyễn Thị Sen (vương phi vua Đinh Tiên Hoàng). Nơi lập nên các phố thợ may danh tiếng tại Hàng Bông, Cầu Gỗ.\n` +
+          `• **Kỹ thuật độc bản:** Khâu tay hoàn toàn 'năm mũi một' giấu đường chỉ, tà áo mềm mại, ôm dáng tuyệt đối.\n` +
+          `• **Di chuyển:** QL21B qua Ba La xuống thị trấn Vân Đình rẽ Hòa Lâm. Tuyến buýt 78 hoặc 103A/B.`;
+      }
+      return `🍃 **Làng quạt lá châm nón Nghĩa Đồng (Huyện Chương Mỹ):**\n\n` +
+        `• **Vị trí:** Thôn Nghĩa Đồng, xã Đại Yên, Chương Mỹ, cách Hà Nội 30 – 35 km về phía Tây Nam.\n` +
+        `• **Lịch sử:** Hàng trăm năm làm quạt lá và nón chằm thủ công từ lá cọ, lá gòn, lá buông bằng kim chỉ cước chắc chắn, siêu bền, mát rượi và thân thiện môi trường.\n` +
+        `• **Di chuyển:** QL6 qua Chúc Sơn rẽ Đại Yên. Tuyến buýt 72 hoặc 114.`;
+    }
+
+    // 13. Khảm trai Chuôn Ngọ & Tò he Xuân La
+    if (q.includes('chuôn ngọ') || q.includes('chuon ngo') || q.includes('khảm trai') || q.includes('xuân la') || q.includes('xuan la') || q.includes('tò he') || q.includes('to he')) {
+      if (q.includes('xuân la') || q.includes('xuan la') || q.includes('tò he') || q.includes('to he')) {
+        return `🎨 **Làng làm tò he Xuân La (Huyện Phú Xuyên):**\n\n` +
+          `• **Vị trí:** Thôn Xuân La, xã Phượng Dực, Phú Xuyên, cách Hà Nội khoảng 40km về phía Nam.\n` +
+          `• **Lịch sử:** Hơn 3 thế kỷ gìn giữ nghề nặn tò he bằng bột gạo nếp tự nhiên (tên xưa là 'bánh chim cò' có gắn còi tò-te-tò-he).\n` +
+          `• **Trải nghiệm:** Tự tay nhào bột, tạo hình nhân vật cổ tích bằng que tre; xem nghệ nhân nặn thần tốc 3-5 phút một sản phẩm; khám phá màu tự nhiên từ gấc (đỏ), nghệ (vàng), lá nếp (xanh).\n` +
+          `• **Di chuyển:** QL1A hoặc cao tốc Pháp Vân rẽ nút Đỗ Xá đi TL429. Tuyến buýt 06A hoặc 108.`;
+      }
+      return `✨ **Làng khảm trai Chuôn Ngọ (Huyện Phú Xuyên):**\n\n` +
+        `• **Vị trí:** Thôn Chuôn Ngọ, xã Chuyên Mỹ, Phú Xuyên (ven sông Nhuệ), cách Hà Nội 35 – 40 km về phía Nam.\n` +
+        `• **Lịch sử:** Từ thời nhà Lý (thế kỷ XI) thờ tổ nghề danh tướng Trương Công Thành, từng là phẩm vật tiến cống triều đình ngự dụng.\n` +
+        `• **Kỹ thuật:** Cưa lọng, đục khắc vỏ trai, vỏ ốc xà cừ ngũ sắc gắn lên gỗ sưa, gụ, trắc tạo tranh phong cảnh, sập gụ tủ chè lấp lánh ánh quang phổ.\n` +
+        `• **Di chuyển:** QL1A hoặc cao tốc Pháp Vân rẽ nút Thường Tín về Chuyên Mỹ. Buýt 06A.`;
+    }
+
+    // 14. Thêu ren Quất Động & Bánh chưng Tranh Khúc
+    if (q.includes('quất động') || q.includes('quat dong') || q.includes('thêu ren') || q.includes('tranh khúc') || q.includes('tranh khuc') || q.includes('bánh chưng')) {
+      if (q.includes('tranh khúc') || q.includes('tranh khuc') || q.includes('bánh chưng')) {
+        return `🍃 **Làng làm bánh chưng Tranh Khúc (Huyện Thanh Trì):**\n\n` +
+          `• **Vị trí:** Thôn Tranh Khúc, xã Duyên Hà, Thanh Trì (ven đê sông Hồng), cách Hồ Gươm khoảng 15km về phía Nam.\n` +
+          `• **Lịch sử:** Hàng trăm năm gói bánh chưng nức tiếng đất Bắc. Nguyên liệu khắt khe: nếp cái hoa vàng, đỗ xanh tiêu lòng vàng, lá dong rừng Tây Bắc.\n` +
+          `• **Kỹ thuật độc đáo:** Gói 'vo' bằng tay hoàn toàn không dùng khuôn nhưng vuông vức chằn chặn chỉ trong 30 giây đến 1 phút.\n` +
+          `• **Di chuyển:** Đường đê Nguyễn Khoái - Hữu Hồng về Duyên Hà. Tuyến buýt 08A, 12, 99.`;
+      }
+      return `🪡 **Làng thêu ren Quất Động (Huyện Thường Tín):**\n\n` +
+        `• **Vị trí:** Xã Quất Động, Thường Tín (sát QL1A cũ), cách Hà Nội 20 – 25 km về phía Nam.\n` +
+        `• **Lịch sử:** Từ thế kỷ XVII thờ ông tổ nghề Tiến sĩ Lê Công Hành (giỗ tổ ngày 12 tháng Giêng âm lịch).\n` +
+        `• **Kỹ thuật:** Phối màu chỉ tơ uyển chuyển, mũi kim tinh tế thêu tranh phong cảnh quê hương, câu đối hoành phi sống động như tranh vẽ.\n` +
+        `• **Di chuyển:** Đi theo QL1A cũ hoặc cao tốc Pháp Vân nút Thường Tín. Tuyến buýt 06A hoặc 06E từ BX Giáp Bát.`;
+    }
+
+    // 15. Diều sáo Hồng Hà & Rèn Dao Đa Sỹ
+    if (q.includes('hồng hà') || q.includes('hong ha') || q.includes('diều sáo') || q.includes('đa sỹ') || q.includes('da sy') || q.includes('làng rèn') || q.includes('dao đa sỹ')) {
+      if (q.includes('đa sỹ') || q.includes('da sy') || q.includes('dao') || q.includes('rèn')) {
+        return `🔨 **Làng rèn Dao Dẫy Đa Sỹ (Kiến Hưng, Hà Đông):**\n\n` +
+          `• **Vị trí:** Phường Kiến Hưng, quận Hà Đông, cách Hồ Gươm 10 – 12 km về phía Tây Nam.\n` +
+          `• **Lịch sử:** Hơn 500 năm thời Hậu Lê do hai vị tổ nghề họ Nguyễn từ Thanh Hóa truyền dạy. Thương hiệu 'Dao Đa Sỹ' sắc bén, bền bỉ, tôi nước gia truyền giữ cạnh cực lâu cùn.\n` +
+          `• **Trải nghiệm:** Nghe tiếng búa đập đe chan chát, xem nghệ nhân nung thép đỏ hồng nhúng nước tôi thép xèo xèo, mua dao thái chặt uy tín tại lò rèn.\n` +
+          `• **Di chuyển:** Trục Nguyễn Trãi - Phúc La vào Kiến Hưng. Tàu điện Metro Cát Linh hoặc buýt 01, 02, 19.`;
+      }
+      return `🪁 **Làng làm diều sáo Hồng Hà (Huyện Đan Phượng):**\n\n` +
+        `• **Vị trí:** Thôn Bá Dương Nội, xã Hồng Hà, Đan Phượng (ven bờ bắc sông Hồng), cách Hà Nội 20 – 25 km về phía Tây Bắc.\n` +
+        `• **Di sản Quốc gia:** 'Hội Diều làng Bá Dương Nội' được công nhận là Di sản văn hóa phi vật thể quốc gia (2024), hội thi thả diều Rằm tháng 3 âm lịch.\n` +
+        `• **Kỹ thuật sáo diều:** Khoét sáo bịt gỗ vàng tâm tạo âm thanh trầm bổng ngân vang hàng cây số.\n` +
+        `• **Di chuyển:** Tuyến QL32 qua Nhổn rẽ hướng đê sông Hồng. Buýt 20A, 29, 117.`;
+    }
+
+    // 16. Cốm Làng Vòng & Dát vàng Kiêu Kỵ
+    if (q.includes('làng vòng') || q.includes('cốm vòng') || q.includes('com vong') || q.includes('cốm') || q.includes('kiêu kỵ') || q.includes('kieu ky') || q.includes('dát vàng')) {
+      if (q.includes('kiêu kỵ') || q.includes('kieu ky') || q.includes('dát vàng')) {
+        return `👑 **Làng nghề dát vàng Kiêu Kỵ (Huyện Gia Lâm):**\n\n` +
+          `• **Vị trí:** Xã Kiêu Kỵ, Gia Lâm (gần Vinhomes Ocean Park), cách Hà Nội 15 – 20 km về phía Đông.\n` +
+          `• **Lịch sử:** Hơn 300 năm từ thời Hậu Lê (thế kỷ XVII), làng duy nhất tại Việt Nam giữ nghề làm quỳ vàng, quỳ bạc thủ công.\n` +
+          `• **Kỹ thuật đỉnh cao:** Đập búa hàng nghìn nhát biến thỏi vàng thành những lá quỳ mỏng tang như cánh ve dát lên tượng Phật, hoành phi câu đối và đồ ngự dụng.\n` +
+          `• **Di chuyển:** Cầu Chương Dương / Vĩnh Tuy theo đường Cổ Linh – Đa Tốn – Nguyễn Quý Trị. Tuyến buýt 69 hoặc VinBus E02.`;
+      }
+      return `🌾 **Làng cốm Vòng (Dịch Vọng Hậu, Cầu Giấy):**\n\n` +
+        `• **Vị trí:** Phố Xuân Thủy, Trần Thái Tông, ngõ 63 Xuân Thủy, Cầu Giấy, cách Hồ Gươm 6 – 7 km về phía Tây.\n` +
+        `• **Lịch sử:** Hàng trăm năm từ thời nhà Lý, từng là vật phẩm tiến cống triều đình, biểu tượng thanh tao của mùa thu Hà Nội.\n` +
+        `• **Đặc sản:** Cốm tươi dẻo thơm sữa lúa non bọc lá sen lá dong buộc lạt đỏ, bánh cốm, xôi cốm hạt sen, chè cốm, chả cốm.\n` +
+        `• **Di chuyển:** Metro Nhổn - Ga Hà Nội (ga ĐHQG) hoặc buýt 26, 32, 34, 38 xuống ngõ 63 Xuân Thủy.`;
+    }
+
+    // 17. Vườn Quốc gia Ba Vì
     if (q.includes('ba vì') || q.includes('bavi')) {
       return `🌲 **Vườn Quốc gia Ba Vì (Vành đai xanh phía Tây):**\n\n` +
         `• **Khoảng cách:** Cách trung tâm Hà Nội khoảng 48km theo hướng Đại lộ Thăng Long.\n` +
@@ -509,41 +695,27 @@ Khi người dùng hỏi về các địa điểm, dữ liệu mật độ đám
         `• **Khuyến nghị di chuyển:** Xe máy phượt trong ngày hoặc ô tô cá nhân (vé vào cổng khoảng 60.000đ/người lớn, ưu đãi HSSV 20.000đ).`;
     }
 
-    // 6. Hồ Đại Lải
-    if (q.includes('đại lải') || q.includes('flamingo') || q.includes('dai lai')) {
-      return `🏖️ **Khu Du lịch Sinh thái Hồ Đại Lải (Vành đai phía Bắc):**\n\n` +
-        `• **Khoảng cách:** Cách trung tâm Hà Nội khoảng 45km (Phúc Yên, Vĩnh Phúc).\n` +
-        `• **Không gian:** Mặt hồ rộng hơn 525ha bao bọc bởi những cánh rừng thông ngút ngàn và dãy núi Tam Đảo hùng vĩ.\n` +
-        `• **Trải nghiệm:** Chèo thuyền kayak, chèo SUP trên mặt hồ tĩnh lặng, cắm trại dã ngoại, khám phá Đảo Ngọc và quần thể bảo tàng nghệ thuật đương đại Flamingo.\n` +
-        `• **Thời điểm lý tưởng:** Thích hợp cho chuyến dã ngoại nghỉ ngơi cuối tuần gia đình từ 1 đến 2 ngày.`;
-    }
-
-    // 7. Xe buýt Tuyến 47A & Làng gốm Bát Tràng
-    if (q.includes('xe buýt') || q.includes('bát tràng') || q.includes('47a') || q.includes('làng gốm')) {
-      return `🚌 **Cẩm nang Xe buýt Tuyến 47A đi Làng gốm Bát Tràng:**\n\n` +
-        `• **Lộ trình:** Điểm trung chuyển Long Biên ➔ Đê Bát Tràng ➔ Chợ gốm Bát Tràng.\n` +
-        `• **Giá vé:** 9.000 VNĐ / lượt (Học sinh - Sinh viên chỉ 5.000 VNĐ / vé tháng ưu đãi).\n` +
-        `• **Tần suất hoạt động:** 15 - 20 phút / chuyến (Từ 05:00 - 19:40 hàng ngày, xe chất lượng cao có máy lạnh).\n` +
-        `• **Trải nghiệm tại Bát Tràng:** Tham quan di tích Lò Bầu cổ 700 năm giữ lửa, tự tay vuốt nặn gốm tại sân Lò Bầu, ghé Trung tâm Tinh hoa Làng nghề Việt và thưởng thức canh măng mực truyền thống.`;
-    }
-
-    // 8. Vùng ven khác: Tam Đảo, Ecopark, Làng cổ Đường Lâm, Bản Rõm
-    if (q.includes('vùng ven') || q.includes('tam đảo') || q.includes('ecopark') || q.includes('đường lâm') || q.includes('bản rõm')) {
-      return `🌲 **Bộ sưu tập Điểm đến Vùng ven & Vành đai xanh:**\n\n` +
+    // 18. Hồ Đại Lải, Ecopark, Tam Đảo, Bản Rõm
+    if (q.includes('vùng ven') || q.includes('tam đảo') || q.includes('ecopark') || q.includes('đại lải') || q.includes('bản rõm')) {
+      return `🌲 **Bộ sưu tập Điểm đến Vùng ven & Vành đai xanh Thủ đô:**\n\n` +
         `• **Phía Tây:** Vườn Quốc gia Ba Vì (48km - rừng thông & đền Thượng), Làng cổ Đường Lâm (45km - quần thể nhà cổ đá ong).\n` +
-        `• **Phía Bắc:** Thị trấn Tam Đảo (75km - mây mù mát mẻ), Hồ Đại Lải (45km), Bản Rõm Sóc Sơn (32km - cắm trại rừng thông).\n` +
+        `• **Phía Bắc:** Thị trấn Tam Đảo (75km - mây mù mát mẻ), Hồ Đại Lải (45km - chèo kayak & rừng thông Flamingo), Bản Rõm Sóc Sơn (32km - cắm trại sinh thái).\n` +
         `• **Đông Nam:** Khu đô thị sinh thái Ecopark (15km - công viên mùa xuân, đại ngàn xanh mát ven sông Bắc Hưng Hải).\n` +
         `• *Bạn có thể xem bản đồ số Google Maps tại Tab 2 của trang web.*`;
     }
 
-    // 9. Audio Guide & QR Code di sản số
+    // 19. Audio Guide & QR Code di sản số
     if (q.includes('qr') || q.includes('audio') || q.includes('thuyết minh') || q.includes('di sản')) {
       return `🎧 **Hệ thống Audio Guide & Mã QR Di sản (Tab 3 Đề án):**\n\n` +
         `• **Nội dung:** Đề án đã xây dựng hệ thống thuyết minh đa phương tiện (thời lượng 1 - 2 phút) do nhóm tự biên soạn và thu âm độc quyền.\n` +
-        `• **3 Di tích trọng điểm:**\n` +
+        `• **Các Di tích trọng điểm:**\n` +
         `  1. **Lò Bầu Bát Tràng:** 700 năm giữ lửa truyền thống làng gốm bên sông Hồng.\n` +
-        `  2. **Cửa ô Quan Chưởng:** Cửa ô cổ kính duy nhất còn nguyên vẹn của Kinh thành Thăng Long thời Nguyễn.\n` +
+        `  2. **Làng lụa Vạn Phúc:** Kỹ nghệ dệt lụa tơ tằm cổ truyền nức tiếng.\n` +
         `  3. **Nhà cổ đá ong Đường Lâm:** Nghệ thuật kiến trúc đá ong độc bản xứ Đoài.\n` +
+        `  4. **Làng hương Quảng Phú Cầu:** Sắc đỏ tăm hương trăm năm OCOP 4 sao.\n` +
+        `  5. **Làng nón Chuông:** Hồn nón lá 16 vòng bên dòng sông Đáy.\n` +
+        `  6. **Dát vàng Kiêu Kỵ:** Kỹ nghệ quỳ vàng 300 năm cung đình.\n` +
+        `  7. **Cốm Làng Vòng:** Hồn thu Hà Nội lắng đọng hạt cốm xanh ngọc.\n` +
         `• **Tương tác:** Bạn hoặc Ban Giám khảo có thể dùng camera smartphone quét trực tiếp mã QR trên Tab 3 hoặc bấm nút **Mobile View** trên thanh điều hướng để trải nghiệm giao diện thuyết minh tương tác di động.`;
     }
 
