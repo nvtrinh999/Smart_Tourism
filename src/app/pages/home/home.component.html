@@ -58,12 +58,12 @@
           <span>Dành cho BGK</span>
         </button>
 
-        <!-- Phone Preview Simulator Button (PrimeNG Secondary Outlined) -->
+        <!-- Phone Preview Simulator Button (PrimeNG Secondary Outlined)
         <button class="btn-phone-sim" (click)="openMobileSimulator('bat-trang')"
           title="Xem trước giao diện trên iPhone">
           <i class="fa-solid fa-mobile-screen-button"></i>
           <span>Mobile View</span>
-        </button>
+        </button> -->
       </div>
 
     </div>
@@ -456,15 +456,15 @@
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'south'"
                 (click)="selectRegion('south')">
-                Phía Nam (Quảng Phú Cầu, Làng Chuông, Phú Vinh...)
+                Phía Nam (Quảng Phú Cầu, Làng Chuông, Cự Đà...)
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'east'"
                 (click)="selectRegion('east')">
-                Đông & Đông Nam (Bát Tràng, Kiêu Kỵ, Đại Bái...)
+                Đông & Đông Nam (Bát Tràng, Kiêu Kỵ, Ecopark...)
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'north'"
                 (click)="selectRegion('north')">
-                Nội đô & Phía Bắc (Ngũ Xã, Cốm Vòng, Tam Đảo...)
+                Nội đô & Phía Bắc (Ngũ Xã, Cốm Vòng, Bản Rõm...)
               </button>
             </div>
           </div>
@@ -473,11 +473,9 @@
           <div class="craft-search-container">
             <div class="craft-search-box">
               <i class="fa-solid fa-magnifying-glass search-icon"></i>
-              <input type="text"
-                class="craft-search-input"
+              <input type="text" class="craft-search-input"
                 placeholder="Tìm nhanh làng nghề, di sản, đặc sản (Bát Tràng, Đường Lâm, Quảng Phú Cầu, Nón Chuông, Cốm Vòng, Quạt, Diều sáo...)"
-                [ngModel]="searchQuery()"
-                (ngModelChange)="searchQuery.set($event)">
+                [ngModel]="searchQuery()" (ngModelChange)="searchQuery.set($event)">
               <button *ngIf="searchQuery()" class="btn-clear-search" (click)="clearSearch()" title="Xóa tìm kiếm">
                 <i class="fa-solid fa-xmark"></i>
               </button>
@@ -495,15 +493,18 @@
             <div *ngIf="topWideDestinations[0] as dest1" class="merc-wide-card"
               (click)="selectMapForDestination(dest1)">
               <div class="merc-card-media">
-                <img [src]="dest1.image" (error)="onImageError($event)" [alt]="dest1.name" class="merc-card-img" loading="lazy">
+                <img [src]="dest1.image" (error)="onImageError($event)" [alt]="dest1.name" class="merc-card-img"
+                  loading="lazy">
                 <div class="merc-watermark">{{ dest1.watermark }}</div>
                 <div class="merc-card-gradient"></div>
               </div>
 
               <!-- Top Floating Meta Badges -->
               <div class="merc-card-top-badges">
-                <span class="merc-badge-region"><i class="fa-solid fa-fire text-gold"></i> {{ dest1.regionLabel }}</span>
-                <span class="merc-badge-dist"><i class="fa-solid fa-location-arrow"></i> {{ dest1.shortDistance }}</span>
+                <span class="merc-badge-region"><i class="fa-solid fa-fire text-gold"></i> {{ dest1.regionLabel
+                  }}</span>
+                <span class="merc-badge-dist"><i class="fa-solid fa-location-arrow"></i> {{ dest1.shortDistance
+                  }}</span>
               </div>
 
               <!-- Bottom Content Overlay -->
@@ -542,15 +543,18 @@
             <div *ngIf="topWideDestinations[1] as dest2" class="merc-wide-card"
               (click)="selectMapForDestination(dest2)">
               <div class="merc-card-media">
-                <img [src]="dest2.image" (error)="onImageError($event)" [alt]="dest2.name" class="merc-card-img" loading="lazy">
+                <img [src]="dest2.image" (error)="onImageError($event)" [alt]="dest2.name" class="merc-card-img"
+                  loading="lazy">
                 <div class="merc-watermark">{{ dest2.watermark }}</div>
                 <div class="merc-card-gradient"></div>
               </div>
 
               <!-- Top Floating Meta Badges -->
               <div class="merc-card-top-badges">
-                <span class="merc-badge-region"><i class="fa-solid fa-landmark text-gold"></i> {{ dest2.regionLabel }}</span>
-                <span class="merc-badge-dist"><i class="fa-solid fa-location-arrow"></i> {{ dest2.shortDistance }}</span>
+                <span class="merc-badge-region"><i class="fa-solid fa-landmark text-gold"></i> {{ dest2.regionLabel
+                  }}</span>
+                <span class="merc-badge-dist"><i class="fa-solid fa-location-arrow"></i> {{ dest2.shortDistance
+                  }}</span>
               </div>
 
               <!-- Bottom Content Overlay -->
@@ -594,7 +598,8 @@
               (click)="selectMapForDestination(dest)">
 
               <div class="merc-card-media">
-                <img [src]="dest.image" (error)="onImageError($event)" [alt]="dest.name" class="merc-card-img" loading="lazy">
+                <img [src]="dest.image" (error)="onImageError($event)" [alt]="dest.name" class="merc-card-img"
+                  loading="lazy">
                 <div class="merc-watermark standing">{{ dest.watermark }}</div>
                 <div class="merc-card-gradient"></div>
               </div>
@@ -644,7 +649,8 @@
           <div *ngIf="filteredSurroundingDestinations.length === 0" class="search-empty-state glass-panel">
             <i class="fa-solid fa-compass-drafting empty-icon text-gold"></i>
             <h4>Không tìm thấy địa điểm phù hợp</h4>
-            <p>Không có kết quả nào khớp với từ khóa "<strong>{{ searchQuery() }}</strong>". Hãy thử tìm theo tên huyện (Gia Lâm, Sơn Tây, Ứng Hòa...) hoặc nghề thủ công (gốm, nón, đúc đồng, cốm...).</p>
+            <p>Không có kết quả nào khớp với từ khóa "<strong>{{ searchQuery() }}</strong>". Hãy thử tìm theo tên huyện
+              (Gia Lâm, Sơn Tây, Ứng Hòa...) hoặc nghề thủ công (gốm, nón, đúc đồng, cốm...).</p>
             <button class="btn-primary" (click)="clearSearch(); selectRegion('all')">
               <i class="fa-solid fa-rotate-left"></i> Xem tất cả địa điểm
             </button>
@@ -955,9 +961,9 @@
               <!-- Top Info Header -->
               <div class="heritage-top-meta">
                 <div class="heritage-badges">
-                  <span class="badge-status primary">Di Tích #0{{ i + 1 }}</span>
-                  <span class="badge-status accent"><i class="fa-solid fa-location-dot"></i> {{ audio.heritageSite
-                    }}</span>
+                  <span class="badge-status primary">Di Tích #{{ (i + 1) < 10 ? '0' : '' }}{{ i + 1 }}</span>
+                      <span class="badge-status accent"><i class="fa-solid fa-location-dot"></i> {{ audio.heritageSite
+                        }}</span>
                 </div>
                 <div class="narrator-pill">
                   <i class="fa-solid fa-microphone-lines text-gold"></i>
@@ -1152,11 +1158,14 @@
 
       <div class="modal-body-content">
         <div class="modal-top-meta-row">
-          <span class="modal-cat">{{ selectedSurroundingModal()!.category || selectedSurroundingModal()!.location }}</span>
-          <span *ngIf="selectedSurroundingModal()!.category" class="modal-loc-sub"><i class="fa-solid fa-location-dot"></i> {{ selectedSurroundingModal()!.location }}</span>
+          <span class="modal-cat">{{ selectedSurroundingModal()!.category || selectedSurroundingModal()!.location
+            }}</span>
+          <span *ngIf="selectedSurroundingModal()!.category" class="modal-loc-sub"><i
+              class="fa-solid fa-location-dot"></i> {{ selectedSurroundingModal()!.location }}</span>
         </div>
         <h3 class="modal-title">{{ selectedSurroundingModal()!.name }}</h3>
-        <p class="modal-distance"><i class="fa-solid fa-route text-gold"></i> {{ selectedSurroundingModal()!.distance }}</p>
+        <p class="modal-distance"><i class="fa-solid fa-route text-gold"></i> {{ selectedSurroundingModal()!.distance }}
+        </p>
         <p class="modal-desc">{{ selectedSurroundingModal()!.description }}</p>
 
         <!-- Audio Thuyết Minh Di Sản Bản Quyền (~1p - 1p30s) -->
@@ -1166,20 +1175,28 @@
               [class.playing]="tourismService.currentPlayingId() === selectedSurroundingModal()!.id && tourismService.isPlaying()"
               (click)="playSurroundingAudio(selectedSurroundingModal()!)"
               [title]="(tourismService.currentPlayingId() === selectedSurroundingModal()!.id && tourismService.isPlaying()) ? 'Tạm dừng audio' : 'Phát audio thuyết minh'">
-              <i *ngIf="!(tourismService.currentPlayingId() === selectedSurroundingModal()!.id && tourismService.isPlaying())" class="fa-solid fa-play"></i>
-              <i *ngIf="tourismService.currentPlayingId() === selectedSurroundingModal()!.id && tourismService.isPlaying()" class="fa-solid fa-pause"></i>
+              <i *ngIf="!(tourismService.currentPlayingId() === selectedSurroundingModal()!.id && tourismService.isPlaying())"
+                class="fa-solid fa-play"></i>
+              <i *ngIf="tourismService.currentPlayingId() === selectedSurroundingModal()!.id && tourismService.isPlaying()"
+                class="fa-solid fa-pause"></i>
             </button>
             <div class="audio-banner-text">
               <div class="abt-top">
-                <span class="abt-tag"><i class="fa-solid fa-headphones text-gold"></i> Audio Thuyết Minh Di Sản ({{ selectedSurroundingModal()!.audioDuration || '01:25' }})</span>
-                <span *ngIf="tourismService.currentPlayingId() === selectedSurroundingModal()!.id" class="abt-status text-gold">
+                <span class="abt-tag"><i class="fa-solid fa-headphones text-gold"></i> Audio Thuyết Minh Di Sản ({{
+                  selectedSurroundingModal()!.audioDuration || '01:25' }})</span>
+                <span *ngIf="tourismService.currentPlayingId() === selectedSurroundingModal()!.id"
+                  class="abt-status text-gold">
                   <i class="fa-solid fa-chart-simple fa-beat"></i> {{ formatTime(tourismService.currentTime()) }}
                 </span>
               </div>
-              <h5 class="abt-title">{{ selectedSurroundingModal()!.audioTitle || selectedSurroundingModal()!.name }}</h5>
-              <p class="abt-desc">Giọng đọc truyền cảm tự nhiên • Viện Nghiên cứu Di sản Trẻ Hà Nội (Thời lượng: {{ selectedSurroundingModal()!.audioDuration || '1p30s' }})</p>
+              <h5 class="abt-title">{{ selectedSurroundingModal()!.audioTitle || selectedSurroundingModal()!.name }}
+              </h5>
+              <p class="abt-desc">Giọng đọc truyền cảm tự nhiên • Viện Nghiên cứu Di sản Trẻ Hà Nội (Thời lượng: {{
+                selectedSurroundingModal()!.audioDuration || '1p30s' }})</p>
             </div>
-            <button class="audio-qr-btn" (click)="openMobileSimulator(selectedSurroundingModal()!.id); closeSurroundingModal()" title="Mô phỏng trải nghiệm quét mã QR di động">
+            <button class="audio-qr-btn"
+              (click)="openMobileSimulator(selectedSurroundingModal()!.id); closeSurroundingModal()"
+              title="Mô phỏng trải nghiệm quét mã QR di động">
               <i class="fa-solid fa-qrcode text-gold"></i>
               <span>Mô phỏng QR</span>
             </button>
@@ -1211,23 +1228,28 @@
           <!-- Chi tiết phương tiện cá nhân & xe buýt cụ thể -->
           <div class="modal-transit-detail-cards" *ngIf="selectedSurroundingModal()!.transportDetail">
             <div class="transit-detail-card" *ngIf="selectedSurroundingModal()!.transportDetail?.motorcycle">
-              <div class="tdc-header"><i class="fa-solid fa-motorcycle text-gold"></i> <strong>Phương tiện cá nhân (Ô tô / Xe máy):</strong></div>
+              <div class="tdc-header"><i class="fa-solid fa-motorcycle text-gold"></i> <strong>Phương tiện cá nhân (Ô tô
+                  / Xe máy):</strong></div>
               <p class="tdc-text">{{ selectedSurroundingModal()!.transportDetail!.motorcycle }}</p>
             </div>
             <div class="transit-detail-card" *ngIf="selectedSurroundingModal()!.transportDetail?.bus">
-              <div class="tdc-header"><i class="fa-solid fa-bus-simple text-accent"></i> <strong>Lộ trình xe buýt & Điểm xuống:</strong></div>
+              <div class="tdc-header"><i class="fa-solid fa-bus-simple text-accent"></i> <strong>Lộ trình xe buýt & Điểm
+                  xuống:</strong></div>
               <p class="tdc-text">{{ selectedSurroundingModal()!.transportDetail!.bus }}</p>
             </div>
             <div class="transit-detail-card" *ngIf="selectedSurroundingModal()!.transportDetail?.parking">
-              <div class="tdc-header"><i class="fa-solid fa-square-parking text-success"></i> <strong>Gửi xe & Tham quan:</strong></div>
+              <div class="tdc-header"><i class="fa-solid fa-square-parking text-success"></i> <strong>Gửi xe & Tham
+                  quan:</strong></div>
               <p class="tdc-text">{{ selectedSurroundingModal()!.transportDetail!.parking }}</p>
             </div>
           </div>
         </div>
 
         <!-- Trải nghiệm thực tế có thể thử -->
-        <div *ngIf="selectedSurroundingModal()!.experiences && selectedSurroundingModal()!.experiences!.length > 0" class="modal-rich-section">
-          <h5 class="modal-subhead"><i class="fa-solid fa-wand-magic-sparkles text-gold"></i> Trải Nghiệm Thực Tế Không Thể Bỏ Lỡ:</h5>
+        <div *ngIf="selectedSurroundingModal()!.experiences && selectedSurroundingModal()!.experiences!.length > 0"
+          class="modal-rich-section">
+          <h5 class="modal-subhead"><i class="fa-solid fa-wand-magic-sparkles text-gold"></i> Trải Nghiệm Thực Tế Không
+            Thể Bỏ Lỡ:</h5>
           <ul class="modal-bullet-list">
             <li *ngFor="let exp of selectedSurroundingModal()!.experiences" class="bullet-item">
               <i class="fa-solid fa-circle-check text-success"></i>
@@ -1237,8 +1259,10 @@
         </div>
 
         <!-- Góc check-in sống ảo đẹp -->
-        <div *ngIf="selectedSurroundingModal()!.checkInSpots && selectedSurroundingModal()!.checkInSpots!.length > 0" class="modal-rich-section">
-          <h5 class="modal-subhead"><i class="fa-solid fa-camera-retro text-gold"></i> Góc Check-in Sống Ảo Đẹp Nhất:</h5>
+        <div *ngIf="selectedSurroundingModal()!.checkInSpots && selectedSurroundingModal()!.checkInSpots!.length > 0"
+          class="modal-rich-section">
+          <h5 class="modal-subhead"><i class="fa-solid fa-camera-retro text-gold"></i> Góc Check-in Sống Ảo Đẹp Nhất:
+          </h5>
           <ul class="modal-bullet-list checkin-list">
             <li *ngFor="let spot of selectedSurroundingModal()!.checkInSpots" class="bullet-item">
               <i class="fa-solid fa-location-dot text-danger"></i>
@@ -1248,7 +1272,8 @@
         </div>
 
         <!-- Điểm nổi bật & Hashtags -->
-        <div class="modal-rich-section" *ngIf="selectedSurroundingModal()!.highlights || selectedSurroundingModal()!.tags">
+        <div class="modal-rich-section"
+          *ngIf="selectedSurroundingModal()!.highlights || selectedSurroundingModal()!.tags">
           <h5 class="modal-subhead"><i class="fa-solid fa-star text-gold"></i> Điểm Nổi Bật & Thẻ Phân Loại:</h5>
           <div class="modal-hl-chips">
             <span *ngFor="let hl of selectedSurroundingModal()!.highlights" class="hl-chip">
@@ -1420,12 +1445,14 @@
         </div>
       </div>
 
-      <div class="footer-links-col">
-        <h5 class="footer-heading">Cấu Trúc Hệ Thống</h5>
-        <ul class="footer-nav">
-          <li><a (click)="switchTab('tab1')">Tránh bão</a></li>
-          <li><a (click)="switchTab('tab2')"> Về vùng ven </a></li>
-          <li><a (click)="switchTab('tab3')">Chạm di sản & Audio Guide</a></li>
+
+
+      <div class="footer-notes-col">
+        <h5 class="footer-heading">Nhà Phát Triển</h5>
+
+        <ul class="footer-note-text">
+          <li>Nguyễn Phương Trinh</li>
+          <li>Ngô Thị Minh Châu</li>
         </ul>
       </div>
 

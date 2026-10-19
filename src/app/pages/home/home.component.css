@@ -305,8 +305,10 @@
   transform: translate(-50%, -50%) !important;
   /* Viewport-relative overscan: ensure the 16:9 video always overflows
      the container in both axes, then overflow:hidden on wrapper clips it */
-  width: 177.78vh !important;   /* 100vh * 16/9 */
-  height: 56.25vw !important;   /* 100vw * 9/16 */
+  width: 177.78vh !important;
+  /* 100vh * 16/9 */
+  height: 56.25vw !important;
+  /* 100vw * 9/16 */
   min-width: 100% !important;
   min-height: 100% !important;
   border: 0 !important;
@@ -946,20 +948,25 @@
 .alert-banner-danger.alert-state-warning {
   border-color: var(--warning-border);
 }
+
 .alert-banner-danger.alert-state-warning::before {
   background: var(--warning);
 }
+
 .alert-banner-danger.alert-state-success {
   border-color: var(--success-border);
 }
+
 .alert-banner-danger.alert-state-success::before {
   background: var(--success);
 }
+
 .alert-status-square.warning {
   background: var(--warning-bg);
   border-color: var(--warning-border);
   color: var(--warning-light);
 }
+
 .alert-status-square.success {
   background: var(--success-bg);
   border-color: var(--success-border);
@@ -970,6 +977,7 @@
   background: var(--warning-bg);
   border-color: var(--warning-border);
 }
+
 .alert-banner-danger.alert-state-warning .meter-num,
 .alert-banner-danger.alert-state-warning .meter-label {
   color: var(--warning-light);
@@ -979,6 +987,7 @@
   background: var(--success-bg);
   border-color: var(--success-border);
 }
+
 .alert-banner-danger.alert-state-success .meter-num,
 .alert-banner-danger.alert-state-success .meter-label {
   color: var(--success-light);
@@ -1012,8 +1021,13 @@
   margin-bottom: 4px;
 }
 
-.text-muted-icon { color: var(--text-muted); }
-.text-gold { color: var(--accent-gold-light); }
+.text-muted-icon {
+  color: var(--text-muted);
+}
+
+.text-gold {
+  color: var(--accent-gold-light);
+}
 
 .card-subtitle {
   font-size: 0.8125rem;
@@ -1182,10 +1196,21 @@
   transition: height 0.4s ease;
 }
 
-.fill-danger { background: var(--danger); }
-.fill-warning { background: var(--warning); }
-.fill-normal { background: #52525B; }
-.fill-success { background: var(--success); }
+.fill-danger {
+  background: var(--danger);
+}
+
+.fill-warning {
+  background: var(--warning);
+}
+
+.fill-normal {
+  background: #52525B;
+}
+
+.fill-success {
+  background: var(--success);
+}
 
 .bar-hour-label {
   font-size: 0.6875rem;
@@ -1225,10 +1250,21 @@
   border-radius: 50%;
 }
 
-.legend-dot.green { background: var(--success); }
-.legend-dot.zinc { background: #52525B; }
-.legend-dot.amber { background: var(--warning); }
-.legend-dot.red { background: var(--danger); }
+.legend-dot.green {
+  background: var(--success);
+}
+
+.legend-dot.zinc {
+  background: #52525B;
+}
+
+.legend-dot.amber {
+  background: var(--warning);
+}
+
+.legend-dot.red {
+  background: var(--danger);
+}
 
 /* Selected Time Detail Banner */
 .selected-time-summary {
@@ -2214,7 +2250,8 @@
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border-hairline);
-  background: #E8EAED; /* Standard Google Maps canvas base color */
+  background: #E8EAED;
+  /* Standard Google Maps canvas base color */
   box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
@@ -2224,7 +2261,8 @@
   width: 100% !important;
   height: 100% !important;
   border: 0 !important;
-  filter: contrast(1.04) saturate(1.08); /* Natural real-world clarity, no dark invert */
+  filter: contrast(1.04) saturate(1.08);
+  /* Natural real-world clarity, no dark invert */
 }
 
 /* Google Maps Loading State Skeleton */
@@ -2252,7 +2290,9 @@
 }
 
 @keyframes mapSpin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .map-loading-text {
@@ -2637,7 +2677,9 @@
   line-height: 1.45;
 }
 
-.text-xs { font-size: 0.6875rem; }
+.text-xs {
+  font-size: 0.6875rem;
+}
 
 /* Photo Gallery Carousel */
 .gallery-card {
@@ -2970,9 +3012,17 @@
   animation: waveform 1s infinite ease-in-out;
 }
 
-.wave-active .wave-bar:nth-child(2n) { animation-delay: 0.15s; }
-.wave-active .wave-bar:nth-child(3n) { animation-delay: 0.3s; }
-.wave-active .wave-bar:nth-child(4n) { animation-delay: 0.45s; }
+.wave-active .wave-bar:nth-child(2n) {
+  animation-delay: 0.15s;
+}
+
+.wave-active .wave-bar:nth-child(3n) {
+  animation-delay: 0.3s;
+}
+
+.wave-active .wave-bar:nth-child(4n) {
+  animation-delay: 0.45s;
+}
 
 .player-slider {
   width: 100%;
@@ -3536,7 +3586,9 @@
   font-size: 0.95rem;
 }
 
-.btn-close-sim:hover { color: var(--text-primary); }
+.btn-close-sim:hover {
+  color: var(--text-primary);
+}
 
 /* Phone Frame Mockup */
 .smartphone-frame {
@@ -3890,12 +3942,15 @@
   margin-bottom: 10px;
 }
 
-.mt-2 { margin-top: 8px; }
+.mt-2 {
+  margin-top: 8px;
+}
 
 /* ==========================================================================
    RESPONSIVE MEDIA QUERIES
    ========================================================================== */
 @media (max-width: 1024px) {
+
   .tab1-grid,
   .tab2-bottom-grid,
   .heritage-card {
@@ -4116,11 +4171,12 @@
   }
 
   .merc-standing-grid {
-    grid-template-columns: 1fr; /* Automatic single column vertical stack on smartphones */
+    grid-template-columns: 1fr;
+    /* Automatic single column vertical stack on smartphones */
     gap: 18px;
   }
 
-  .merc-wide-card, 
+  .merc-wide-card,
   .merc-standing-card {
     min-height: 380px !important;
     border-radius: 16px;
@@ -4842,6 +4898,7 @@
     flex-wrap: wrap;
     gap: 12px;
   }
+
   .audio-qr-btn {
     width: 100%;
     flex-direction: row;
@@ -4849,4 +4906,3 @@
     padding: 6px 10px;
   }
 }
-

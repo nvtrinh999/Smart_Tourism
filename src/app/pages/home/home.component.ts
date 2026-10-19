@@ -73,12 +73,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       tag: 'Vùng ven 4K'
     },
     {
-      id: 'https://www.youtube.com/watch?v=TdHbEbpIA5o',
-      title: 'Flycam 4K Hồ Đại Lải & Quần Thể Nghỉ Dưỡng Flamingo',
-      label: 'Flycam Đại Lải',
-      tag: 'Hồ nước 4K'
-    },
-    {
       id: 'https://www.youtube.com/watch?v=KPwNA0PidEY',
       title: 'Flycam 4K Toàn Cảnh Hồ Tây & Bán Đảo Quảng An',
       label: 'Flycam Hồ Tây',
@@ -98,13 +92,13 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     },
     {
       id: 'https://www.youtube.com/watch?v=uPHK-wj6wIo',
-      title: 'Lễ Thượng Cờ & Không Khí Trang Nghiêm Tại Lăng Bác (TikTok 4K)',
-      label: 'Lăng Bác TikTok',
-      tag: 'TikTok Video'
+      title: 'Lễ Thượng Cờ & Không Khí Trang Nghiêm Tại Lăng Bác (YouTube 4K)',
+      label: 'Lăng Bác',
+      tag: 'YouTube 4K'
     }
   ];
 
-  // Tab 1 state: 6 Flycam Locations - Unified Order: 1. Ba Vì, 2. Đại Lải, 3. Hồ Tây, then Hồ Gươm, Hoàng Thành, Lăng Bác
+  // Tab 1 state: 5 Flycam Locations - Unified Order: 1. Ba Vì, 2. Hồ Tây, 3. Hồ Gươm, 4. Hoàng Thành, 5. Lăng Bác
   locationOptions: LocationOption[] = [
     {
       id: 'ba-vi',
@@ -114,15 +108,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
       icon: 'fa-mountain-sun',
       videoUrl: 'https://www.youtube.com/watch?v=b5apHzIybjE',
       coordinates: [21.0833, 105.3667]
-    },
-    {
-      id: 'dai-lai',
-      name: 'Hồ Đại Lải & Flamingo',
-      shortName: 'Đại Lải',
-      district: 'Phúc Yên - Vĩnh Phúc',
-      icon: 'fa-water',
-      videoUrl: 'https://www.youtube.com/watch?v=TdHbEbpIA5o',
-      coordinates: [21.3250, 105.7167]
     },
     {
       id: 'ho-tay',
@@ -170,12 +155,12 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   selectedRegion = signal<'all' | 'craft' | 'west' | 'north' | 'east' | 'south'>('all');
   searchQuery = signal<string>('');
   selectedSurroundingModal = signal<SurroundingDestination | null>(null);
-  activeMapLocation = signal<string>('Hanoi+Ba+Vi+Tam+Dao+Ecopark');
-  activeMapTitle = signal<string>('Toàn cảnh Vành đai Thủ Đô (Hà Nội, Ba Vì, Tam Đảo, Ecopark)');
+  activeMapLocation = signal<string>('Hanoi+Ba+Vi+Duong+Lam+Bat+Trang');
+  activeMapTitle = signal<string>('Toàn cảnh Du lịch Thủ Đô (Hà Nội, Ba Vì, Đường Lâm, Bát Tràng)');
   isMapLoading = signal<boolean>(true);
   safeGoogleMapsEmbedUrl = signal<SafeResourceUrl>(
     this.sanitizer.bypassSecurityTrustResourceUrl(
-      'https://maps.google.com/maps?q=Hanoi+Ba+Vi+Tam+Dao+Ecopark&t=&z=10&ie=UTF8&iwloc=&output=embed'
+      'https://maps.google.com/maps?q=Hanoi+Ba+Vi+Duong+Lam+Bat+Trang&t=&z=10&ie=UTF8&iwloc=&output=embed'
     )
   );
   selectedSuburb = signal<SuburbDestination | null>(null);
@@ -350,45 +335,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           statusBadge: 'Tuyệt đối thông thoáng',
           headline: `Ba Vì: Yên tĩnh (${density}%) — Cảnh sắc núi rừng tĩnh mịch`,
           recommendation: 'Khu vực rừng thông yên ả, nhiệt độ se lạnh về đêm, hoàn toàn không có khói bụi.'
-        };
-      }
-    } else if (locId === 'dai-lai') {
-      // Hồ Đại Lải & Flamingo
-      if (isWeekend && hour >= 14 && hour < 19) {
-        const density = 55;
-        return {
-          day,
-          timeString,
-          density,
-          level: 'Lưu lượng ổn định (Mức xanh an toàn)',
-          statusType: 'success',
-          statusBadge: 'Thư thái ven hồ',
-          headline: `Đại Lải: Mật độ ổn định (${density}%) — Mặt hồ lộng gió 525ha, nhiều hoạt động giải trí`,
-          recommendation: 'Mặt hồ phẳng lặng, cảnh sắc thơ mộng. Rất thích hợp cho hoạt động chèo kayak, đạp xe quanh rừng thông và tham quan bảo tàng ngoài trời Art in the Forest.'
-        };
-      } else if (!isWeekend && hour >= 8 && hour < 17) {
-        const density = 22;
-        return {
-          day,
-          timeString,
-          density,
-          level: 'Mức xanh an toàn',
-          statusType: 'success',
-          statusBadge: 'Rất thông thoáng',
-          headline: `Đại Lải: Rất thông thoáng (${density}%) — Không gian trong lành`,
-          recommendation: 'Khuôn viên ven hồ thoáng đãng, thư thái dạo bước dưới tán thông reo và thưởng ngoạn nghệ thuật.'
-        };
-      } else {
-        const density = 10;
-        return {
-          day,
-          timeString,
-          density,
-          level: 'Thanh bình ven hồ',
-          statusType: 'success',
-          statusBadge: 'Tuyệt đối thông thoáng',
-          headline: `Đại Lải: Thanh bình (${density}%) — Gió hồ dịu mát`,
-          recommendation: 'Không gian tĩnh lặng, thích hợp nghỉ ngơi thư giãn.'
         };
       }
     } else if (locId === 'ho-guom') {
@@ -719,7 +665,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     let list = this.surroundingDestinations;
 
     if (reg === 'craft') {
-      list = list.filter(d => d.id !== 'ba-vi' && d.id !== 'ecopark' && d.id !== 'tam-dao' && d.id !== 'dai-lai' && d.id !== 'ban-rom');
+      list = list.filter(d => d.id !== 'ba-vi' && d.id !== 'ecopark' && d.id !== 'ban-rom');
     } else if (reg === 'south') {
       list = list.filter(d => d.region === 'south');
     } else if (reg !== 'all') {
@@ -736,7 +682,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           d.category || '',
           d.history || ''
         ].join(' ');
-        
+
         const rawText = textToSearch.toLowerCase();
         const normText = this.removeAccents(textToSearch);
         return rawText.includes(rawQuery) || normText.includes(query);
@@ -894,7 +840,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.ytPlayer && typeof this.ytPlayer.setSize === 'function') {
       try {
         this.ytPlayer.setSize(finalWidth, finalHeight);
-      } catch (e) {}
+      } catch (e) { }
     }
   }
 
@@ -908,7 +854,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
           if (duration > 5 && current >= duration - 0.7) {
             this.handleVideoEnded();
           }
-        } catch (e) {}
+        } catch (e) { }
       }
     }, 500);
   }
@@ -1180,8 +1126,6 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     // Synchronize Google Maps focus for Control Fit
     if (locId === 'ba-vi') {
       this.selectMapLocation('Vuon+Quoc+Gia+Ba+Vi+Ha+Noi', 'Vườn Quốc gia Ba Vì (Huyện Ba Vì)');
-    } else if (locId === 'dai-lai') {
-      this.selectMapLocation('Ho+Dai+Lai+Flamingo+Vinh+Phuc', 'Hồ Đại Lải & Flamingo (Phúc Yên)');
     } else if (locId === 'lang-bac') {
       this.selectMapLocation('Lang+Chu+tich+Ho+Chi+Minh+Ha+Noi', 'Lăng Chủ tịch Hồ Chí Minh (Quận Ba Đình)');
     } else if (locId === 'ho-guom') {

@@ -437,16 +437,16 @@ Khi người dùng hỏi về các địa điểm, dữ liệu mật độ đám
 - Hồ Gươm & Phố Cổ: Cao điểm Thứ Bảy 19:00 - 21:00 (mật độ 95% - Báo động đỏ). Khung giờ vàng thanh bình: 06:30 - 08:30 (25%) và 14:00 - 16:00 (38%). Điểm thay thế thông thoáng: Vườn hoa Con Cóc / Diên Hồng, Bảo tàng Lịch sử Quốc gia (số 1 Tràng Tiền), Phố sách 19/12.
 - Hồ Tây & Trúc Bạch: Cao điểm cuối tuần hoàng hôn 16:00 - 20:00 (86%). Buổi sáng và ngày thường rất thoáng mát (30%). Điểm thay thế: Chùa Trấn Quốc, Làng hoa Nghi Tàm, đường dạo ven hồ Quảng An.
 - Hoàng Thành Thăng Long & Ba Đình: Cuối tuần sáng 08:30 - 10:30 (58% - ổn định). Điểm thay thế: Công viên Bách Thảo, Đoan Môn, Đại lộ Hoàng Diệu rợp bóng xà cừ.
-- Lăng Chủ tịch Hồ Chí Minh (Lăng Bác): Tọa độ [21.0369, 105.8347]. Cao điểm sáng Chủ Nhật 07:30 - 10:30 (88%). Khung giờ lý tưởng: 05:30 - 06:30 (lễ thượng cờ trang nghiêm) và 14:00 - 16:30 (Nhà sàn, ao cá, Bảo tàng Hồ Chí Minh thoáng mát ~32%). Điểm kế cận: Chùa Một Cột (150m), Bảo tàng Hồ Chí Minh, Công viên Bách Thảo. Video tư liệu TikTok chính thức đã được tích hợp trên Hero Banner.
+- Lăng Chủ tịch Hồ Chí Minh (Lăng Bác): Tọa độ [21.0369, 105.8347]. Cao điểm sáng Chủ Nhật 07:30 - 10:30 (88%). Khung giờ lý tưởng: 05:30 - 06:30 (lễ thượng cờ trang nghiêm) và 14:00 - 16:30 (Nhà sàn, ao cá, Bảo tàng Hồ Chí Minh thoáng mát ~32%). Điểm kế cận: Chùa Một Cột (150m), Bảo tàng Hồ Chí Minh, Công viên Bách Thảo. Video tư liệu 4K chính thức đã được tích hợp trên Hero Banner qua YouTube.
 
 2. TAB 2 - VÙNG VEN VÀNH ĐAI XANH & 20 LÀNG NGHỀ TRUYỀN THỐNG:
-- Hệ thống 25 Điểm đến & Làng nghề:
+- Hệ thống 23 Điểm đến & Làng nghề:
   • Làng gốm Bát Tràng (Gia Lâm): Hơn 500 năm thời Lý, bảo tàng 7 bàn xoay khổng lồ, nhà cổ Vạn Vân 300 cổ vật, xe buýt 47A từ Long Biên.
   • Làng cổ Đường Lâm (Sơn Tây): Di tích quốc gia làng cổ, nhà đá ong 300-400 năm, quê hương 2 vua Phùng Hưng & Ngô Quyền, xe buýt 70A.
   • Làng hương Quảng Phú Cầu (Ứng Hòa): Hơn 100 năm, sân phơi bó hương đỏ rực như đóa hoa khổng lồ, hương OCOP 3-4 sao, xe buýt 91 từ Yên Nghĩa.
   • Làng nón Chuông (Thanh Oai): Hàng trăm năm bên sông Đáy, nón 16 vòng nan tre, chợ phiên từ 5h sáng, xe buýt 78, 103A/B, 91.
   • Làng mây tre đan Phú Vinh (Chương Mỹ): Hơn 400 năm (Phú Hoa Trang), tranh mây chân dung, xe buýt 72 kết hợp Metro Cát Linh.
-  • Làng đúc đồng Đại Bái (Gia Bình, Bắc Ninh): Hơn 900 năm thời Lý thờ tổ nghề Nguyễn Công Triều, tranh đồng chạm nổi lộng lẫy.
+  • Làng cổ Cự Đà (Thanh Oai, Hà Nội): Hơn 400 năm ven sông Nhuệ, làng đầu tiên đánh số nhà, biệt thự Pháp cổ, tương nếp & miến dong vàng óng, xe buýt 85, 103A/B.
   • Làng chuồn chuồn tre Thạch Xá (Thạch Thất): Hơn 20 năm chân Chùa Tây Phương, chuồn chuồn tre thăng bằng trên đầu ngón tay, xe buýt 89.
   • Làng quạt Chàng Sơn (Thạch Thất): Hàng trăm năm xứ Đoài, từng triển lãm tại Paris, xe buýt 89/107.
   • Làng quạt lá châm nón Nghĩa Đồng (Chương Mỹ): Chằm nón lá cọ và quạt lá thủ công bền mát, xe buýt 72/114.
@@ -461,7 +461,7 @@ Khi người dùng hỏi về các địa điểm, dữ liệu mật độ đám
   • Làng rèn Dao Dẫy Đa Sỹ (Kiến Hưng, Hà Đông): Hơn 500 năm thời Hậu Lê, bí quyết tôi thép nước sắc bén bền bỉ, buýt 01/02/19.
   • Làng cốm Vòng (Dịch Vọng Hậu, Cầu Giấy): Hàng trăm năm thời Lý, thức quà mùa thu Hà Nội bọc lá sen xanh, Metro Nhổn - Ga Hà Nội.
   • Làng nghề dát vàng Kiêu Kỵ (Gia Lâm): Hơn 300 năm thời Hậu Lê, đập quỳ vàng mỏng như cánh ve thếp tượng Phật, buýt 69 / E02.
-  • Vườn Quốc gia Ba Vì (48km), Khu đô thị Ecopark (15km), Tam Đảo (75km), Hồ Đại Lải (45km), Bản Rõm Sóc Sơn (32km).
+  • Vườn Quốc gia Ba Vì (48km), Khu đô thị Ecopark (15km), Bản Rõm Sóc Sơn (32km).
 
 3. TAB 3 - CHẠM DI SẢN BẰNG AUDIO GUIDE & QR CODE:
 - Hệ thống Audio Guide tự túc thu âm 1-2 phút kèm mã QR độc bản cho các làng nghề & di tích: Lò Bầu Bát Tràng, Làng lụa Vạn Phúc, Nhà cổ đá ong Đường Lâm, Làng hương Quảng Phú Cầu, Làng nón Chuông, Dát vàng Kiêu Kỵ, Cốm Làng Vòng.
@@ -570,20 +570,21 @@ Khi người dùng hỏi về các địa điểm, dữ liệu mật độ đám
         `• **Góc check-in:** Sân phơi mây tre rực vàng dưới nắng, phòng trưng bày đèn lồng decor lung linh và Đình thôn Phú Vinh.`;
     }
 
-    // 10. Làng đúc đồng Đại Bái & Ngũ Xã
-    if (q.includes('đại bái') || q.includes('dai bai') || q.includes('ngũ xã') || q.includes('ngu xa') || q.includes('đúc đồng')) {
-      if (q.includes('ngũ xã') || q.includes('ngu xa') || q.includes('phở cuốn')) {
+    // 10. Làng cổ Cự Đà (Thanh Oai) & Làng đúc đồng Ngũ Xã
+    if (q.includes('cự đà') || q.includes('cu da') || q.includes('tương nếp') || q.includes('miến dong') || q.includes('ngũ xã') || q.includes('ngu xa') || q.includes('đúc đồng')) {
+      if (q.includes('ngũ xã') || q.includes('ngu xa') || q.includes('phở cuốn') || q.includes('đúc đồng')) {
         return `🔔 **Làng đúc đồng Ngũ Xã (Quận Ba Đình):**\n\n` +
           `• **Vị trí:** Bán đảo Ngũ Xã, phường Trúc Bạch, Ba Đình (sát hồ Trúc Bạch), cách Hồ Gươm chỉ ~3 km.\n` +
           `• **Lịch sử:** Thế kỷ XVII thời nhà Lê, hội tụ thợ giỏi từ 5 làng đúc đồng vùng Kinh Bắc và Hải Dương. Đúc tượng Phật Thích Ca Mâu Ni 12,3 tấn tại Chùa Thần Quang (1952).\n` +
           `• **Trải nghiệm:** Chiêm ngưỡng tượng Phật đồng nguyên khối Chùa Thần Quang, dạo phố đi bộ Đảo Ngọc, thưởng thức phở cuốn & phở chiên phồng chính gốc Ngũ Xã.\n` +
           `• **Di chuyển:** Đi theo Quán Thánh hoặc Yên Phụ rẽ Nguyễn Trường Tộ. Buýt 31, 50, 55A/B, E05.`;
       }
-      return `🔔 **Làng đúc đồng nghệ thuật Đại Bái (Gia Bình, Bắc Ninh):**\n\n` +
-        `• **Vị trí:** Xã Đại Bái, huyện Gia Bình, Bắc Ninh, cách Hà Nội khoảng 35 – 40 km về phía Đông Bắc.\n` +
-        `• **Lịch sử:** Trên 900 năm (tên cổ làng Bưởi hay Hạm Sảnh), thờ tổ nghề Nguyễn Công Triều từ thời nhà Lý (thế kỷ XI).\n` +
-        `• **Trải nghiệm:** Lắng nghe tiếng búa gò đồng lách cách rộn ràng, xem nung đồng đổ khuôn và kỹ thuật gò chạm nổi hoa văn sống động trên tấm kim loại, mua tranh đồng phong thủy.\n` +
-        `• **Di chuyển:** QL1A hoặc cao tốc HN - Bắc Giang rẽ QL38 qua thị trấn Hồ sang Gia Bình.`;
+      return `🏮 **Làng cổ Cự Đà (Huyện Thanh Oai):**\n\n` +
+        `• **Vị trí:** Xã Cự Khê, huyện Thanh Oai, ven sông Nhuệ, cách trung tâm Hà Nội khoảng 20 km về phía Tây Nam.\n` +
+        `• **Lịch sử & Nét độc bản:** Ngôi làng cổ trù phú với nét giao thoa kỳ diệu giữa kiến trúc nhà gỗ 3 gian Bắc Bộ và các ngôi biệt thự 2 tầng kiểu Pháp cổ kính đầu thế kỷ XX. Là ngôi làng nông thôn đầu tiên tại Việt Nam có nhà đánh số, ngõ gắn tên và đường lát gạch nghiêng.\n` +
+        `• **Nghề truyền thống:** Nổi danh với 'tương Cự Đà, cà làng Láng' ủ trong chum sành da lươn thơm ngọt và những giàn phơi miến dong vàng óng trải khắp ngõ xóm bên triền đê.\n` +
+        `• **Di chuyển:** Trục Nguyễn Trãi - Hà Đông - rẽ đường Cienco 5 khoảng 4km đến Cự Khê. Xe buýt tuyến 85 hoặc 103A/103B kết hợp taxi/xe ôm ngắn 1.5km.\n` +
+        `• **Góc check-in:** Cổng làng Cự Đà với tháp chuông đồng hồ kiểu Tây độc nhất vô nhị, các ngõ cổ lát gạch nghiêng, giàn phơi miến dong óng ánh và Đình, Chùa Thọ Thánh cổ kính.`;
     }
 
     // 11. Chuồn chuồn tre Thạch Xá & Quạt Chàng Sơn & Mộc Chàng Sơn
@@ -695,11 +696,12 @@ Khi người dùng hỏi về các địa điểm, dữ liệu mật độ đám
         `• **Khuyến nghị di chuyển:** Xe máy phượt trong ngày hoặc ô tô cá nhân (vé vào cổng khoảng 60.000đ/người lớn, ưu đãi HSSV 20.000đ).`;
     }
 
-    // 18. Hồ Đại Lải, Ecopark, Tam Đảo, Bản Rõm
-    if (q.includes('vùng ven') || q.includes('tam đảo') || q.includes('ecopark') || q.includes('đại lải') || q.includes('bản rõm')) {
+    // 18. Ecopark, Bản Rõm Sóc Sơn, Ba Vì
+    if (q.includes('vùng ven') || q.includes('vành đai') || q.includes('ecopark') || q.includes('bản rõm')) {
       return `🌲 **Bộ sưu tập Điểm đến Vùng ven & Vành đai xanh Thủ đô:**\n\n` +
         `• **Phía Tây:** Vườn Quốc gia Ba Vì (48km - rừng thông & đền Thượng), Làng cổ Đường Lâm (45km - quần thể nhà cổ đá ong).\n` +
-        `• **Phía Bắc:** Thị trấn Tam Đảo (75km - mây mù mát mẻ), Hồ Đại Lải (45km - chèo kayak & rừng thông Flamingo), Bản Rõm Sóc Sơn (32km - cắm trại sinh thái).\n` +
+        `• **Phía Bắc:** Khu sinh thái Bản Rõm Sóc Sơn (32km - cắm trại sinh thái & rừng thông ngút ngàn).\n` +
+        `• **Phía Nam:** Làng cổ Cự Đà (20km - di sản ven sông Nhuệ), Làng nón Chuông (30km).\n` +
         `• **Đông Nam:** Khu đô thị sinh thái Ecopark (15km - công viên mùa xuân, đại ngàn xanh mát ven sông Bắc Hưng Hải).\n` +
         `• *Bạn có thể xem bản đồ số Google Maps tại Tab 2 của trang web.*`;
     }

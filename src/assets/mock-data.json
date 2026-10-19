@@ -1658,7 +1658,7 @@
         21.0369,
         105.8347
       ],
-      "videoUrl": "https://www.tiktok.com/@nguyennhuquang/video/7594084833874201876",
+      "videoUrl": "https://www.youtube.com/watch?v=uPHK-wj6wIo",
       "mapQuery": "Lang+Chu+tich+Ho+Chi+Minh+Ha+Noi",
       "peakStatus": {
         "day": "Chủ Nhật",
@@ -2464,390 +2464,6 @@
           "mapUrl": "https://maps.google.com/?q=Lang+Van+Hoa+Cac+Dan+Toc+Dong+Mo"
         }
       ]
-    },
-    "dai-lai": {
-      "id": "dai-lai",
-      "warningArea": "Hồ Đại Lải & Quần thể Nghỉ dưỡng Flamingo",
-      "shortName": "Đại Lải",
-      "district": "Phúc Yên, Vĩnh Phúc",
-      "coordinates": [
-        21.325,
-        105.7167
-      ],
-      "videoUrl": "https://www.youtube.com/watch?v=TdHbEbpIA5o",
-      "mapQuery": "Ho+Dai+Lai+Flamingo+Vinh+Phuc",
-      "peakStatus": {
-        "day": "Thứ Bảy",
-        "timeRange": "14:00 - 18:00",
-        "density": 55,
-        "level": "Không gian hồ nước thênh thang",
-        "statusType": "success",
-        "statusBadge": "Thư thái ven hồ",
-        "message": "Đại Lải: Lưu lượng ổn định (55%) — Mặt hồ lộng gió 525ha, nhiều hoạt động giải trí chèo thuyền và dã ngoại"
-      },
-      "offPeakRecommendations": [
-        {
-          "timeRange": "06:30 - 09:00",
-          "description": "Bình minh trên mặt hồ sương sớm mờ ảo, không gian tĩnh lặng thích hợp đi dạo ven rừng thông.",
-          "avgDensity": 20,
-          "badge": "Lý tưởng nhất"
-        },
-        {
-          "timeRange": "14:00 - 17:00",
-          "description": "Tham quan bảo tàng nghệ thuật ngoài trời Art in the Forest và chèo thuyền Kayak trên hồ.",
-          "avgDensity": 38,
-          "badge": "Thư thả dã ngoại"
-        }
-      ],
-      "weeklySchedule": {
-        "Thứ Hai": [
-          {
-            "hour": "06:00",
-            "density": 12,
-            "label": "Vắng"
-          },
-          {
-            "hour": "08:00",
-            "density": 18,
-            "label": "Vắng"
-          },
-          {
-            "hour": "10:00",
-            "density": 22,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "12:00",
-            "density": 25,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "14:00",
-            "density": 20,
-            "label": "Lý tưởng"
-          },
-          {
-            "hour": "16:00",
-            "density": 18,
-            "label": "Vắng"
-          },
-          {
-            "hour": "18:00",
-            "density": 15,
-            "label": "Vắng"
-          },
-          {
-            "hour": "20:00",
-            "density": 12,
-            "label": "Vắng"
-          },
-          {
-            "hour": "22:00",
-            "density": 10,
-            "label": "Vắng"
-          }
-        ],
-        "Thứ Ba": [
-          {
-            "hour": "06:00",
-            "density": 12,
-            "label": "Vắng"
-          },
-          {
-            "hour": "08:00",
-            "density": 18,
-            "label": "Vắng"
-          },
-          {
-            "hour": "10:00",
-            "density": 22,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "12:00",
-            "density": 25,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "14:00",
-            "density": 22,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "16:00",
-            "density": 20,
-            "label": "Vắng"
-          },
-          {
-            "hour": "18:00",
-            "density": 15,
-            "label": "Vắng"
-          },
-          {
-            "hour": "20:00",
-            "density": 12,
-            "label": "Vắng"
-          },
-          {
-            "hour": "22:00",
-            "density": 10,
-            "label": "Vắng"
-          }
-        ],
-        "Thứ Tư": [
-          {
-            "hour": "06:00",
-            "density": 14,
-            "label": "Vắng"
-          },
-          {
-            "hour": "08:00",
-            "density": 20,
-            "label": "Vắng"
-          },
-          {
-            "hour": "10:00",
-            "density": 25,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "12:00",
-            "density": 28,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "14:00",
-            "density": 24,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "16:00",
-            "density": 22,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "18:00",
-            "density": 18,
-            "label": "Vắng"
-          },
-          {
-            "hour": "20:00",
-            "density": 15,
-            "label": "Vắng"
-          },
-          {
-            "hour": "22:00",
-            "density": 10,
-            "label": "Vắng"
-          }
-        ],
-        "Thứ Năm": [
-          {
-            "hour": "06:00",
-            "density": 14,
-            "label": "Vắng"
-          },
-          {
-            "hour": "08:00",
-            "density": 22,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "10:00",
-            "density": 28,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "12:00",
-            "density": 30,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "14:00",
-            "density": 26,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "16:00",
-            "density": 24,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "18:00",
-            "density": 20,
-            "label": "Vắng"
-          },
-          {
-            "hour": "20:00",
-            "density": 16,
-            "label": "Vắng"
-          },
-          {
-            "hour": "22:00",
-            "density": 12,
-            "label": "Vắng"
-          }
-        ],
-        "Thứ Sáu": [
-          {
-            "hour": "06:00",
-            "density": 16,
-            "label": "Vắng"
-          },
-          {
-            "hour": "08:00",
-            "density": 25,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "10:00",
-            "density": 35,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "12:00",
-            "density": 38,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "14:00",
-            "density": 40,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "16:00",
-            "density": 45,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "18:00",
-            "density": 35,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "20:00",
-            "density": 25,
-            "label": "Vắng"
-          },
-          {
-            "hour": "22:00",
-            "density": 15,
-            "label": "Vắng"
-          }
-        ],
-        "Thứ Bảy": [
-          {
-            "hour": "06:00",
-            "density": 22,
-            "label": "Vắng"
-          },
-          {
-            "hour": "08:00",
-            "density": 45,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "10:00",
-            "density": 52,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "12:00",
-            "density": 50,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "14:00",
-            "density": 55,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "16:00",
-            "density": 52,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "18:00",
-            "density": 42,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "20:00",
-            "density": 32,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "22:00",
-            "density": 18,
-            "label": "Vắng"
-          }
-        ],
-        "Chủ Nhật": [
-          {
-            "hour": "06:00",
-            "density": 25,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "08:00",
-            "density": 48,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "10:00",
-            "density": 54,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "12:00",
-            "density": 48,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "14:00",
-            "density": 45,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "16:00",
-            "density": 40,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "18:00",
-            "density": 30,
-            "label": "Bình thường"
-          },
-          {
-            "hour": "20:00",
-            "density": 20,
-            "label": "Vắng"
-          },
-          {
-            "hour": "22:00",
-            "density": 15,
-            "label": "Vắng"
-          }
-        ]
-      },
-      "alternativeDestinations": [
-        {
-          "id": "thung-lung-thanh-xuan",
-          "name": "Thung lũng Thanh Xuân (Valley of Spring)",
-          "category": "Khu sinh thái đồi thông & Hồ nước",
-          "badge": "Tĩnh lặng, mát mẻ",
-          "density": 25,
-          "distance": "Cạnh hồ Đại Lải",
-          "image": "assets/images/quiet-cafe.jpg",
-          "description": "Thung lũng được bao bọc bởi đồi thông xanh ngắt, hồ nước tự nhiên phẳng lặng, cực kỳ thích hợp cho đi dạo và cắm trại chill.",
-          "highlights": [
-            "Đồi thông ngút ngàn xanh mát",
-            "Cung đường dạo bộ quanh hồ",
-            "Cà phê ngắm hoàng hôn lãng mạn"
-          ],
-          "mapUrl": "https://maps.google.com/?q=Thung+lung+Thanh+Xuan+Dai+Lai"
-        }
-      ]
     }
   },
   "tab2_suburbs": {
@@ -3141,51 +2757,51 @@
         "audioTitle": "Nghệ thuật Mây tre đan Đỉnh cao Làng Phú Vinh"
       },
       {
-        "id": "dai-bai",
-        "name": "Làng đúc đồng nghệ thuật Đại Bái",
-        "region": "east",
-        "regionLabel": "Đông Bắc • Bắc Ninh",
-        "category": "Làng nghề gò đúc đồng",
-        "location": "Xã Đại Bái, huyện Gia Bình, tỉnh Bắc Ninh",
-        "distance": "Nằm cách trung tâm thủ đô Hà Nội khoảng 35 – 40 km về phía Đông Bắc.",
-        "shortDistance": "38km • Đông Bắc",
-        "description": "Làng nghề gò đúc đồng trên 900 năm tuổi thờ tổ nghề Nguyễn Công Triều từ thời nhà Lý. Nơi vang vọng tiếng búa gò đồng lách cách rộn ràng, làm nên những bức tranh đồng chạm nổi và vật phẩm phong thủy lộng lẫy.",
+        "id": "cu-da",
+        "name": "Làng cổ Cự Đà",
+        "region": "south",
+        "regionLabel": "Phía Nam • Thanh Oai",
+        "category": "Làng cổ & Làng nghề tương miến",
+        "location": "Xã Cự Khê, huyện Thanh Oai, Hà Nội",
+        "distance": "Nằm cách trung tâm thủ đô Hà Nội khoảng 20 km về phía Tây Nam ven sông Nhuệ.",
+        "shortDistance": "20km • Phía Nam",
+        "description": "Làng cổ ven sông Nhuệ với sự giao thoa độc đáo giữa kiến trúc nhà gỗ 3 gian Bắc Bộ và biệt thự Pháp cổ đầu thế kỷ XX. Nổi danh với nghề làm tương nếp gia truyền thơm ngọt và những giàn phơi miến dong vàng óng trải khắp ngõ xóm.",
         "tags": [
-          "Đúc đồng 900 năm",
-          "Tổ nghề Lý triều",
-          "Tranh đồng chạm nổi",
-          "Âm thanh búa gò"
+          "Làng cổ sông Nhuệ",
+          "Biệt thự Pháp cổ",
+          "Tương nếp Cự Đà",
+          "Miến dong vàng óng"
         ],
-        "image": "assets/images/dai-bai.jpg",
-        "watermark": "ĐẠI BÁI",
-        "mapQuery": "Lang+duc+dong+Dai+Bai+Gia+Binh+Bac+Ninh",
-        "busRoute": "Bắt các tuyến xe buýt liên tỉnh từ Hà Nội đi Bắc Ninh / Hải Dương có lộ trình qua Thuận Thành/Gia Bình rồi đi taxi/xe ôm vào làng.",
-        "bestTime": "Quanh năm, các dịp chuẩn bị đồ đồng thờ cúng và lễ hội truyền thống tháng 4 âm lịch.",
+        "image": "assets/images/cu-da.jpg",
+        "watermark": "CỰ ĐÀ",
+        "mapQuery": "Lang+co+Cu+Da+Cu+Khe+Thanh+Oai+Ha+Noi",
+        "busRoute": "Đi xe buýt tuyến 85 hoặc 103A/103B đến gần khu vực Cự Khê (hoặc KĐT Thanh Hà) rồi di chuyển xe ôm/taxi khoảng 1.5 - 2 km vào làng.",
+        "bestTime": "Quanh năm, đặc biệt những ngày nắng ráo để chiêm ngưỡng những giàn miến dong phơi vàng óng và các chum tương nếp tỏa hương thơm nồng.",
         "highlights": [
-          "Tiếng búa đục gò đồng lách cách vang rộn suốt các con ngõ làng",
-          "Tận mắt chứng kiến kỹ thuật nung đồng, đổ khuôn và gò chạm nổi hoa văn",
-          "Chiêm ngưỡng showroom tranh đồng và đồ phong thủy lấp lánh ánh kim"
+          "Chiêm ngưỡng cổng làng cổ với tháp đồng hồ kiểu phương Tây độc nhất vô nhị",
+          "Khám phá những ngôi nhà gỗ truyền thống xen lẫn biệt thự kiến trúc Pháp cổ kính bên sông Nhuệ",
+          "Tận mắt ngắm nhìn những giàn phơi miến dong vàng ruộm và thưởng thức hương vị tương nếp Cự Đà nức tiếng"
         ],
-        "history": "Làng Đại Bái (xưa tên làng Bưởi hay Hạm Sảnh) có lịch sử trên 900 năm. Tương truyền ông tổ nghề đúc và gò đồng của làng là cụ Nguyễn Công Triều (thời nhà Lý, thế kỷ XI), cụ là người truyền dạy nghề gò đúc đồng cho dân làng, từ đó nghề lan rộng khắp vùng và phát triển qua nhiều thế hệ.",
+        "history": "Làng cổ Cự Đà nằm ven dòng sông Nhuệ thuộc xã Cự Khê, huyện Thanh Oai, Hà Nội. Từng là một thương cảng sầm uất trên bến dưới thuyền thời phong kiến, Cự Đà là làng đầu tiên ở nông thôn Việt Nam được đánh số nhà, đặt tên ngõ và có hệ thống cột cờ, đường lát gạch nghiêng kiên cố. Trải qua hàng trăm năm thăng trầm, làng vẫn lưu giữ quần thể di tích đình, chùa Thọ Thánh xếp hạng di tích quốc gia cùng nghề truyền thống làm tương nếp và miến dong nức tiếng gần xa.",
         "transportDetail": {
-          "motorcycle": "Theo Quốc lộ 1A và Quốc lộ 38: Từ Hà Nội qua cầu Thanh Trì hoặc Vĩnh Tuy ra QL1A/cao tốc HN - Bắc Giang. Đến nút giao Bắc Ninh rẽ QL38 đi thị trấn Hồ (Thuận Thành), đi tiếp sang huyện Gia Bình tới xã Đại Bái.",
-          "bus": "Xe buýt: Bắt các tuyến xe buýt liên tỉnh từ Hà Nội đi Bắc Ninh có lộ trình qua Thuận Thành/Gia Bình, kết hợp xe ôm/taxi ngắn vào làng.",
-          "parking": "Gửi xe tại các cửa hàng, xưởng sản xuất lớn hoặc xung quanh Đình làng Đại Bái."
+          "motorcycle": "Từ trung tâm Hà Nội theo đường Nguyễn Trãi - Trần Phú (Hà Đông) - rẽ Phùng Hưng qua KĐT Xa La rồi theo đường trục phía Nam (Cienco 5) khoảng 4km đến cầu Cự Đà rẽ vào xã Cự Khê. Hoặc đi men theo đường đê sông Nhuệ thơ mộng.",
+          "bus": "Xe buýt tuyến 85 (Công viên Nghĩa Đô - KĐT Thanh Hà) hoặc buýt 103A/103B, sau đó đi taxi hoặc xe ôm khoảng 1.5km vào làng cổ Cự Đà.",
+          "parking": "Gửi xe máy và ô tô tại khu vực sân Đình Cự Đà, Chùa Cự Đà hoặc các bãi đỗ trước cổng làng."
         },
         "experiences": [
-          "Lắng nghe âm thanh gò đúc đặc trưng: Tiếng búa gò đồng lách cách, tiếng đục, tiếng khò lửa vang lên từ các xưởng sản xuất tạo bầu không khí nhộn nhịp đậm chất nghệ nhân.",
-          "Khám phá quy trình nghệ thuật thủ công: Xem nghệ nhân nung đồng, đổ khuôn, kỹ thuật gò chạm nổi tỉ mỉ trên tấm kim loại phẳng biến chúng thành tác phẩm đường nét uyển chuyển.",
-          "Mua sắm đồ đồng nghệ thuật & phong thủy: Chiêm ngưỡng và chọn mua tranh đồng chạm khắc thủ công, đồ decor, vật phẩm phong thủy tinh xảo trực tiếp từ xưởng."
+          "Dạo bước trên ngõ lát gạch nghiêng: Khám phá những con ngõ nhỏ rêu phong lát gạch nghiêng đặc trưng, hai bên là những bức tường đá ong và nhà cổ hàng trăm năm tuổi.",
+          "Tìm hiểu nghề làm tương nếp & miến dong: Ghé thăm các hộ gia đình làm tương truyền thống với hàng trăm chum sành ủ tương ngoài sân và xem thợ làm miến tráng bột phơi bánh.",
+          "Chiêm ngưỡng kiến trúc Đông - Tây hòa hợp: Thưởng ngoạn nét giao thoa kỳ diệu giữa nhà 5 gian truyền thống của đồng bằng Bắc Bộ và biệt thự kiểu Pháp thời thuộc địa."
         ],
         "checkInSpots": [
-          "Khu vực xưởng gò đúc nghệ thuật: Khoảnh khắc thợ thủ công bên ánh lửa lò đúc hoặc miệt mài chạm trổ chi tiết hoa văn dưới ánh sáng tự nhiên.",
-          "Khu trưng bày sản phẩm đồng lấp lánh: Showroom với vô vàn sắc màu ánh đồng (đồng đỏ, đồng vàng, đồng giả cổ) lung linh dưới ánh đèn.",
-          "Đình làng Đại Bái: Ngôi đình cổ kính nơi thờ tổ nghề Nguyễn Công Triều và các thành hoàng làng, không gian thanh tịnh trầm mặc."
+          "Cổng làng Cự Đà: Chiếc cổng làng cổ kính rêu phong có gắn tháp chuông đồng hồ kiểu phương Tây vô cùng độc đáo bên bờ sông Nhuệ.",
+          "Giàn phơi miến dong vàng óng: Những hàng miến dong vàng rực trải dài dọc triền sông và sân đình tạo nên phông nền chụp ảnh tuyệt đẹp dưới nắng.",
+          "Đình làng và Chùa Cự Đà (Thọ Thánh): Quần thể di tích quốc gia cổ kính rợp bóng cây cổ thụ thanh tịnh và trầm mặc."
         ],
-        "source": "ivivu.com",
-        "audioUrl": "assets/audio/dai-bai.mp3",
-        "audioDuration": "01:18",
-        "audioTitle": "Âm vang Nghệ thuật Gò Đúc Đồng Chín Trăm Năm Đại Bái"
+        "source": "hanoitourist.gov.vn",
+        "audioUrl": "assets/audio/cu-da.mp3",
+        "audioDuration": "01:22",
+        "audioTitle": "Không Gian Di Sản Làng Cổ Cự Đà Bên Dòng Sông Nhuệ"
       },
       {
         "id": "thach-xa",
@@ -3935,92 +3551,6 @@
         ]
       },
       {
-        "id": "tam-dao",
-        "name": "Thị trấn Tam Đảo",
-        "region": "north",
-        "regionLabel": "Phía Bắc",
-        "category": "Thị trấn nghỉ dưỡng vùng núi",
-        "location": "Huyện Tam Đảo, Vĩnh Phúc",
-        "distance": "Cách trung tâm Hà Nội khoảng 75km – 80km về phía Bắc.",
-        "shortDistance": "75km – 80km • Phía Bắc",
-        "description": "Thị trấn mờ sương nằm ở độ cao hơn 900m so với mực nước biển với khí hậu 4 mùa trong 1 ngày. Nổi tiếng với Nhà thờ đá cổ kính, Tháp truyền hình và Cầu Mây săn mây tuyệt đẹp.",
-        "tags": [
-          "Thị trấn mờ sương",
-          "Khí hậu 4 mùa",
-          "Nhà thờ đá",
-          "Săn mây"
-        ],
-        "image": "assets/images/tam-dao.jpg",
-        "watermark": "TAM ĐẢO",
-        "mapQuery": "Thi+tran+Tam+Dao+Vinh+Phuc",
-        "busRoute": "Xe khách Limousine từ Hà Nội lên thẳng trung tâm thị trấn Tam Đảo (130.000đ - 150.000đ)",
-        "bestTime": "Mùa hè trốn nóng hoặc mùa thu đông ngắm sương mù lãng đãng",
-        "highlights": [
-          "Nhà thờ đá cổ kính kiến trúc Gothic thời Pháp",
-          "Khu Cầu Mây & Cổng trời săn mây bồng bềnh",
-          "Thưởng thức đặc sản ngọn su su non xào tỏi và thịt lợn mán nướng"
-        ],
-        "history": "Tam Đảo được người Pháp phát hiện và xây dựng thành khu nghỉ dưỡng trên cao từ đầu thế kỷ XX với hàng trăm ngôi biệt thự nguy nga.",
-        "transportDetail": {
-          "motorcycle": "Từ Hà Nội theo đường cầu Thăng Long / Nhật Tân ra QL2 đi Vĩnh Yên, rẽ QL2B lên dốc đèo Tam Đảo dài 13km uốn lượn.",
-          "bus": "Các tuyến xe Limousine đón trả tận nơi từ trung tâm Hà Nội lên Tam Đảo trong khoảng 1.5 - 2 giờ.",
-          "parking": "Bãi đỗ xe tại quảng trường trung tâm thị trấn hoặc khách sạn nghỉ dưỡng."
-        },
-        "experiences": [
-          "Dạo bước tại Quảng trường trung tâm và ngắm hoàng hôn buông xuống thung lũng mờ sương.",
-          "Thưởng thức ngọn su su tươi non giòn ngọt xào tỏi và xiên thịt nướng than hồng thơm nức.",
-          "Leo bậc đá lên Tháp truyền hình ngắm toàn cảnh thị trấn từ trên mây."
-        ],
-        "checkInSpots": [
-          "Nhà thờ đá cổ Tam Đảo: Nền đá ong uốn vòm nhìn xuống thung lũng mờ sương.",
-          "Cổng Trời Tam Đảo: Nơi phóng tầm mắt bắt trọn khung cảnh thị trấn trong mây.",
-          "Quán Gió Tam Đảo: Quán cà phê lưng chừng đèo ngắm hoàng hôn buông tuyệt đẹp."
-        ]
-      },
-      {
-        "id": "dai-lai",
-        "name": "Hồ Đại Lải & Flamingo",
-        "region": "north",
-        "regionLabel": "Phía Bắc",
-        "category": "Hồ cảnh quan & Quần thể nghỉ dưỡng",
-        "location": "Phúc Yên, Vĩnh Phúc",
-        "distance": "Cách trung tâm Hà Nội khoảng 40km – 45km về phía Bắc.",
-        "shortDistance": "40km – 45km • Phía Bắc",
-        "description": "Hồ nước ngọt nhân tạo rộng lớn hơn 525ha được bao bọc bởi những cánh rừng thông xanh biếc và dãy núi Tam Đảo. Không gian lộng gió, thanh bình thích hợp chèo kayak, cắm trại và nghỉ dưỡng.",
-        "tags": [
-          "Mặt hồ 525ha",
-          "Rừng thông reo",
-          "Art in the Forest",
-          "Chèo Kayak"
-        ],
-        "image": "assets/images/dai-lai.jpg",
-        "watermark": "ĐẠI LẢI",
-        "mapQuery": "Ho+Dai+Lai+Phuc+Yen+Vinh+Phuc",
-        "busRoute": "Tuyến buýt số 95 (BX Nam Thăng Long - Xuân Hòa) kết hợp taxi ngắn 4km vào hồ",
-        "bestTime": "Mùa hè và thu từ tháng 4 đến tháng 10 nắng ấm, gió hồ dịu mát",
-        "highlights": [
-          "Mặt hồ lộng gió 525ha với đảo Ngọc hoang sơ giữa hồ",
-          "Bảo tàng nghệ thuật ngoài trời Art in the Forest độc bản",
-          "Trải nghiệm chèo kayak, đạp xe xuyên rừng thông ngút ngàn"
-        ],
-        "history": "Hồ Đại Lải được khởi công xây dựng từ năm 1959 nhằm phục vụ tưới tiêu nông nghiệp, sau đó trở thành quần thể sinh thái nghỉ dưỡng trọng điểm của vùng Thủ đô.",
-        "transportDetail": {
-          "motorcycle": "Từ trung tâm theo đường cầu Nhật Tân qua sân bay Nội Bài, rẽ theo Quốc lộ 2A hướng đi Phúc Yên, rẽ vào đường Nguyễn Tất Thành đến hồ Đại Lải.",
-          "bus": "Đi xe buýt 95 từ BX Nam Thăng Long đến bến cuối Xuân Hòa, sau đó đi taxi hoặc xe ôm 4km vào cổng hồ Đại Lải.",
-          "parking": "Bãi đỗ xe quanh khu du lịch ven hồ hoặc bãi xe Flamingo Đại Lải."
-        },
-        "experiences": [
-          "Đi thuyền ra thăm Đảo Ngọc thanh bình giữa lòng hồ Đại Lải.",
-          "Chiêm ngưỡng các tác phẩm điêu khắc nghệ thuật đương đại trong rừng thông tại Art in the Forest.",
-          "Trải nghiệm chèo thuyền kayak lướt nhẹ trên mặt nước hồ xanh biếc."
-        ],
-        "checkInSpots": [
-          "Bến thuyền hồ Đại Lải: Khung cảnh mặt hồ mênh mông gợn sóng lăn tăn.",
-          "Đường dạo bộ xuyên rừng thông: Những hàng thông thẳng tắp đổ bóng mát rượi.",
-          "Bảo tàng công viên nghệ thuật ngoài trời với các tác phẩm điêu khắc ấn tượng."
-        ]
-      },
-      {
         "id": "ban-rom",
         "name": "Khu sinh thái Bản Rõm",
         "region": "north",
@@ -4196,7 +3726,7 @@
         "durationSeconds": 82,
         "audioUrl": "assets/audio/duong-lam.mp3",
         "coverImage": "assets/images/duong-lam.jpg",
-        "qrCodeLabel": "Mã QR Di tích #03 — Đá Ong Đường Lâm",
+        "qrCodeLabel": "Mã QR Di tích #02 — Đá Ong Đường Lâm",
         "summary": "Chiêm ngưỡng kiến trúc nhà cổ đá ong độc bản của vùng đất 'Một ấp hai vua' (Phùng Hưng & Ngô Quyền) với cổng làng Mông Phụ và đình cổ ngàn năm.",
         "article": {
           "lead": "Đường Lâm là bảo tàng sống của văn hóa làng xã vùng đồng bằng châu thổ sông Hồng, nơi lưu giữ gần 1.000 ngôi nhà cổ được xây từ đá ong màu đất nung sẫm.",
@@ -4226,7 +3756,7 @@
         "durationSeconds": 85,
         "audioUrl": "assets/audio/quang-phu-cau.mp3",
         "coverImage": "assets/images/quang-phu-cau.jpg",
-        "qrCodeLabel": "Mã QR Di tích #04 — Làng hương Quảng Phú Cầu",
+        "qrCodeLabel": "Mã QR Di tích #03 — Làng hương Quảng Phú Cầu",
         "summary": "Lắng nghe câu chuyện giữ lửa nghề làm tăm hương thảo mộc hơn một thế kỷ, từ chiếc nan tre chẻ tay của cụ Lê Xuân Vịnh đến thương hiệu OCOP 4 sao vươn tầm thế giới.",
         "article": {
           "lead": "Giữa miền quê ngoại thành Ứng Hòa thanh bình, sắc đỏ son của hàng vạn bó hương bung xòe như những đóa hoa khổng lồ dưới nắng vàng đã làm say đắm biết bao lữ khách.",
@@ -4286,7 +3816,7 @@
         "durationSeconds": 83,
         "audioUrl": "assets/audio/phu-vinh.mp3",
         "coverImage": "assets/images/phu-vinh.jpg",
-        "qrCodeLabel": "Mã QR Di tích #04 — Làng mây tre đan Phú Vinh",
+        "qrCodeLabel": "Mã QR Di tích #05 — Làng mây tre đan Phú Vinh",
         "summary": "Làng nghề mây tre đan hơn 400 năm tuổi với danh xưng xưa 'Phú Hoa Trang' (trời phú cho dân bàn tay tài hoa). Đỉnh cao kỹ thuật biến mây tre thô cứng thành tranh chân dung, đèn lồng và đồ mỹ nghệ xuất khẩu toàn cầu.",
         "article": {
           "lead": "Làng nghề có lịch sử hình thành hơn 400 năm. Tương truyền vào khoảng năm 1700 làng có tên gọi ban đầu là Phú Hoa Trang ('trời phú cho dân bàn tay tài hoa'). Đến khoảng năm 1800 làng đổi tên thành Phú Vinh mong ước làng nghề luôn phú quý và vinh hiển. Kỹ thuật đỉnh cao biến sợi mây nan tre thành tranh chân dung, đồ decor xuất khẩu đi nhiều nước trên thế giới.",
@@ -4307,31 +3837,31 @@
         }
       },
       {
-        "id": "dai-bai",
-        "slug": "dai-bai",
-        "title": "Âm vang Nghệ thuật Gò Đúc Đồng Chín Trăm Năm Đại Bái",
-        "heritageSite": "Làng đúc đồng nghệ thuật Đại Bái, Xã Đại Bái, huyện Gia Bình, tỉnh Bắc Ninh",
+        "id": "cu-da",
+        "slug": "cu-da",
+        "title": "Nét Cổ Kính Ven Sông Nhuệ & Tương Nếp Làng Cổ Cự Đà",
+        "heritageSite": "Làng cổ Cự Đà, Xã Cự Khê, huyện Thanh Oai, Hà Nội (ven sông Nhuệ)",
         "narrator": "Nhóm nghiên cứu Di sản Trẻ Hà Nội",
-        "durationFormatted": "01:18",
-        "durationSeconds": 78,
-        "audioUrl": "assets/audio/dai-bai.mp3",
-        "coverImage": "assets/images/dai-bai.jpg",
-        "qrCodeLabel": "Mã QR Di tích #05 — Làng đúc đồng nghệ thuật Đại Bái",
-        "summary": "Làng nghề gò đúc đồng trên 900 năm tuổi thờ tổ nghề Nguyễn Công Triều từ thời nhà Lý. Nơi vang vọng tiếng búa gò đồng lách cách rộn ràng, làm nên những bức tranh đồng chạm nổi và vật phẩm phong thủy lộng lẫy.",
+        "durationFormatted": "01:22",
+        "durationSeconds": 82,
+        "audioUrl": "assets/audio/cu-da.mp3",
+        "coverImage": "assets/images/cu-da.jpg",
+        "qrCodeLabel": "Mã QR Di tích #06 — Làng cổ Cự Đà",
+        "summary": "Làng cổ ven sông Nhuệ với sự giao thoa độc đáo giữa kiến trúc nhà gỗ 3 gian Bắc Bộ và biệt thự Pháp cổ đầu thế kỷ XX. Nổi danh với nghề làm tương nếp gia truyền thơm ngọt và những giàn phơi miến dong vàng óng trải khắp ngõ xóm.",
         "article": {
-          "lead": "Làng Đại Bái (xưa tên làng Bưởi hay Hạm Sảnh) có lịch sử trên 900 năm. Tương truyền ông tổ nghề đúc và gò đồng của làng là cụ Nguyễn Công Triều (thời nhà Lý, thế kỷ XI), cụ là người truyền dạy nghề gò đúc đồng cho dân làng, từ đó nghề lan rộng khắp vùng và phát triển qua nhiều thế hệ.",
+          "lead": "Nằm uốn mình bên bờ sông Nhuệ hiền hòa, làng cổ Cự Đà (xã Cự Khê, huyện Thanh Oai, Hà Nội) là một trong những ngôi làng cổ độc đáo bậc nhất đồng bằng Bắc Bộ. Nơi đây không chỉ nức tiếng gần xa với nghề làm tương nếp gia truyền và miến dong vàng óng, mà còn ghi dấu ấn lịch sử như ngôi làng đầu tiên ở nông thôn Việt Nam có nhà đánh số, ngõ gắn tên và những biệt thự phong cách Pháp cổ kính tọa lạc thanh bình giữa làng quê.",
           "sections": [
             {
-              "heading": "1. Lịch sử hình thành & Giá trị văn hóa",
-              "content": "Làng Đại Bái (xưa tên làng Bưởi hay Hạm Sảnh) có lịch sử trên 900 năm. Tương truyền ông tổ nghề đúc và gò đồng của làng là cụ Nguyễn Công Triều (thời nhà Lý, thế kỷ XI), cụ là người truyền dạy nghề gò đúc đồng cho dân làng, từ đó nghề lan rộng khắp vùng và phát triển qua nhiều thế hệ."
+              "heading": "1. Lịch sử hình thành & Giá trị kiến trúc độc bản",
+              "content": "Cự Đà xưa kia là một thương cảng sầm uất trên bến dưới thuyền bên dòng sông Nhuệ. Nhờ giao thương hưng thịnh vào cuối thế kỷ XIX – đầu thế kỷ XX, các bậc phú thương trong làng đã xây dựng những ngôi biệt thự hai tầng mang phong cách kiến trúc Pháp cổ kết hợp tinh hoa mỹ nghệ gỗ truyền thống Việt Nam. Đến nay, làng vẫn bảo tồn được cổng làng cổ với ngọn tháp chuông đồng hồ kiểu phương Tây độc nhất vô nhị, đường làng lát gạch nghiêng kiên cố cùng quần thể Đình và Chùa Thọ Thánh đã được xếp hạng Di tích lịch sử văn hóa quốc gia."
             },
             {
-              "heading": "2. Kỹ nghệ truyền thống & Trải nghiệm thực tế",
-              "content": "Lắng nghe âm thanh gò đúc đặc trưng: Tiếng búa gò đồng lách cách, tiếng đục, tiếng khò lửa vang lên từ các xưởng sản xuất tạo bầu không khí nhộn nhịp đậm chất nghệ nhân.\n\nKhám phá quy trình nghệ thuật thủ công: Xem nghệ nhân nung đồng, đổ khuôn, kỹ thuật gò chạm nổi tỉ mỉ trên tấm kim loại phẳng biến chúng thành tác phẩm đường nét uyển chuyển.\n\nMua sắm đồ đồng nghệ thuật & phong thủy: Chiêm ngưỡng và chọn mua tranh đồng chạm khắc thủ công, đồ decor, vật phẩm phong thủy tinh xảo trực tiếp từ xưởng."
+              "heading": "2. Tinh hoa ẩm thực: Tương nếp & Miến dong gia truyền",
+              "content": "Tương nếp Cự Đà từ lâu đã đi vào ca dao tục ngữ \"tương Cự Đà, cà làng Láng\". Tương được làm từ gạo nếp cái hoa vàng chọn lọc kỹ lưỡng, đỗ tương rang thơm vàng và ủ kỹ trong các chum sành da lươn phơi nắng tự nhiên suốt nhiều tháng để tạo vị ngọt đậm đà, màu cánh gián sóng sánh đặc trưng. Bên cạnh nghề tương, Cự Đà còn là vựa miến dong trứ danh. Những sợi miến làm từ củ dong riềng nguyên chất, phơi thủ công trên các phên nứa tre vàng óng dưới ánh nắng tạo nên thương hiệu miến dai giòn, nấu lâu không bị nát."
             },
             {
-              "heading": "3. Hướng dẫn di chuyển & Góc check-in",
-              "content": "Phương tiện cá nhân: Theo Quốc lộ 1A và Quốc lộ 38: Từ Hà Nội qua cầu Thanh Trì hoặc Vĩnh Tuy ra QL1A/cao tốc HN - Bắc Giang. Đến nút giao Bắc Ninh rẽ QL38 đi thị trấn Hồ (Thuận Thành), đi tiếp sang huyện Gia Bình tới xã Đại Bái.\nXe buýt: Xe buýt: Bắt các tuyến xe buýt liên tỉnh từ Hà Nội đi Bắc Ninh có lộ trình qua Thuận Thành/Gia Bình, kết hợp xe ôm/taxi ngắn vào làng.\nGóc check-in đẹp: Khu vực xưởng gò đúc nghệ thuật: Khoảnh khắc thợ thủ công bên ánh lửa lò đúc hoặc miệt mài chạm trổ chi tiết hoa văn dưới ánh sáng tự nhiên., Khu trưng bày sản phẩm đồng lấp lánh: Showroom với vô vàn sắc màu ánh đồng (đồng đỏ, đồng vàng, đồng giả cổ) lung linh dưới ánh đèn., Đình làng Đại Bái: Ngôi đình cổ kính nơi thờ tổ nghề Nguyễn Công Triều và các thành hoàng làng, không gian thanh tịnh trầm mặc."
+              "heading": "3. Hướng dẫn trải nghiệm & Góc check-in di sản",
+              "content": "Phương tiện di chuyển: Từ trung tâm Hà Nội theo trục Nguyễn Trãi – Hà Đông – đường Cienco 5 hướng Thanh Oai chừng 4km qua KĐT Thanh Hà là tới làng. Hoặc đi tuyến xe buýt 85, 103A/103B kết hợp taxi/xe ôm ngắn.\nGóc check-in tuyệt đẹp: Cổng làng Cự Đà với tháp chuông đồng hồ cổ kính bên triền sông Nhuệ; các ngõ nhỏ rêu phong lát gạch nghiêng với những cánh cổng gỗ và tường gạch cổ; giàn phơi miến dong vàng óng trải dài dưới nắng rực rỡ; sân đình Cự Đà rợp bóng cây cổ thụ trầm mặc."
             }
           ]
         }
@@ -4346,7 +3876,7 @@
         "durationSeconds": 75,
         "audioUrl": "assets/audio/thach-xa.mp3",
         "coverImage": "assets/images/thach-xa.jpg",
-        "qrCodeLabel": "Mã QR Di tích #06 — Làng chuồn chuồn tre Thạch Xá",
+        "qrCodeLabel": "Mã QR Di tích #07 — Làng chuồn chuồn tre Thạch Xá",
         "summary": "Làng nghề độc đáo dưới chân Chùa Tây Phương sáng tạo nên những chú chuồn chuồn tre tự thăng bằng trên đầu ngón tay. Món quà lưu niệm đậm hồn quê Việt Nam, gắn liền với ký ức tuổi thơ đã xuất khẩu đi nhiều nước.",
         "article": {
           "lead": "Nghề làm chuồn chuồn tre tại Thạch Xá đã có lịch sử phát triển hơn 20 năm. Ban đầu làm đồ chơi truyền thống bằng tre nứa, sau đó chuyên sâu chế tác chuồn chuồn tre và trở thành thương hiệu độc đáo có một không hai, gắn liền với ký ức tuổi thơ và xuất khẩu đi nhiều quốc gia.",
@@ -4376,7 +3906,7 @@
         "durationSeconds": 75,
         "audioUrl": "assets/audio/chang-son-quat.mp3",
         "coverImage": "assets/images/chang-son-quat.jpg",
-        "qrCodeLabel": "Mã QR Di tích #07 — Làng quạt Chàng Sơn",
+        "qrCodeLabel": "Mã QR Di tích #08 — Làng quạt Chàng Sơn",
         "summary": "Cái nôi sản xuất quạt thủ công lâu đời và nổi tiếng nhất xứ Đoài từ thế kỷ XIX, từng tham gia triển lãm tại Paris thời Pháp thuộc. Đa dạng từ quạt giấy, quạt vải, quạt tranh mỹ nghệ đến quạt phong thủy và quạt khổng lồ decor.",
         "article": {
           "lead": "Nghề làm quạt giấy ở Chàng Sơn có lịch sử hàng trăm năm từ thế kỷ XIX, là một trong những cái nôi sản xuất quạt thủ công lâu đời và nổi tiếng nhất xứ Đoài. Quạt Chàng Sơn từng nổi tiếng khắp Nam Bắc và được mang đi triển lãm tại Pháp thời thuộc địa. Sản phẩm phong phú từ quạt giấy, vải, quạt tranh mỹ nghệ đến quạt decor khổng lồ.",
@@ -4406,7 +3936,7 @@
         "durationSeconds": 77,
         "audioUrl": "assets/audio/nghia-dong.mp3",
         "coverImage": "assets/images/nghia-dong.jpg",
-        "qrCodeLabel": "Mã QR Di tích #08 — Làng quạt lá châm nón Nghĩa Đồng",
+        "qrCodeLabel": "Mã QR Di tích #09 — Làng quạt lá châm nón Nghĩa Đồng",
         "summary": "Làng nghề chằm nón lá và đan quạt lá cọ hàng trăm năm. Bằng đôi bàn tay khéo léo cùng kim chỉ cước, người dân chằm cẩn thận từng lá cọ vào nan tre tạo nên sản phẩm quạt lá mát rượi, mộc mạc, siêu bền và thân thiện môi trường.",
         "article": {
           "lead": "Nghề chằm nón và đan quạt lá ở Nghĩa Đồng xuất hiện từ hàng trăm năm trước, truyền qua nhiều thế hệ. Sản phẩm chính là quạt lá và nón lá chằm thủ công từ lá cọ, lá gòn, lá buông. Người dân dùng kim chỉ khâu cẩn thận từng lá cọ vào khung nan tre chắc chắn. Dù qua thời hiện đại hóa, sản phẩm vẫn được ưa chuộng nhờ độ bền, mát, mộc mạc và thân thiện môi trường.",
@@ -4436,7 +3966,7 @@
         "durationSeconds": 75,
         "audioUrl": "assets/audio/ngu-xa.mp3",
         "coverImage": "assets/images/ngu-xa.jpg",
-        "qrCodeLabel": "Mã QR Di tích #09 — Làng đúc đồng Ngũ Xã",
+        "qrCodeLabel": "Mã QR Di tích #10 — Làng đúc đồng Ngũ Xã",
         "summary": "Làng đúc đồng cổ kính hình thành từ thời nhà Lê tụ hội thợ giỏi của 5 làng nghề danh tiếng. Nơi sở hữu pho tượng Phật Thích Ca Mâu Ni bằng đồng nguyên khối 12,3 tấn tại Chùa Thần Quang, nay phát triển thành phố đi bộ - ẩm thực phở cuốn nức tiếng.",
         "article": {
           "lead": "Làng hình thành từ thời nhà Lê (thế kỷ XVII). Khi đó thợ giỏi từ 5 làng đúc đồng nổi tiếng vùng Đông Cùng (Bắc Ninh) và Hải Dương (Đông Mai, Châu Mỹ, Long Mai, Đào Viên, Điện Tiền) tụ họp về đây lập xưởng, tạo nên tên gọi Ngũ Xã (5 làng). Kỹ thuật đúc đồng nguyên khối tinh xảo làm nên tượng Phật Thích Ca Mâu Ni 12,3 tấn tại chùa Thần Quang (1952). Ngày nay nơi đây vừa duy trì nghề vừa là tuyến phố ẩm thực - đi bộ sầm uất.",
@@ -4466,7 +3996,7 @@
         "durationSeconds": 76,
         "audioUrl": "assets/audio/hong-ha.mp3",
         "coverImage": "assets/images/hong-ha.jpg",
-        "qrCodeLabel": "Mã QR Di tích #10 — Làng làm diều sáo Hồng Hà",
+        "qrCodeLabel": "Mã QR Di tích #11 — Làng làm diều sáo Hồng Hà",
         "summary": "Ngôi làng ven sông Hồng nghìn năm lưu giữ thú chơi diều sáo tâm linh gắn với Miếu Diều cổ kính. Lễ hội diều truyền thống được vinh danh là Di sản văn hóa phi vật thể quốc gia (2024), nổi tiếng với kỹ thuật làm sáo diều gỗ vàng tâm âm vang ngân nga hàng cây số.",
         "article": {
           "lead": "Làng Bá Dương Nội có lịch sử gắn liền với nền văn minh lúa nước và tín ngưỡng thờ Thần Giao Châu tại ngôi Miếu Diều cổ kính. Thú chơi và làm diều sáo nơi đây đã có từ hàng trăm năm. Đầu năm 2024, 'Hội Diều làng Bá Dương Nội' chính thức được Bộ VHTTDL đưa vào Danh mục Di sản văn hóa phi vật thể quốc gia. Nghệ nhân nổi tiếng với kỹ thuật chế tác sáo diều thủ công bịt gỗ vàng tâm tạo âm thanh ngân vang đặc trưng.",
@@ -4496,7 +4026,7 @@
         "durationSeconds": 77,
         "audioUrl": "assets/audio/trach-xa.mp3",
         "coverImage": "assets/images/trach-xa.jpg",
-        "qrCodeLabel": "Mã QR Di tích #11 — Làng may áo dài Trạch Xá",
+        "qrCodeLabel": "Mã QR Di tích #12 — Làng may áo dài Trạch Xá",
         "summary": "Cái nôi ngàn năm may áo dài truyền thống từ thời nhà Đinh thờ Đức thánh tổ Nguyễn Thị Sen. Nơi lưu giữ kỹ thuật khâu tay 'năm mũi một' độc nhất vô nhị, từng tà áo dài thướt tha, mềm mại ôm dáng mà không hề lộ đường kim mũi chỉ.",
         "article": {
           "lead": "Tương truyền nghề may áo dài tại Trạch Xá có lịch sử từ thời nhà Đinh (thế kỷ X). Người có công truyền dạy nghề là Đức thánh tổ Nguyễn Thị Sen – vương phi vua Đinh Tiên Hoàng. Những người thợ tài hoa Trạch Xá đã lập nên các 'phố thợ may' nổi tiếng tại Hà Nội (Cầu Gỗ, Hàng Bông...). Kỹ thuật khâu tay 'năm mũi một' làm cho tà áo mềm mại, ôm dáng, không lộ đường chỉ mà bền chắc tuyệt đối.",
@@ -4526,7 +4056,7 @@
         "durationSeconds": 78,
         "audioUrl": "assets/audio/chuon-ngo.mp3",
         "coverImage": "assets/images/chuon-ngo.jpg",
-        "qrCodeLabel": "Mã QR Di tích #12 — Làng khảm trai Chuôn Ngọ",
+        "qrCodeLabel": "Mã QR Di tích #13 — Làng khảm trai Chuôn Ngọ",
         "summary": "Cái nôi nghệ thuật khảm xà cừ nghìn năm từ thời nhà Lý do danh tướng Trương Công Thành truyền dạy. Nơi những mảnh vỏ trai, vỏ ốc xà cừ ngũ sắc qua tài hoa cưa, đục, mài của nghệ nhân biến thành các tác phẩm tranh phong cảnh, sập gụ tủ chè lấp lánh ánh quang phổ sang trọng.",
         "article": {
           "lead": "Nghề khảm trai tại Chuôn Ngọ có lịch sử lâu đời từ thời nhà Lý (thế kỷ XI). Ông tổ nghề là danh tướng Trương Công Thành sau khi cáo quan về quê đã dạy nghề cho dân làng. Xưa kia sản phẩm khảm trai Chuôn Ngọ thường được tiến cống triều đình ngự dụng, nay xuất khẩu nhiều nước. Vỏ trai, vỏ ốc xà cừ được chọn lọc kỹ lưỡng, mài mỏng dính rồi đục khắc gắn lên gỗ sưa, gụ, trắc tạo tác phẩm lấp lánh bền bỉ.",
@@ -4556,7 +4086,7 @@
         "durationSeconds": 76,
         "audioUrl": "assets/audio/xuan-la.mp3",
         "coverImage": "assets/images/xuan-la.jpg",
-        "qrCodeLabel": "Mã QR Di tích #13 — Làng làm tò he Xuân La",
+        "qrCodeLabel": "Mã QR Di tích #14 — Làng làm tò he Xuân La",
         "summary": "Ngôi làng duy nhất gìn giữ nghề nặn tò he bằng bột gạo nếp hơn 3 thế kỷ. Nơi những nắm bột màu chiết xuất từ hoa quả tự nhiên (gấc đỏ, nghệ vàng, lá nếp xanh) qua bàn tay điêu luyện 3-5 phút biến hóa thành nhân vật cổ tích và linh vật sống động.",
         "article": {
           "lead": "Nghề nặn tò he ở Xuân La đã tồn tại hơn 3 thế kỷ, ban đầu gọi là 'chim cò bằng bột' hay 'bánh chim cò'. Tên gọi tò he xuất phát từ việc thợ gắn chiếc còi nhỏ ở đầu sản phẩm thổi phát ra tiếng tò-te-tò-he vui tai. Bột nặn làm từ bột gạo nếp luộc chín phối màu tự nhiên từ gấc (đỏ), lá nếp (xanh), củ nghệ (vàng), tro bếp (đen), an toàn cho trẻ nhỏ.",
@@ -4586,7 +4116,7 @@
         "durationSeconds": 77,
         "audioUrl": "assets/audio/quat-dong.mp3",
         "coverImage": "assets/images/quat-dong.jpg",
-        "qrCodeLabel": "Mã QR Di tích #14 — Làng thêu ren Quất Động",
+        "qrCodeLabel": "Mã QR Di tích #15 — Làng thêu ren Quất Động",
         "summary": "Cái nôi nghề thêu tay truyền thống Việt Nam từ thế kỷ XVII thờ Tiến sĩ Lê Công Hành. Nơi những sợi chỉ tơ óng ả qua mũi kim tinh tế của người thợ tài hoa dệt nên những bức tranh phong cảnh quê hương, tranh chân dung sống động như tranh vẽ và hoành phi câu đối xuất khẩu danh giá.",
         "article": {
           "lead": "Tương truyền người có công truyền dạy nghề thêu cho dân làng Quất Động từ thế kỷ XVII là Tiến sĩ Lê Công Hành (Bùi Công Hành). Sau khi đi sứ học được kỹ thuật thêu và làm lọng, ông truyền lại cho dân làng, từ đó nghề thêu phát triển rực rỡ lan ra cả nước. Hằng năm vào ngày 12 tháng Giêng âm lịch dân làng tổ chức giỗ Tổ nghề. Sản phẩm: tranh thêu chân dung, phong cảnh, câu đối hoành phi, áo dài xuất khẩu.",
@@ -4616,7 +4146,7 @@
         "durationSeconds": 79,
         "audioUrl": "assets/audio/tranh-khuc.mp3",
         "coverImage": "assets/images/tranh-khuc.jpg",
-        "qrCodeLabel": "Mã QR Di tích #15 — Làng làm bánh chưng Tranh Khúc",
+        "qrCodeLabel": "Mã QR Di tích #16 — Làng làm bánh chưng Tranh Khúc",
         "summary": "Làng nghề gói bánh chưng truyền thống hàng trăm năm nức tiếng đất Bắc ven bờ đê sông Hồng. Nơi nghệ nhân sở hữu kỹ thuật gói 'vo' bằng tay không cần khuôn chỉ mất chưa đầy 1 phút nhưng vuông vức đặn góc, nếp dẻo thơm quyện đỗ tiêu bùi thơm ngậy.",
         "article": {
           "lead": "Nghề gói bánh chưng ở Tranh Khúc đã tồn tại hàng trăm năm ven đê sông Hồng. Bánh chưng Tranh Khúc nổi tiếng nhờ nguyên liệu tuyển lựa khắt khe: nếp cái hoa vàng hạt tròn mẩy, đậu xanh tiêu lòng vàng óng, thịt ba chỉ tươi ngon và lá dong báng xanh mướt chuyển từ vùng núi cao Tây Bắc (Lào Cai, Yên Bái). Kỹ thuật gói 'vo' bằng tay không dùng khuôn vẫn vuông vức đều chằn chặn, luộc chín màu xanh tươi ngọc bích thơm bùi ngậy.",
@@ -4646,7 +4176,7 @@
         "durationSeconds": 76,
         "audioUrl": "assets/audio/chang-son-moc.mp3",
         "coverImage": "assets/images/chang-son-moc.jpg",
-        "qrCodeLabel": "Mã QR Di tích #16 — Làng mộc mỹ nghệ Chàng Sơn",
+        "qrCodeLabel": "Mã QR Di tích #17 — Làng mộc mỹ nghệ Chàng Sơn",
         "summary": "Làng mộc mỹ nghệ nghìn năm tuổi từng được triều đình nhà Nguyễn triệu về kinh đô Huế tạc cung điện lăng tẩm hoàng gia. Những người thợ tài hoa đã góp công dựng nên kiến trúc và tạc các pho tượng Phật tuyệt tác tại Chùa Tây Phương, nay tiếp tục lưu truyền nghề chạm trổ đồ gỗ nội thất quý phái.",
         "article": {
           "lead": "Xưa kia thợ mộc Chàng Sơn nổi tiếng cả nước với tay nghề đục đẽo, chạm khắc tinh xảo, từng được triều đình nhà Nguyễn triệu về kinh đô Huế tham gia xây dựng, chạm trổ cung điện, lăng tẩm hoàng gia. Họ chính là những người chủ trì dựng nên nhiều ngôi đình, chùa cổ kính xứ Đoài (tiêu biểu như việc tạc tượng Phật và kiến trúc Chùa Tây Phương). Sản phẩm: đồ gỗ nội thất cao cấp (sập gụ, tủ chè), đồ thờ cúng chạm trổ tinh vi (hoành phi, câu đối, án gian).",
@@ -4676,7 +4206,7 @@
         "durationSeconds": 78,
         "audioUrl": "assets/audio/da-sy.mp3",
         "coverImage": "assets/images/da-sy.jpg",
-        "qrCodeLabel": "Mã QR Di tích #17 — Làng rèn Dao Dẫy Đa Sỹ",
+        "qrCodeLabel": "Mã QR Di tích #18 — Làng rèn Dao Dẫy Đa Sỹ",
         "summary": "Làng rèn truyền thống hơn 500 năm ven bờ sông Nhuệ. Thương hiệu 'Dao Đa Sỹ' nổi tiếng khắp toàn quốc nhờ độ sắc bén, bền bỉ, thép tốt tôi nước gia truyền giữ cạnh cực kỳ lâu cùn.",
         "article": {
           "lead": "Làng Đa Sỹ có lịch sử làm nghề rèn truyền thống đã hơn nửa thiên niên kỷ. Tương truyền nghề rèn nơi đây bắt nguồn từ hai ông tổ nghề họ Nguyễn từ vùng Thanh Hóa truyền dạy cho dân làng từ thời Hậu Lê. Sản phẩm chủ lực là dao, kéo, nông cụ, trong đó thương hiệu Dao Đa Sỹ nổi tiếng nhờ độ sắc bén, bền bỉ, thép tốt và giữ cạnh cực kỳ lâu cùn.",
@@ -4736,7 +4266,7 @@
         "durationSeconds": 80,
         "audioUrl": "assets/audio/kieu-ky.mp3",
         "coverImage": "assets/images/kieu-ky.jpg",
-        "qrCodeLabel": "Mã QR Di tích #06 — Làng dát vàng Kiêu Kỵ",
+        "qrCodeLabel": "Mã QR Di tích #20 — Làng dát vàng Kiêu Kỵ",
         "summary": "Tìm hiểu bí quyết làm quỳ vàng, quỳ bạc cực mỏng từ thời Hậu Lê, biến một chỉ vàng thô thành hàng ngàn lá quỳ dát lên tượng Phật và đồ ngự dụng cung đình.",
         "article": {
           "lead": "Là làng nghề độc nhất vô nhị ở Việt Nam gìn giữ nghề đập quỳ vàng, Kiêu Kỵ đã tôn thêm vẻ uy nghiêm, lộng lẫy cho hàng ngàn ngôi chùa, đền đài và di tích lịch sử trên khắp dải đất hình chữ S.",
@@ -4769,18 +4299,6 @@
       "coordinates": [
         21.0833,
         105.3667
-      ]
-    },
-    {
-      "id": "dai-lai",
-      "name": "Hồ Đại Lải & Flamingo",
-      "shortName": "Đại Lải",
-      "district": "Phúc Yên - Vĩnh Phúc",
-      "icon": "fa-water",
-      "videoUrl": "https://www.youtube.com/watch?v=TdHbEbpIA5o",
-      "coordinates": [
-        21.325,
-        105.7167
       ]
     },
     {
@@ -4825,7 +4343,7 @@
       "shortName": "Lăng Bác",
       "district": "Quận Ba Đình",
       "icon": "fa-star",
-      "videoUrl": "https://www.tiktok.com/@nguyennhuquang/video/7594084833874201876",
+      "videoUrl": "https://www.youtube.com/watch?v=uPHK-wj6wIo",
       "coordinates": [
         21.0369,
         105.8347

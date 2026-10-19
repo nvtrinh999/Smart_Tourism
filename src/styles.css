@@ -417,6 +417,7 @@ button {
 }
 
 @media (min-width: 769px) {
+
   .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
   .video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player {
     position: absolute !important;
@@ -435,6 +436,7 @@ button {
 }
 
 @media (max-width: 768px) {
+
   .video-mask iframe,
   .video-mask #yt-hero-player,
   .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
