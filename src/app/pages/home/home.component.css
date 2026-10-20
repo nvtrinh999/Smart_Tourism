@@ -259,12 +259,13 @@
   padding: 0 16px;
 }
 
-.hero-video-banner {
+.hero-video-banner,
+.cinematic-hero-banner {
   position: relative;
   width: 100%;
   height: 480px;
-  min-height: 450px;
-  max-height: 520px;
+  min-height: 480px;
+  max-height: 480px;
   border-radius: var(--radius-lg, 20px);
   overflow: visible;
   isolation: isolate;
@@ -272,6 +273,7 @@
   background: #000000;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
   margin-bottom: 36px;
+  box-sizing: border-box;
 }
 
 /* Dedicated Video Mask to cleanly clip video with rounded corners */
@@ -283,6 +285,7 @@
   overflow: hidden;
   border-radius: inherit;
   z-index: 1;
+  box-sizing: border-box;
 }
 
 .video-iframe-wrapper {
@@ -293,29 +296,87 @@
   overflow: hidden;
   isolation: isolate;
   background: #000000;
+  box-sizing: border-box;
+  container-type: size;
 }
 
-.video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
-.video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player,
-::ng-deep .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
-::ng-deep .video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player {
+/* YouTube Iframe & Element: 16:9 Cover Scaling - Zero black bars */
+.video-iframe-wrapper iframe,
+.video-iframe-wrapper #yt-hero-player,
+.cinematic-hero-banner iframe,
+.cinematic-hero-banner .cinematic-media,
+::ng-deep .video-iframe-wrapper iframe,
+::ng-deep .video-iframe-wrapper #yt-hero-player {
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
-  /* Viewport-relative overscan: ensure the 16:9 video always overflows
-     the container in both axes, then overflow:hidden on wrapper clips it */
-  width: 177.78vh !important;
-  /* 100vh * 16/9 */
-  height: 56.25vw !important;
-  /* 100vw * 9/16 */
-  min-width: 100% !important;
-  min-height: 100% !important;
   border: 0 !important;
   margin: 0 !important;
   padding: 0 !important;
   display: block !important;
   pointer-events: none;
+  box-sizing: border-box;
+  width: max(100cqw, calc(100cqh * 16 / 9 * 1.04)) !important;
+  height: max(100cqh, calc(100cqw * 9 / 16 * 1.04)) !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+@container (min-aspect-ratio: 16/9) {
+  .video-iframe-wrapper iframe,
+  .video-iframe-wrapper #yt-hero-player,
+  .cinematic-hero-banner iframe,
+  .cinematic-hero-banner .cinematic-media,
+  ::ng-deep .video-iframe-wrapper iframe,
+  ::ng-deep .video-iframe-wrapper #yt-hero-player {
+    width: 104cqw !important;
+    height: calc(104cqw * (9 / 16)) !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+}
+
+@container (max-aspect-ratio: 16/9) {
+  .video-iframe-wrapper iframe,
+  .video-iframe-wrapper #yt-hero-player,
+  .cinematic-hero-banner iframe,
+  .cinematic-hero-banner .cinematic-media,
+  ::ng-deep .video-iframe-wrapper iframe,
+  ::ng-deep .video-iframe-wrapper #yt-hero-player {
+    height: 104cqh !important;
+    width: calc(104cqh * (16 / 9)) !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+}
+
+/* HTML5 Video & Fallback Image: Native Object-Fit Cover */
+.video-iframe-wrapper video,
+.video-iframe-wrapper img,
+.cinematic-hero-banner video,
+.cinematic-hero-banner img {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  box-sizing: border-box;
 }
 
 .video-gradient-overlay {
@@ -441,17 +502,11 @@
   outline-offset: 2px;
 }
 
-@media (max-width: 900px) {
-  .video-iframe-wrapper {
-    height: 380px;
-  }
-}
-
 @media (max-width: 768px) {
   .hero-video-banner {
     height: 320px;
-    min-height: 280px;
-    max-height: 360px;
+    min-height: 320px;
+    max-height: 320px;
     border-radius: var(--radius-md, 14px);
     position: relative;
     overflow: visible !important;
@@ -468,18 +523,26 @@
     z-index: 1;
   }
 
-  .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
-  .video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player,
-  ::ng-deep .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
-  ::ng-deep .video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player {
+  .video-iframe-wrapper iframe,
+  .video-iframe-wrapper #yt-hero-player,
+  .cinematic-hero-banner iframe,
+  .cinematic-hero-banner .cinematic-media,
+  ::ng-deep .video-iframe-wrapper iframe,
+  ::ng-deep .video-iframe-wrapper #yt-hero-player {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
-    width: 300% !important;
-    height: 300% !important;
+    transform: translate(-50%, -50%) !important;
+    height: 104cqh !important;
+    width: calc(104cqh * (16 / 9)) !important;
     min-width: 100% !important;
     min-height: 100% !important;
-    transform: translate(-50%, -50%) !important;
+    max-width: none !important;
+    max-height: none !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
     pointer-events: none !important;
   }
 
@@ -4305,8 +4368,8 @@
 
   .hero-video-banner {
     height: 320px;
-    min-height: 280px;
-    max-height: 360px;
+    min-height: 320px;
+    max-height: 320px;
     border-radius: var(--radius-md, 14px);
     position: relative;
     overflow: visible !important;
@@ -4323,18 +4386,26 @@
     z-index: 1;
   }
 
-  .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
-  .video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player,
-  ::ng-deep .video-iframe-wrapper:not(.tiktok-video-wrapper) iframe,
-  ::ng-deep .video-iframe-wrapper:not(.tiktok-video-wrapper) #yt-hero-player {
+  .video-iframe-wrapper iframe,
+  .video-iframe-wrapper #yt-hero-player,
+  .cinematic-hero-banner iframe,
+  .cinematic-hero-banner .cinematic-media,
+  ::ng-deep .video-iframe-wrapper iframe,
+  ::ng-deep .video-iframe-wrapper #yt-hero-player {
     position: absolute !important;
     top: 50% !important;
     left: 50% !important;
-    width: 300% !important;
-    height: 300% !important;
+    transform: translate(-50%, -50%) !important;
+    height: 104cqh !important;
+    width: calc(104cqh * (16 / 9)) !important;
     min-width: 100% !important;
     min-height: 100% !important;
-    transform: translate(-50%, -50%) !important;
+    max-width: none !important;
+    max-height: none !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
     pointer-events: none !important;
   }
 
@@ -4766,7 +4837,8 @@
 @media (min-width: 769px) and (max-width: 1024px) {
   .hero-video-banner {
     height: 400px;
-    min-height: 380px;
+    min-height: 400px;
+    max-height: 400px;
   }
 
   .hero-glass-pill .location-pill-btn {

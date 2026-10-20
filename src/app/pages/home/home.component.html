@@ -72,20 +72,21 @@
   <!-- CINEMATIC HERO VIDEO BANNER (YouTube Embed & Camera Angle Switcher) -->
   <section class="hero-video-section">
     <div class="container hero-container">
-      <div class="hero-video-banner glass-panel">
+      <div class="hero-video-banner glass-panel cinematic-hero-banner">
 
         <!-- Dedicated Video Mask to cleanly clip video with rounded corners while allowing Pill Tabs to overlap -->
         <div class="video-mask">
-          <!-- Responsive Video Container -->
-          <div class="video-iframe-wrapper" [class.tiktok-video-wrapper]="isVideoTikTok()">
-            <!-- TikTok Video (Lăng Bác) -->
-            <iframe *ngIf="isVideoTikTok()" [src]="activeVideoId() | youtubeSafeUrl"
-              title="Lăng Chủ tịch Hồ Chí Minh TikTok Video" frameborder="0" scrolling="no"
+          <!-- Responsive Video Container: Fixed stable layout -->
+          <div class="video-iframe-wrapper">
+            <!-- TikTok Video (if applicable) -->
+            <iframe *ngIf="isVideoTikTok()" [src]="activeVideoId() | youtubeSafeUrl" title="TikTok Video"
+              frameborder="0" scrolling="no" class="cinematic-media"
               allow="fullscreen; autoplay; encrypted-media; picture-in-picture" allowfullscreen>
             </iframe>
 
-            <!-- YouTube Player API Element for 16:9 Landscape Flycam Videos -->
-            <div *ngIf="!isVideoTikTok()" id="yt-hero-player" class="youtube-api-player"></div>
+            <!-- YouTube Player API Element (Persistent DOM element, never destroyed on switch) -->
+            <div id="yt-hero-player" class="youtube-api-player cinematic-media"
+              [style.display]="isVideoTikTok() ? 'none' : 'block'"></div>
 
             <div class="video-gradient-overlay" *ngIf="!isVideoTikTok()"></div>
           </div>
@@ -126,7 +127,7 @@
             HỆ THỐNG GIÁM SÁT & ĐIỀU TIẾT MẬT ĐỘ DU KHÁCH NỘI ĐÔ
           </span>
           <h1 class="hero-title">
-            Giải Pháp Tránh Bão Quá Tải Trung Tâm Hà Nội
+            Giải Pháp "TRÁNH BÃO" Quá Tải Trung Tâm Hà Nội
           </h1>
           <p class="hero-subtitle">
             Cảnh báo lưu lượng đám đông thời gian thực tại các khu vực trọng điểm, đồng thời điều hướng linh hoạt tới
@@ -773,7 +774,7 @@
                 </div>
               </div>
 
-              <!-- Step-by-Step Bus Stops Route (Precision Vertical Line) -->
+              <!-- Step-by-Step Bus Stops Route (Precision Vertical Line)
               <div class="bus-route-steps">
                 <h5 class="route-heading">
                   <i class="fa-solid fa-timeline text-muted-icon"></i> Lộ Trình & Điểm Dừng Quan Trọng
@@ -787,7 +788,7 @@
                     <span class="stop-name">{{ stop }}</span>
                   </div>
                 </div>
-              </div>
+              </div> -->
 
               <!-- Pro Tips for Students -->
               <div class="bus-tips-box">
@@ -1453,6 +1454,9 @@
         <ul class="footer-note-text">
           <li>Nguyễn Phương Trinh</li>
           <li>Ngô Thị Minh Châu</li>
+          <li>Phạm Đăng Khôi</li>
+          <li>Lê Doãn Bình</li>
+          <li>Hoàng Đậu Thiên Ân</li>
         </ul>
       </div>
 

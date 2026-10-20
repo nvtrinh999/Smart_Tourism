@@ -714,12 +714,23 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   // Lifecycle
+  private bannerResizeObserver?: ResizeObserver;
+
   ngAfterViewInit(): void {
     setTimeout(() => {
       this.setupScrollDrivenTabs();
       this.setupTouchSwipe();
       this.initOrUpdatePlayer();
       this.centerActivePillTab(this.selectedLocation());
+
+      // Observe video container resize to maintain 16:9 full cover dynamically
+      const wrapper = document.querySelector('.video-iframe-wrapper');
+      if (wrapper && typeof ResizeObserver !== 'undefined') {
+        this.bannerResizeObserver = new ResizeObserver(() => {
+          this.syncPlayerDimensions();
+        });
+        this.bannerResizeObserver.observe(wrapper);
+      }
     }, 250);
   }
 
@@ -727,6 +738,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.scrollObserver?.disconnect();
+    this.bannerResizeObserver?.disconnect();
     clearTimeout(this.scrollTimeout);
     if (this.playbackMonitorInterval) {
       clearInterval(this.playbackMonitorInterval);
@@ -785,61 +797,43 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     const cHeight = container.clientHeight;
     if (!cWidth || !cHeight) return;
 
-    const isMobile = window.innerWidth <= 768 || cWidth < 600;
-    if (isMobile) {
-      iframe.style.position = 'absolute';
-      iframe.style.top = '50%';
-      iframe.style.left = '50%';
-      iframe.style.transform = 'translate(-50%, -50%)';
-      iframe.style.width = '300%';
-      iframe.style.height = '300%';
-      iframe.style.minWidth = '100%';
-      iframe.style.minHeight = '100%';
-      iframe.style.border = '0';
-      iframe.style.margin = '0';
-      iframe.style.padding = '0';
-      iframe.style.display = 'block';
-      return;
-    }
-
-    const containerRatio = cWidth / cHeight;
     const targetRatio = 16 / 9;
+    const containerRatio = cWidth / cHeight;
 
-    let finalWidth: number;
-    let finalHeight: number;
+    let w: number;
+    let h: number;
 
-    // Scale-to-fill: make the iframe LARGER than the container
-    // so video covers 100% with overflow hidden clipping the excess
     if (containerRatio > targetRatio) {
-      // Container is wider than 16:9 → match width, grow height
-      finalWidth = cWidth;
-      finalHeight = Math.ceil(cWidth / targetRatio);
+      // Container is wider than 16:9 (e.g. desktop 1400x480)
+      // Width matches container + 4% overscan, height scales proportionally to 16:9
+      w = Math.ceil(cWidth * 1.04);
+      h = Math.ceil(w / targetRatio);
     } else {
-      // Container is taller than 16:9 → match height, grow width
-      finalHeight = cHeight;
-      finalWidth = Math.ceil(cHeight * targetRatio);
+      // Container is taller/narrower than 16:9 (e.g. mobile 360x320)
+      // Height matches container + 4% overscan, width scales proportionally to 16:9
+      h = Math.ceil(cHeight * 1.04);
+      w = Math.ceil(h * targetRatio);
     }
 
-    // Apply 8% overscan margin to eliminate any thin black edges
-    finalWidth = Math.ceil(finalWidth * 1.08);
-    finalHeight = Math.ceil(finalHeight * 1.08);
-
-    iframe.style.position = 'absolute';
-    iframe.style.top = '50%';
-    iframe.style.left = '50%';
-    iframe.style.transform = 'translate(-50%, -50%)';
-    iframe.style.width = `${finalWidth}px`;
-    iframe.style.height = `${finalHeight}px`;
-    iframe.style.minWidth = `${cWidth}px`;
-    iframe.style.minHeight = `${cHeight}px`;
-    iframe.style.border = '0';
-    iframe.style.margin = '0';
-    iframe.style.padding = '0';
-    iframe.style.display = 'block';
+    iframe.style.setProperty('position', 'absolute', 'important');
+    iframe.style.setProperty('top', '50%', 'important');
+    iframe.style.setProperty('left', '50%', 'important');
+    iframe.style.setProperty('transform', 'translate(-50%, -50%)', 'important');
+    iframe.style.setProperty('width', `${w}px`, 'important');
+    iframe.style.setProperty('height', `${h}px`, 'important');
+    iframe.style.setProperty('min-width', `${w}px`, 'important');
+    iframe.style.setProperty('min-height', `${h}px`, 'important');
+    iframe.style.setProperty('max-width', 'none', 'important');
+    iframe.style.setProperty('max-height', 'none', 'important');
+    iframe.style.setProperty('border', '0', 'important');
+    iframe.style.setProperty('margin', '0', 'important');
+    iframe.style.setProperty('padding', '0', 'important');
+    iframe.style.setProperty('display', 'block', 'important');
+    iframe.style.setProperty('pointer-events', 'none', 'important');
 
     if (this.ytPlayer && typeof this.ytPlayer.setSize === 'function') {
       try {
-        this.ytPlayer.setSize(finalWidth, finalHeight);
+        this.ytPlayer.setSize(w, h);
       } catch (e) { }
     }
   }
@@ -878,12 +872,10 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
         this.ytPlayer.loadVideoById(ytId);
         this.ytPlayer.mute();
         this.ytPlayer.playVideo();
-        setTimeout(() => this.syncPlayerDimensions(), 100);
+        this.syncPlayerDimensions();
         return;
       } catch (err) {
         console.warn('Error loading video on existing YouTube player:', err);
-        try { this.ytPlayer.destroy(); } catch (e) { }
-        this.ytPlayer = null;
       }
     }
 
@@ -1078,13 +1070,12 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     if (this.isVideoTikTok()) {
       if (this.ytPlayer) {
         try {
-          this.ytPlayer.destroy();
+          this.ytPlayer.pauseVideo();
         } catch (e) { }
-        this.ytPlayer = null;
       }
     } else {
       this.initOrUpdatePlayer();
-      setTimeout(() => this.syncPlayerDimensions(), 120);
+      this.syncPlayerDimensions();
     }
 
     if (shouldScroll) {
@@ -1098,18 +1089,19 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   /**
-   * Auto-center active location pill tab in horizontal scrollable container (Mobile & Desktop)
-   * Uses scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' })
+   * Auto-center active location pill tab in horizontal scrollable container only (Mobile & Desktop).
+   * Uses container.scrollTo() instead of Element.scrollIntoView() to prevent ANY window / layout shift.
    */
   centerActivePillTab(locId: string): void {
     if (typeof window === 'undefined' || typeof document === 'undefined') return;
     setTimeout(() => {
       const pillBtn = document.getElementById('hero-loc-pill-' + locId);
-      if (pillBtn) {
-        pillBtn.scrollIntoView({
-          behavior: 'smooth',
-          inline: 'center',
-          block: 'nearest'
+      const container = pillBtn?.closest('.location-pill-container') as HTMLElement | null;
+      if (pillBtn && container && container.scrollWidth > container.clientWidth) {
+        const scrollLeft = pillBtn.offsetLeft - (container.clientWidth / 2) + (pillBtn.clientWidth / 2);
+        container.scrollTo({
+          left: Math.max(0, scrollLeft),
+          behavior: 'smooth'
         });
       }
     }, 60);
