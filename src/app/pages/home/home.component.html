@@ -421,7 +421,7 @@
           </h1>
           <p class="hero-subtitle">
             Hạ tầng kết nối giao thông thông minh giúp bạn thảnh thơi "trốn khói bụi" cuối tuần: từ rừng nguyên sinh Ba
-            Vì, đại công viên xanh Ecopark đến thị trấn sương mây Tam Đảo và các di sản trăm tuổi.
+            Vì, làng sinh thái Bản Rõm đến các làng nghề di sản trăm tuổi ven đô.
           </p>
         </div>
 
@@ -461,7 +461,7 @@
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'east'"
                 (click)="selectRegion('east')">
-                Đông & Đông Nam (Bát Tràng, Kiêu Kỵ, Ecopark...)
+                Đông & Đông Nam (Bát Tràng, Kiêu Kỵ, Tranh Khúc...)
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'north'"
                 (click)="selectRegion('north')">
@@ -688,8 +688,8 @@
 
           <!-- Quick Navigation Chips for All Destinations -->
           <div class="map-quick-chips">
-            <button class="map-chip-btn" [class.active]="activeMapLocation() === 'Hanoi+Ba+Vi+Tam+Dao+Ecopark'"
-              (click)="selectMapLocation('Hanoi+Ba+Vi+Tam+Dao+Ecopark', 'Toàn cảnh Vành đai Thủ Đô (Hà Nội, Ba Vì, Tam Đảo, Ecopark)')">
+            <button class="map-chip-btn" [class.active]="activeMapLocation() === 'Hanoi+Ba+Vi+Duong+Lam+Bat+Trang'"
+              (click)="selectMapLocation('Hanoi+Ba+Vi+Duong+Lam+Bat+Trang', 'Toàn cảnh Du lịch Thủ Đô (Hà Nội, Ba Vì, Đường Lâm, Bát Tràng)')">
               <i class="fa-solid fa-earth-americas"></i> Toàn cảnh Vành đai
             </button>
             <button *ngFor="let dest of surroundingDestinations" class="map-chip-btn"
@@ -774,21 +774,29 @@
                 </div>
               </div>
 
-              <!-- Step-by-Step Bus Stops Route (Precision Vertical Line)
-              <div class="bus-route-steps">
-                <h5 class="route-heading">
-                  <i class="fa-solid fa-timeline text-muted-icon"></i> Lộ Trình & Điểm Dừng Quan Trọng
+              <!-- Top Ranked Must-Visit Attractions -->
+              <div class="attractions-ranking-box">
+                <h5 class="ranking-heading">
+                  <i class="fa-solid fa-ranking-star text-gold"></i> Địa Điểm Tham Quan / Ghé Thăm Nên Tới
                 </h5>
-                <div class="route-timeline-list">
-                  <div *ngFor="let stop of data.tab2_suburbs.busGuide.keyStops; let i = index" class="bus-stop-item">
-                    <div class="stop-dot" [class.start-dot]="i === 0"
-                      [class.end-dot]="i === data.tab2_suburbs.busGuide.keyStops.length - 1">
-                      <span>{{ i + 1 }}</span>
+                <div class="ranking-list">
+                  <div *ngFor="let item of rankedAttractions" class="ranking-item" [class.top-tier]="item.rank <= 3">
+                    <div class="rank-badge" [class.rank-1]="item.rank === 1" [class.rank-2]="item.rank === 2"
+                      [class.rank-3]="item.rank === 3">
+                      <span>{{ item.rank }}</span>
                     </div>
-                    <span class="stop-name">{{ stop }}</span>
+                    <div class="ranking-info">
+                      <div class="ranking-title-row">
+                        <span class="ranking-name">{{ item.name }}</span>
+                        <span class="ranking-score">
+                          <i class="fa-solid fa-star"></i> {{ item.rating }}
+                        </span>
+                      </div>
+                      <span class="ranking-highlight">{{ item.highlight }}</span>
+                    </div>
                   </div>
                 </div>
-              </div> -->
+              </div>
 
               <!-- Pro Tips for Students -->
               <div class="bus-tips-box">

@@ -3508,49 +3508,6 @@
         ]
       },
       {
-        "id": "ecopark",
-        "name": "Khu đô thị sinh thái Ecopark",
-        "region": "east",
-        "regionLabel": "Đông Nam",
-        "category": "Đại công viên sinh thái",
-        "location": "Văn Giang, Hưng Yên (giáp Gia Lâm, Hà Nội)",
-        "distance": "Cách trung tâm Hà Nội khoảng 13km – 15km về phía Đông Nam.",
-        "shortDistance": "13km – 15km • Đông Nam",
-        "description": "Đại đô thị sinh thái xanh lớn nhất miền Bắc với hơn 1 triệu cây xanh và hồ Thiên Nga thơ mộng. Điểm đến lý tưởng cho các buổi dã ngoại, chèo kayak, cắm trại gia đình.",
-        "tags": [
-          "Hồ Thiên Nga",
-          "Dã ngoại",
-          "Camping",
-          "Triệu cây xanh"
-        ],
-        "image": "assets/images/ecopark.jpg",
-        "watermark": "ECOPARK",
-        "mapQuery": "Khu+do+thi+Ecopark+Van+Giang",
-        "busRoute": "Hệ thống xe Ecobus đón trả tại nhiều điểm trung tâm nội đô Hà Nội",
-        "bestTime": "Các ngày cuối tuần quanh năm, tiết trời thu mát mẻ hoặc mùa xuân ngập sắc hoa",
-        "highlights": [
-          "Hồ Thiên Nga thơ mộng ngắm đàn thiên nga đen trắng bơi lội",
-          "Công viên Mùa Hạ, Mùa Thu rợp bóng cây cổ thụ",
-          "Trải nghiệm chèo thuyền kayak và cắm trại trên thảm cỏ ven hồ"
-        ],
-        "history": "Được quy hoạch từ năm 2004 theo mô hình thành phố xanh thông minh bền vững, kết nối hài hòa giữa thiên nhiên sông Hồng và kiến trúc hiện đại.",
-        "transportDetail": {
-          "motorcycle": "Từ trung tâm qua cầu Thanh Trì hoặc Vĩnh Tuy theo đường Cổ Linh, đi thẳng theo đường liên tỉnh Hà Nội - Hưng Yên chừng 15 phút.",
-          "bus": "Hệ thống xe buýt Ecobus hoạt động liên tục đón khách từ Phố Cổ, Cầu Giấy, Mỹ Đình sang Ecopark.",
-          "parking": "Bãi đỗ xe tại Công viên Mùa Hạ, Công viên Mùa Xuân và khu Hồ Thiên Nga."
-        },
-        "experiences": [
-          "Cho đàn thiên nga ăn và ngắm hoàng hôn buông xuống mặt hồ Thiên Nga phẳng lặng.",
-          "Tổ chức tiệc nướng BBQ và cắm trại cùng bạn bè dưới tán cây xanh mát.",
-          "Khám phá phố đi bộ phong cách Hàn Quốc và thưởng thức ẩm thực đa dạng."
-        ],
-        "checkInSpots": [
-          "Cầu phao Hồ Thiên Nga: Khung cảnh đàn thiên nga bơi lội tự nhiên giữa mặt nước.",
-          "Rừng cọ và đồi hoa: Rực rỡ sắc màu theo từng mùa hoa nở rộ.",
-          "Khu phố vịnh đảo Grand Marina lung linh ánh đèn phản chiếu mặt hồ."
-        ]
-      },
-      {
         "id": "ban-rom",
         "name": "Khu sinh thái Bản Rõm",
         "region": "north",
@@ -3679,7 +3636,39 @@
           "image": "assets/images/bat-trang.jpg"
         }
       ]
-    }
+    },
+    "topAttractions": [
+      {
+        "rank": 1,
+        "name": "Bảo tàng Gốm Bát Tràng",
+        "highlight": "Kiến trúc 7 bàn xoay khổng lồ độc bản, check-in số 1",
+        "rating": "9.9"
+      },
+      {
+        "rank": 2,
+        "name": "Chợ Gốm Làng Cổ Bát Tràng",
+        "highlight": "Hàng trăm gian hàng thủ công, ẩm thực canh măng mực",
+        "rating": "9.7"
+      },
+      {
+        "rank": 3,
+        "name": "Lò Bầu Cổ Bát Tràng",
+        "highlight": "Di sản lò gốm nung củi 700 năm duy nhất còn lại",
+        "rating": "9.5"
+      },
+      {
+        "rank": 4,
+        "name": "Nhà Cổ Vạn Vân",
+        "highlight": "Nhà gỗ cổ hơn 200 năm, lưu giữ hơn 300 cổ vật gốm",
+        "rating": "9.3"
+      },
+      {
+        "rank": 5,
+        "name": "Xưởng Gốm Vuốt Nặn Nghệ Thuật",
+        "highlight": "Tự tay ngồi bàn xoay nặn gốm cùng nghệ nhân (50k/lượt)",
+        "rating": "9.2"
+      }
+    ]
   },
   "tab3_heritage": {
     "title": "Chạm Di Sản — Audio Guide & QR Code Thông Minh",

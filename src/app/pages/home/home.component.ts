@@ -14,7 +14,8 @@ import {
   SurroundingDestination,
   HourlyData,
   Tab1LocationData,
-  FlycamLocation
+  FlycamLocation,
+  RankedAttraction
 } from '../../models/tourism.model';
 
 export interface LocationOption {
@@ -649,6 +650,41 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     return this.data?.tab2_suburbs.surroundingDestinations || [];
   }
 
+  get rankedAttractions(): RankedAttraction[] {
+    return this.data?.tab2_suburbs?.topAttractions || [
+      {
+        rank: 1,
+        name: 'Bảo tàng Gốm Bát Tràng',
+        highlight: 'Kiến trúc 7 bàn xoay khổng lồ độc bản, check-in số 1',
+        rating: '9.9'
+      },
+      {
+        rank: 2,
+        name: 'Chợ Gốm Làng Cổ Bát Tràng',
+        highlight: 'Hàng trăm gian hàng thủ công, ẩm thực canh măng mực',
+        rating: '9.7'
+      },
+      {
+        rank: 3,
+        name: 'Lò Bầu Cổ Bát Tràng',
+        highlight: 'Di sản lò gốm nung củi 700 năm duy nhất còn lại',
+        rating: '9.5'
+      },
+      {
+        rank: 4,
+        name: 'Nhà Cổ Vạn Vân',
+        highlight: 'Nhà gỗ cổ hơn 200 năm, lưu giữ hơn 300 cổ vật gốm',
+        rating: '9.3'
+      },
+      {
+        rank: 5,
+        name: 'Xưởng Gốm Vuốt Nặn Nghệ Thuật',
+        highlight: 'Tự tay ngồi bàn xoay nặn gốm cùng nghệ nhân (50k/lượt)',
+        rating: '9.2'
+      }
+    ];
+  }
+
   private removeAccents(str: string): string {
     return (str || '')
       .normalize('NFD')
@@ -665,7 +701,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     let list = this.surroundingDestinations;
 
     if (reg === 'craft') {
-      list = list.filter(d => d.id !== 'ba-vi' && d.id !== 'ecopark' && d.id !== 'ban-rom');
+      list = list.filter(d => d.id !== 'ba-vi' && d.id !== 'ban-rom');
     } else if (reg === 'south') {
       list = list.filter(d => d.region === 'south');
     } else if (reg !== 'all') {

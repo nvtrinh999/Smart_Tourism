@@ -108,6 +108,13 @@ export interface CheckInPhoto {
   image: string;
 }
 
+export interface RankedAttraction {
+  rank: number;
+  name: string;
+  highlight: string;
+  rating: string;
+}
+
 export interface ArticleSection {
   heading: string;
   content: string;
@@ -186,6 +193,7 @@ export interface TourismData {
       timeline: ItineraryStep[];
       checkInGallery: CheckInPhoto[];
     };
+    topAttractions?: RankedAttraction[];
   };
   tab3_heritage: {
     title: string;

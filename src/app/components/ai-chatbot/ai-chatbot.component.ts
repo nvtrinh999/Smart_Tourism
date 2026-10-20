@@ -461,7 +461,7 @@ Khi người dùng hỏi về các địa điểm, dữ liệu mật độ đám
   • Làng rèn Dao Dẫy Đa Sỹ (Kiến Hưng, Hà Đông): Hơn 500 năm thời Hậu Lê, bí quyết tôi thép nước sắc bén bền bỉ, buýt 01/02/19.
   • Làng cốm Vòng (Dịch Vọng Hậu, Cầu Giấy): Hàng trăm năm thời Lý, thức quà mùa thu Hà Nội bọc lá sen xanh, Metro Nhổn - Ga Hà Nội.
   • Làng nghề dát vàng Kiêu Kỵ (Gia Lâm): Hơn 300 năm thời Hậu Lê, đập quỳ vàng mỏng như cánh ve thếp tượng Phật, buýt 69 / E02.
-  • Vườn Quốc gia Ba Vì (48km), Khu đô thị Ecopark (15km), Bản Rõm Sóc Sơn (32km).
+  • Vườn Quốc gia Ba Vì (48km), Khu sinh thái Bản Rõm Sóc Sơn (32km).
 
 3. TAB 3 - CHẠM DI SẢN BẰNG AUDIO GUIDE & QR CODE:
 - Hệ thống Audio Guide tự túc thu âm 1-2 phút kèm mã QR độc bản cho các làng nghề & di tích: Lò Bầu Bát Tràng, Làng lụa Vạn Phúc, Nhà cổ đá ong Đường Lâm, Làng hương Quảng Phú Cầu, Làng nón Chuông, Dát vàng Kiêu Kỵ, Cốm Làng Vòng.
@@ -696,15 +696,14 @@ Khi người dùng hỏi về các địa điểm, dữ liệu mật độ đám
         `• **Khuyến nghị di chuyển:** Xe máy phượt trong ngày hoặc ô tô cá nhân (vé vào cổng khoảng 60.000đ/người lớn, ưu đãi HSSV 20.000đ).`;
     }
 
-    // 18. Ecopark, Bản Rõm Sóc Sơn, Ba Vì
-    if (q.includes('vùng ven') || q.includes('vành đai') || q.includes('ecopark') || q.includes('bản rõm')) {
-      return `🌲 **Bộ sưu tập Điểm đến Vùng ven & Vành đai xanh Thủ đô:**\n\n` +
-        `• **Phía Tây:** Vườn Quốc gia Ba Vì (48km - rừng thông & đền Thượng), Làng cổ Đường Lâm (45km - quần thể nhà cổ đá ong).\n` +
-        `• **Phía Bắc:** Khu sinh thái Bản Rõm Sóc Sơn (32km - cắm trại sinh thái & rừng thông ngút ngàn).\n` +
-        `• **Phía Nam:** Làng cổ Cự Đà (20km - di sản ven sông Nhuệ), Làng nón Chuông (30km).\n` +
-        `• **Đông Nam:** Khu đô thị sinh thái Ecopark (15km - công viên mùa xuân, đại ngàn xanh mát ven sông Bắc Hưng Hải).\n` +
-        `• *Bạn có thể xem bản đồ số Google Maps tại Tab 2 của trang web.*`;
-    }
+    // 18. Bản Rõm Sóc Sơn, Ba Vì
+    // if (q.includes('vùng ven') || q.includes('vành đai') || q.includes('bản rõm')) {
+    //   return `🌲 **Bộ sưu tập Điểm đến Vùng ven & Vành đai xanh Thủ đô:**\n\n` +
+    //     `• **Phía Tây:** Vườn Quốc gia Ba Vì (48km - rừng thông & đền Thượng), Làng cổ Đường Lâm (45km - quần thể nhà cổ đá ong).\n` +
+    //     `• **Phía Bắc:** Khu sinh thái Bản Rõm Sóc Sơn (32km - cắm trại sinh thái & rừng thông ngút ngàn).\n` +
+    //     `• **Phía Nam:** Làng cổ Cự Đà (20km - di sản ven sông Nhuệ), Làng nón Chuông (30km).\n` +
+    //     `• *Bạn có thể xem bản đồ số Google Maps tại Tab 2 của trang web.*`;
+    // }
 
     // 19. Audio Guide & QR Code di sản số
     if (q.includes('qr') || q.includes('audio') || q.includes('thuyết minh') || q.includes('di sản')) {
