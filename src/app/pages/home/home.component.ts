@@ -1260,16 +1260,19 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
   selectCheckInPhoto(index: number): void {
     this.activeCheckInIndex.set(index);
+    this.restartCheckInAutoSlide();
   }
 
   nextCheckInPhoto(): void {
     const total = this.data?.tab2_suburbs.itinerary1Day.checkInGallery.length || 1;
     this.activeCheckInIndex.update(idx => (idx + 1) % total);
+    this.restartCheckInAutoSlide();
   }
 
   prevCheckInPhoto(): void {
     const total = this.data?.tab2_suburbs.itinerary1Day.checkInGallery.length || 1;
     this.activeCheckInIndex.update(idx => (idx - 1 + total) % total);
+    this.restartCheckInAutoSlide();
   }
 
   private checkInAutoSlideTimer?: any;
@@ -1279,9 +1282,14 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.stopCheckInAutoSlide();
     this.checkInAutoSlideTimer = setInterval(() => {
       if (!this.isCheckInHovered) {
-        this.nextCheckInPhoto();
+        const total = this.data?.tab2_suburbs.itinerary1Day.checkInGallery.length || 1;
+        this.activeCheckInIndex.update(idx => (idx + 1) % total);
       }
-    }, 4500);
+    }, 6000);
+  }
+
+  restartCheckInAutoSlide(): void {
+    this.startCheckInAutoSlide();
   }
 
   stopCheckInAutoSlide(): void {

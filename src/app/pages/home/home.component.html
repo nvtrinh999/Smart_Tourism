@@ -855,7 +855,8 @@
             </div>
 
             <!-- Photo Gallery & Carousel Check-in Spots -->
-            <div class="glass-panel gallery-card">
+            <div class="glass-panel gallery-card" (mouseenter)="onCheckInMouseEnter()"
+              (mouseleave)="onCheckInMouseLeave()">
               <div class="gallery-header">
                 <div>
                   <h4 class="gallery-title">
@@ -874,7 +875,8 @@
               </div>
 
               <!-- Carousel Display -->
-              <div class="checkin-carousel-box" (mouseenter)="onCheckInMouseEnter()" (mouseleave)="onCheckInMouseLeave()">
+              <div class="checkin-carousel-box" (mouseenter)="onCheckInMouseEnter()"
+                (mouseleave)="onCheckInMouseLeave()">
                 <div class="carousel-slide">
                   <img [src]="data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].image"
                     [alt]="data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].title"
@@ -886,7 +888,8 @@
                       <h5 class="slide-title">{{
                         data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].title }}</h5>
                     </div>
-                    <p class="slide-desc">{{ data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].desc }}</p>
+                    <p class="slide-desc">{{ data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].desc
+                      }}</p>
                     <div class="slide-tip">
                       <i class="fa-solid fa-wand-magic-sparkles text-gold"></i>
                       <span><strong>Mẹo chụp:</strong> {{
@@ -899,9 +902,7 @@
                 <div class="carousel-dots-bar">
                   <button *ngFor="let item of data.tab2_suburbs.itinerary1Day.checkInGallery; let idx = index"
                     class="carousel-dot-btn" [class.active]="activeCheckInIndex() === idx"
-                    (click)="selectCheckInPhoto(idx)"
-                    [attr.aria-label]="item.title"
-                    [title]="item.title">
+                    (click)="selectCheckInPhoto(idx)" [attr.aria-label]="item.title" [title]="item.title">
                   </button>
                 </div>
               </div>
@@ -910,8 +911,7 @@
               <div class="gallery-thumbs-row">
                 <div *ngFor="let item of data.tab2_suburbs.itinerary1Day.checkInGallery; let idx = index"
                   class="gallery-thumb-item" [class.active]="activeCheckInIndex() === idx"
-                  (click)="selectCheckInPhoto(idx)"
-                  [title]="item.title">
+                  (click)="selectCheckInPhoto(idx)" [title]="item.title">
                   <img [src]="item.image" [alt]="item.title" class="thumb-img">
                   <span class="thumb-label">{{ item.title }}</span>
                 </div>
@@ -970,12 +970,12 @@
               tích thực địa). Camera điện thoại iOS / Android sẽ tự động nhận diện và mở trang đích di động tối ưu.
             </p>
           </div>
-          <div class="judges-cta-col">
+          <!-- <div class="judges-cta-col">
             <button class="btn-demo-mobile" (click)="openMobileSimulator('bat-trang')">
               <i class="fa-solid fa-mobile-screen"></i>
               <span>Mở Giả Lập Mobile</span>
             </button>
-          </div>
+          </div> -->
         </div>
 
         <!-- HERITAGE AUDIO CARDS WITH INTEGRATED QR CODE STANDEES -->
