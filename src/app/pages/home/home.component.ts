@@ -207,6 +207,8 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     // Initialize chart with real-time day and closest schedule hour
     this.selectedDay.set(this.currentRealtimeDay);
     this.selectedHour.set(this.getClosestChartHour(this.currentTime().getHours()));
+
+    this.startCheckInAutoSlide();
   }
 
   updateClock(): void {
@@ -773,6 +775,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   private playbackMonitorInterval?: any;
 
   ngOnDestroy(): void {
+    this.stopCheckInAutoSlide();
     this.scrollObserver?.disconnect();
     this.bannerResizeObserver?.disconnect();
     clearTimeout(this.scrollTimeout);
@@ -1255,6 +1258,10 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
     this.tourismService.playAudio(audioObj);
   }
 
+  selectCheckInPhoto(index: number): void {
+    this.activeCheckInIndex.set(index);
+  }
+
   nextCheckInPhoto(): void {
     const total = this.data?.tab2_suburbs.itinerary1Day.checkInGallery.length || 1;
     this.activeCheckInIndex.update(idx => (idx + 1) % total);
@@ -1263,6 +1270,33 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
   prevCheckInPhoto(): void {
     const total = this.data?.tab2_suburbs.itinerary1Day.checkInGallery.length || 1;
     this.activeCheckInIndex.update(idx => (idx - 1 + total) % total);
+  }
+
+  private checkInAutoSlideTimer?: any;
+  private isCheckInHovered = false;
+
+  startCheckInAutoSlide(): void {
+    this.stopCheckInAutoSlide();
+    this.checkInAutoSlideTimer = setInterval(() => {
+      if (!this.isCheckInHovered) {
+        this.nextCheckInPhoto();
+      }
+    }, 4500);
+  }
+
+  stopCheckInAutoSlide(): void {
+    if (this.checkInAutoSlideTimer) {
+      clearInterval(this.checkInAutoSlideTimer);
+      this.checkInAutoSlideTimer = undefined;
+    }
+  }
+
+  onCheckInMouseEnter(): void {
+    this.isCheckInHovered = true;
+  }
+
+  onCheckInMouseLeave(): void {
+    this.isCheckInHovered = false;
   }
 
   toggleAudio(audio: HeritageAudio): void {

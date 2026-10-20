@@ -874,7 +874,7 @@
               </div>
 
               <!-- Carousel Display -->
-              <div class="checkin-carousel-box">
+              <div class="checkin-carousel-box" (mouseenter)="onCheckInMouseEnter()" (mouseleave)="onCheckInMouseLeave()">
                 <div class="carousel-slide">
                   <img [src]="data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].image"
                     [alt]="data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].title"
@@ -886,14 +886,34 @@
                       <h5 class="slide-title">{{
                         data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].title }}</h5>
                     </div>
-                    <p class="slide-desc">{{ data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].desc
-                      }}</p>
+                    <p class="slide-desc">{{ data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].desc }}</p>
                     <div class="slide-tip">
                       <i class="fa-solid fa-wand-magic-sparkles text-gold"></i>
                       <span><strong>Mẹo chụp:</strong> {{
                         data.tab2_suburbs.itinerary1Day.checkInGallery[activeCheckInIndex()].tip }}</span>
                     </div>
                   </div>
+                </div>
+
+                <!-- Interactive Indicator Dots Bar -->
+                <div class="carousel-dots-bar">
+                  <button *ngFor="let item of data.tab2_suburbs.itinerary1Day.checkInGallery; let idx = index"
+                    class="carousel-dot-btn" [class.active]="activeCheckInIndex() === idx"
+                    (click)="selectCheckInPhoto(idx)"
+                    [attr.aria-label]="item.title"
+                    [title]="item.title">
+                  </button>
+                </div>
+              </div>
+
+              <!-- Thumbnail Quick Switcher Strip -->
+              <div class="gallery-thumbs-row">
+                <div *ngFor="let item of data.tab2_suburbs.itinerary1Day.checkInGallery; let idx = index"
+                  class="gallery-thumb-item" [class.active]="activeCheckInIndex() === idx"
+                  (click)="selectCheckInPhoto(idx)"
+                  [title]="item.title">
+                  <img [src]="item.image" [alt]="item.title" class="thumb-img">
+                  <span class="thumb-label">{{ item.title }}</span>
                 </div>
               </div>
             </div>
