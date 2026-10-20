@@ -431,12 +431,12 @@
 
           <!-- Section Controls Header: Title & Brand/Region Switcher -->
           <div class="merc-section-header">
-            <div>
+            <div class="merc-title-group">
               <span class="eyebrow-label">
                 <i class="fa-solid fa-shapes text-gold"></i> HANOI TRADITIONAL CRAFT & SUBURBS • KHÔNG GIAN VĂN HÓA
               </span>
               <h2 class="merc-section-title">
-                Khám Phá {{ surroundingDestinations.length }} Điểm Đến & Làng Nghề Truyền Thống Thủ Đô
+                Khám Phá {{ surroundingDestinations.length }} Điểm Đến & Làng Nghề Thủ Đô
               </h2>
             </div>
 
@@ -448,23 +448,23 @@
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'craft'"
                 (click)="selectRegion('craft')">
-                <i class="fa-solid fa-fire text-gold"></i> 20 Làng nghề thủ công
+                <i class="fa-solid fa-fire text-gold"></i> 20 Làng nghề
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'west'"
-                (click)="selectRegion('west')">
-                Phía Tây (Ba Vì, Đường Lâm, Chàng Sơn...)
+                (click)="selectRegion('west')" title="Ba Vì, Đường Lâm, Chàng Sơn...">
+                Phía Tây
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'south'"
-                (click)="selectRegion('south')">
-                Phía Nam (Quảng Phú Cầu, Làng Chuông, Cự Đà...)
+                (click)="selectRegion('south')" title="Quảng Phú Cầu, Làng Chuông, Cự Đà...">
+                Phía Nam
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'east'"
-                (click)="selectRegion('east')">
-                Đông & Đông Nam (Bát Tràng, Kiêu Kỵ, Tranh Khúc...)
+                (click)="selectRegion('east')" title="Bát Tràng, Kiêu Kỵ, Tranh Khúc...">
+                Đông & Đông Nam
               </button>
               <button class="merc-region-pill" [class.active]="selectedRegion() === 'north'"
-                (click)="selectRegion('north')">
-                Nội đô & Phía Bắc (Ngũ Xã, Cốm Vòng, Bản Rõm...)
+                (click)="selectRegion('north')" title="Ngũ Xã, Cốm Vòng, Bản Rõm...">
+                Nội đô & Phía Bắc
               </button>
             </div>
           </div>
@@ -493,8 +493,8 @@
             <div *ngIf="topWideDestinations[0] as dest1" class="merc-wide-card"
               (click)="selectMapForDestination(dest1)">
               <div class="merc-card-media">
-                <img [src]="dest1.image" (error)="onImageError($event)" [alt]="dest1.name" class="merc-card-img"
-                  loading="lazy">
+                <img src="https://hn.ss.bfcplatform.vn/tckt/2022/08/22A08032-1.jpg" (error)="onImageError($event)"
+                  [alt]="dest1.name" class="merc-card-img" loading="lazy">
                 <div class="merc-watermark">{{ dest1.watermark }}</div>
                 <div class="merc-card-gradient"></div>
               </div>
